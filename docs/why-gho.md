@@ -12,7 +12,7 @@ Based on the current state of the market, there is still limited adoption of dec
 
 ### The Aave Protocol Is Well Positioned
 
-The Aave Protocol already has the infrastructure to support many of the features needed to implement a stablecoin and will be the first Facilitator (see below) that can trustlessly mint and burn GHO tokens. At launch, if the community approves, there will be two [Facilitators](Facilitators%20e6e36b4bd4ab46f18eef4e2598e18560.md) for GHO (the Aave Protocol and FlashMinter); however, a framework with guidance on how to apply to the AaveDAO to become a Facilitator is open to community discussion on the [Aave Governance](https://governance.aave.com/) forum.
+The Aave Protocol already has the infrastructure to support many of the features needed to implement a stablecoin and will be the first Facilitator (see below) that can trustlessly mint and burn GHO tokens. At launch, if the community approves, there will be two [Facilitators](/) for GHO (the Aave Protocol and FlashMinter); however, a framework with guidance on how to apply to the AaveDAO to become a Facilitator is open to community discussion on the [Aave Governance](https://governance.aave.com/) forum.
 
 ## Differentiating Factors
 
@@ -40,7 +40,7 @@ GHO is decentralized and intentionally does not have one single concentrated poi
 
 Discounts are available to borrowers staking AAVE in the Safety Module.
 
-Please see the [Interest and Discount Rate Models](Interest%20and%20Discount%20Rate%20Models%2010d8aa9a4431488288231c66d052af93.md) page for more information.
+Please see the [Interest and Discount Rate Models](/) page for more information.
 
 ### Multi-Collateral Positions
 
