@@ -19,6 +19,10 @@
 .DS_Store
 *.pem
 
+# generated files
+.docusaurus
+.cache-loader
+
 # debug
 npm-debug.log*
 yarn-debug.log*
