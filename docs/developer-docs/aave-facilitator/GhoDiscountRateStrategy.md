@@ -54,7 +54,7 @@ Expressed with the number of decimals of the discount token (stkAAVE).
 uint256 public constant MIN_DEBT_TOKEN_BALANCE = 1e18
 ```
 
-Minimum balance amount of debt token (variableDebtGHO) to be entitled to a discount.
+Minimum balance amount of debt token (variableEthDebtGHO) to be entitled to a discount.
 
 Expressed with the number of decimals of the debt token (GHO).
 

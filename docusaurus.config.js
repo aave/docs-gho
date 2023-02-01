@@ -81,6 +81,7 @@ const config = {
             position: 'left',
             label: 'GHO Docs',
           },
+          {to: '/faqa', docId: 'faq', label: 'FAQ', position: 'left'},
           {
             href: 'https://app.aave.com',
             label: 'App',
@@ -95,7 +96,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Home',
                 to: '/docs/intro',
               },
             ],
