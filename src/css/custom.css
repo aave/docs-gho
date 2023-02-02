@@ -124,6 +124,10 @@ p {
   
 }
 
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
+}
 
 .cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
   --ifm-link-color: var(--ifm-color-emphasis-800);

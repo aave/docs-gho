@@ -6,14 +6,6 @@ The `IGhoFlashMinter` interface inherits the [`IERC3156FlashLender`](https://git
 
 This page shows the [`events`](#events), [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoFlashMinter` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/flashMinter/interfaces/IGhoFlashMinter.sol).
 
-## Interface
-
-- IGhoFlashMinter.sol
-
-  ```solidity
-
-  ```
-
 ## Events
 
 ### FeeUpdated

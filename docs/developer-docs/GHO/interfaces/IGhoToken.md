@@ -6,16 +6,6 @@ The `IGhoToken` interface inherits the [`IERC20Burnable`](IERC20Burnable.md)`, `
 
 This page shows the [`structs`](#structs), [`events`](#events), and [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/interfaces/IGhoToken.sol).
 
-## Interface
-
-- IGhoToken.sol
-
-https://github.com/aave/gho/blob/7636dddfa3775d1696d621b6a0557aab7f0808ed/src/contracts/gho/interfaces/IGhoToken.sol#L1-L104
-
-```solidity
-https://github.com/aave/gho/blob/7636dddfa3775d1696d621b6a0557aab7f0808ed/src/contracts/gho/interfaces/IGhoToken.sol#L1
-```
-
 ## Structs
 
 ### Facilitator

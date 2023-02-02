@@ -4,14 +4,6 @@ Interface to define the behavior of a GhoFacilitator. Designed to be implemented
 
 This page shows the [`events`](#events), and [`write`](#write-methods) methods within the `IGhoFacilitator` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/interfaces/IGhoFacilitator.sol).
 
-## Interface
-
-- IGhoToken.sol
-
-  ```solidity
-
-  ```
-
 ## Events
 
 ### FeesDistributedToTreasury
