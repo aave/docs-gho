@@ -9,8 +9,8 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'GHO Document Hub',
-  tagline: 'All about GHO',
-  favicon: 'img/favicon.ico',
+  tagline: 'GHO is a decentralized, multi-collateralized stablecoin pegged to the U.S. dollar.',
+  favicon: 'img/logo.svg',
 
   // Set the production url of your site here
   url: 'https://ghodocs.aave.com',
@@ -41,6 +41,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/', // Serve the docs at the site's root
           remarkPlugins: [math],
           rehypePlugins: [katex],
           // Please change this to your repo.
@@ -69,19 +70,19 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'GHO Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'GHO Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'GHO Docs',
-          },
-//          {to: '/faqa', docId: 'faq', label: 'FAQ', position: 'left'},
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'GHO Docs',
+          // },
+          {to: 'https://docs.aave.com', label: 'Aave Protocol Docs', position: 'left'},
           {
             href: 'https://app.aave.com',
             label: 'App',
@@ -97,7 +98,7 @@ const config = {
             items: [
               {
                 label: 'Home',
-                to: '/docs/intro',
+                to: '/intro',
               },
             ],
           },
@@ -119,7 +120,6 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

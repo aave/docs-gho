@@ -42,4 +42,4 @@ GHO introduces the concept of Facilitators. A Facilitator (e.g., a protocol, an 
 
 Governance will be able to determine and assign this facilitator a specific bucket capacity to bootstrap the GHO liquidity and the GHO market.
 
-![Untitled](../docs/assets/facilitator.png)
+![Untitled](./assets/facilitator.png)
