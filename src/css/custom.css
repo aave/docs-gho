@@ -5,281 +5,151 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@font-face {
+    font-family: 'TT Travels';
+    src: url('../fonts/TTTravels-Regular.woff2') format('woff2'),
+        url('../fonts/TTTravels-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TT Travels';
+    src: url('../fonts/TTTravels-Medium.woff2') format('woff2'),
+        url('../fonts/TTTravels-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Travels';
+    src: url('../fonts/TTTravels-DemiBold.woff2') format('woff2'),
+        url('../fonts/TTTravels-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Travels';
+    src: url('../fonts/TTTravels-Bold.woff2') format('woff2'),
+        url('../fonts/TTTravels-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NB International';
+    src: url('../fonts/NBInternationalRegularWebfont.woff2') format('woff2'),
+        url('../fonts/NBInternationalRegularWebfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NB International';
+    src: url('../fonts/NBInternationalBoldWebfont.woff2') format('woff2'),
+        url('../fonts/NBInternationalBoldWebfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-font-family-base:'NB International';
+  --ifm-heading-font-family: 'TT Travels';
+  --ifm-line-height-base: 1.65;
+  --ifm-heading-line-height: 1.05;
+ 
+}
+
+
+:root {
+  --gho-border: rgba(98, 96, 108, 0.1);
+  --ifm-color-primary: #39375a;
+  --ifm-color-primary-dark: #333151;
+  --ifm-color-primary-darker: #302f4d;
+  --ifm-color-primary-darkest: #28263f;
+  --ifm-color-primary-light: #3f3d63;
+  --ifm-color-primary-lighter: #423f68;
+  --ifm-color-primary-lightest: #4a4875;
+  
+  --ifm-font-color-base: var(--ifm-color-primary);
+  --ifm-background-color: #dbd2ef;
   --ifm-code-font-size: 95%;
+  --ifm-navbar-background-color:rgba(255, 255, 255, 0.2);
+  --ifm-card-background-color: background: rgba(98, 96, 108, 0.1);
+  --ifm-background-surface-color: background: linear-gradient(90deg,rgba(36,33,37,.06) 80%,rgba(98,96,108,.1));;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-info-contrast-background: rgba(98, 96, 108, 0.1) ;
+  --ifm-color-success-contrast-background: rgba(98, 96, 108, 0.1) ;
+  --ifm-color-warning-contrast-background: rgba(98, 96, 108, 0.1) ;
+
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #201F2D;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #c9b3f9;
+  --ifm-color-primary-dark: #ad8bf6;
+  --ifm-color-primary-darker: #9f77f4;
+  --ifm-color-primary-darkest: #743cf0;
+  --ifm-color-primary-light: #e5dbfc;
+  --ifm-color-primary-lighter: #f3effe;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-font-color-base: var(--ifm-color-primary);
+  --ifm-background-color: #201f2d!important;
+  --ifm-card-background-color: rgba(98, 96, 108, 0.1)!important;
+
+  --ifm-navbar-background-color:rgba(32, 31, 45, 0.2);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
-[data-theme='light'] img[src$='#gh-dark-mode-only'],
-[data-theme='dark'] img[src$='#gh-light-mode-only'] {
-  display: none;
-}
-/* html {
-  background-color: #dbd2ef;
+
+article {
+  max-width: 700px;
+
 }
 
-html.dark {
-  background-color: #201F2D;
-} */
-
-body {
-  /* font-family: 'Roboto', sans-serif; */
-  height: 100vh;
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-weight: bold ;
 }
 
-#__next {
-  height: 100%;
+p {
+  font-weight:400;
+  
 }
 
-/* body {
-  @apply font-nb;
+
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  --ifm-link-color: var(--ifm-color-emphasis-800);
+  --ifm-link-hover-color: var(--ifm-color-emphasis-700);
+  --ifm-link-hover-decoration: none;
+
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 5%)!important;
+
+
+border: 1.5px solid  var(--gho-border) !important;
+
+
+  transition: all var(--ifm-transition-fast) ease;
+  transition-property: border, box-shadow;
 }
 
-.pill {
-  @apply bg-gems dark: bg-velvet text-night dark:text-violet text-xs font-bold px-6 py-1 flex items-center justify-center uppercase rounded-full;
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module:hover {
+  border-color: var(--ifm-color-primary)!important;
+  box-shadow: 0 8px 12px 0 rgb(0 0 0 / 10%)!important;
 }
 
-.inverted-pill {
-  @apply bg-night dark: bg-gems text-gems dark:text-night text-xs font-bold px-6 md:px-3 py-1 flex items-center justify-center uppercase rounded-full;
-}
+.navbar {
+    backdrop-filter: blur(14px);
 
-.bland-pill {
-  @apply text-night dark: text-lilac border border-lilac/60 text-xs font-bold w-8 py-1 flex items-center justify-center uppercase rounded-full;
-} */
+    }
 
-.card {
-  position: relative;
-  overflow: hidden;
 
-  border: 1px solid rgba(98, 96, 108, 0.2);
-  border-radius: 16px;
 
-  padding: 20px;
-}
 
-.dark .card {
-  position: relative;
-  overflow: hidden;
-
-  border: 1px solid rgba(245, 225, 255, 0.2) !important;
-  border-radius: 16px;
-
-  padding: 20px;
-}
-
-.card-clip {
-  left: 0;
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-
-  background: linear-gradient(to right,
-      rgba(36, 33, 37, 0.06) 80%,
-      rgba(98, 96, 108, 0.1) 100%);
-  box-shadow: 0px 24px 44px rgba(0, 0, 0, 0.1);
-
-  backdrop-filter: blur(16px);
-
-  z-index: 1;
-}
-
-.card-content {
-  position: relative;
-  z-index: 9999;
-}
-
-/* ================ */
-/* TT Travels */
-/* ================ */
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-Thin.otf');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-ThinItalic.otf');
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-ExtraLight.otf');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-ExtraLightItalic.otf');
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-Light.otf');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-LightItalic.otf');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-Regular.otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-Italic.otf');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-Medium.otf');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-MediumItalic.otf');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-DemiBold.otf');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-DemiBoldItalic.otf');
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-Bold.otf');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-BoldItalic.otf');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-ExtraBold.otf');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-ExtraBoldItalic.otf');
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-Black.otf');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Travels';
-  src: url('/fonts/tt_travels/TT Travels-BlackItalic.otf');
-  font-weight: 900;
-  font-style: italic;
-}
-
-/* ================ */
-/* NB INTERNATIONAL */
-/* ================ */
-
-@font-face {
-  font-family: 'NB International';
-  src: url('/fonts/nb_international/NB International-Mono.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NB International';
-  src: url('/fonts/nb_international/NB International-LightItalic.ttf');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'NB International';
-  src: url('/fonts/nb_international/NB International-Regular.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NB International';
-  src: url('/fonts/nb_international/NB International-Italic.ttf');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'NB International';
-  src: url('/fonts/nb_international/NB International-Bold.ttf');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NB International';
-  src: url('/fonts/nb_international/NB International-BoldItalic.ttf');
-  font-weight: 700;
-  font-style: italic;
-}
