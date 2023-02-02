@@ -23,7 +23,7 @@ const config = {
   organizationName: 'Aave Protocol', // Usually your GitHub org/user name.
   projectName: 'GHO', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -76,13 +76,43 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+        {
+          to: 'concepts/overview',
+          label: 'Concepts',
+          position: 'left',
+          className: 'V3_active',
+        },
+         {
+          to: '/developer-docs/overview',
+          label: 'Developers',
+          position: 'left',
+          className: 'V3_active',
+        },
+        {
+          to: '/gho-contracts/overview',
+          label: 'Contracts',
+          position: 'left',
+          className: 'V3_active',
+        },
+        // {
+        //   to: '/sdk/overview',
+        //   label: 'SDK',
+        //   position: 'left',
+        //   className: 'V3_active',
+        // },
+                {
+          label: 'Techpaper',
+          to: 'https://google.com',
+          position: 'right',
+          className: 'persistent',
+        },
           // {
           //   type: 'doc',
           //   docId: 'intro',
           //   position: 'left',
           //   label: 'GHO Docs',
           // },
-          {to: 'https://docs.aave.com', label: 'Aave Protocol Docs', position: 'left'},
+          {to: 'https://docs.aave.com', label: 'Aave Protocol Docs', position: 'right'},
           {
             href: 'https://app.aave.com',
             label: 'App',
@@ -98,7 +128,7 @@ const config = {
             items: [
               {
                 label: 'Home',
-                to: '/intro',
+                to: '/concepts/overview',
               },
             ],
           },

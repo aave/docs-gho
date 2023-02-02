@@ -16,7 +16,7 @@ GHO will be kept stable through market efficiencies. It is envisioned that if GH
 
 Borrow interest rates for GHO will be determined by the AaveDAO, with a stable rate that may be adapted depending on market conditions. This design retains the Aave Protocol’s borrow interest rate model flexibility, and it will be possible in the future to implement any interest rate strategy the Aave community sees fit.
 
-The first decision regarding the GHO interest rates can be seen [here](./fundamental-concepts/gho-discount-strategy)
+The first decision regarding the GHO interest rates can be seen [here](./concepts/fundamental-concepts/gho-discount-strategy)
 
 ### Interest Rate Discount Model for stkAAVE
 

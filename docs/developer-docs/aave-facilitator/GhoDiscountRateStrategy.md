@@ -74,7 +74,7 @@ Calculates the discount rate depending on the debt token (GHO) and discount toke
 
 The `debtBalance` and `discountTokenBalance` must be above the [`MIN_DEBT_TOKEN_BALANCE`](#mindebttokenbalance) and [`MIN_DISCOUNT_TOKEN_BALANCE`](#mindiscounttokenbalance)` respectively, to receive a discount.
 
-Please see the [Discount Rate](../../fundamental-concepts/gho-discount-strategy) page for more information and examples of the discount rate implementation.
+Please see the [Discount Rate](../../concepts/fundamental-concepts/gho-discount-strategy) page for more information and examples of the discount rate implementation.
 
 ### Input Parameters:
 
