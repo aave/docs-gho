@@ -1,7 +1,6 @@
 ---
 id: overview
 title: What Is GHO?
-slug: /concepts
 sidebar_position: 1
 ---
 

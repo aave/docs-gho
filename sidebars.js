@@ -19,17 +19,33 @@ const sidebars = {
   docs: [
     'concepts/overview',
     'concepts/why-gho',
-    {
+     {
       type: 'category',
       label: 'How GHO works',
+      link: 
+      {
+        type: 'doc',
+        id:   'concepts/how-gho-works/how-gho-works',
+      },
       items: [
       'concepts/how-gho-works/gho-facilitators',
       'concepts/how-gho-works/gho-governance',
       'concepts/how-gho-works/gho-implementation',
-      'concepts/how-gho-works/how-gho-works',
       'concepts/how-gho-works/interest-rate-discount-model',
       'concepts/how-gho-works/risk-man-mitigations'
       ],
+      },
+      {
+      type: 'category',
+      label: 'Fundamentals',
+      items: [
+        'concepts/fundamental-concepts/borrow-gho',
+        'concepts/fundamental-concepts/supply-gho',
+        'concepts/fundamental-concepts/repay-liquidate-gho',
+        'concepts/fundamental-concepts/gho-discount-strategy',
+        'concepts/fundamental-concepts/flashmint',
+        'concepts/fundamental-concepts/arbitrage',
+      ]
     },
   ],
   developers: [

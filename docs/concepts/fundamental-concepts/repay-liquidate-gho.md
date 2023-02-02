@@ -18,6 +18,9 @@ When repaying (or liquidating) GHO, first there are automatic smart contract-bas
 
 Normal assets direct the majority of interest earned to users who have supplied the corresponding asset, and a small portion is directed to the DAO. In this instance, since there are no suppliers to pay, the interest (accrued by minters of GHO) that is repaid is automatically transferred to the Aave DAO treasury. While the original amount of GHO is burned, and the Bucket level for the Facilitator is decreased.
 
+![Repay Diagram](../../assets/Repay_and_liquidate_dark.png#gh-dark-mode-only)
+![Repay Diagram](../../assets/Repay_and_liquidate.png#gh-light-mode-only)
+
 ### Example Scenario
 
 - The user has 10 debt tokens

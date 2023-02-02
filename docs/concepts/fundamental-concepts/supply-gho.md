@@ -6,7 +6,8 @@ sidebar_position: 1
 
 Given the nature of GHO and the way it interacts with Aave, GHO cannot be supplied to the Aave V3 Ethereum market where it is minited.
 
-DIAGRAM TO BE ADDED
+![Supply Diagram](../../assets/Supply_dark.png#gh-dark-mode-only)
+![Supply Diagram](../../assets/Supply.png#gh-light-mode-only)
 
 ## Benefits
 

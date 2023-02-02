@@ -16,7 +16,8 @@ VIDEO OF INTERFACE
 
 GHO is created (‘minted’) by Facilitators. GHO is collateralized by the supply of crypto assets in excess of the value of GHO to be minted. This over-collateralization is intended as a stabilization mechanism to reduce the impact of any price fluctuations on the value of the underlying collateral during periods of volatility.
 
-DIAGRAM TO BE ADDED
+![Borrow Diagram](../../assets/GHO_borrow_process.png#gh-dark-mode-only)
+![Borrow Diagram](../../assets/GHO_borrow_process_dark.png#gh-light-mode-only)
 
 When borrowing GHO, based upon standard collateralization requirements built into the smart contracts, new GHO and GHO Debt Tokens are automatically generated and transferred to the user.
 

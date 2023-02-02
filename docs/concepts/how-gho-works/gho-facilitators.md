@@ -4,6 +4,9 @@
 
 GHO introduces the concept of Facilitators. A Facilitator can trustlessly mint and burn GHO tokens through various strategies. These strategies can be enacted by different entities that may employ varying strategies for integrating GHO (each entity, a Facilitator). The Aave DAO assigns each Facilitator a Bucket with a specified Capacity, which is the upward limit of GHO that a specific Facilitator can mint. This limit is defined and can be changed by the Aave DAO.
 
+![facilitator Diagram](../../assets/facilitator_dark.png#gh-dark-mode-only)
+![facilitator Diagram](../../assets/facilitator.png#gh-light-mode-only)
+
 ## Current Facilitators
 
 It has been proposed to the Aave community that the Aave V3 Ethereum Pool and FlashMinter Facilitator will be the first Facilitators of GHO.
@@ -51,5 +54,3 @@ It is important to note the exception to this preliminary equation. As the Bucke
 :::
 
 Facilitators can be different in technical nature. As stablecoins can differ depending on the stabilization mechanisms they employ, with GHO, the idea is to employ multiple stabilization mechanisms, in a controlled fashion via the Aave DAO by properly balancing each Bucket capacity to not compromise overall system collateralization and stability.
-
-![facilitator.png](../../assets/facilitator.png)

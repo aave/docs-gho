@@ -2,6 +2,9 @@
 
 GHO is a flexible, decentralized multi-collateral stablecoin on the Ethereum Mainnet. It is available in the form of an ERC20 token that is designed to maintain a stable rate, pegged to the U.S. dollar, despite market volatility. GHO natively fits into the existing Aave Protocol as a new asset, meaning that interacting with the protocol to borrow GHO will be similar to interacting with other assets in the Aave market:
 
+![GHO_Architecture Diagram](../../assets/GHO_Architecture_dark.png#gh-dark-mode-only)
+![GHO_Architecture Diagram](../../assets/GHO_Architecture.png#gh-light-mode-only)
+
 **Supply Collateral –> Borrow GHO –> Repay GHO Debt**
 
 GHO is created (“minted”) or repaid (“burned”) by Facilitators. GHO is minted upon the supply of assets more than the value of GHO to be minted. GHO is designed to accrue interest when it is borrowed, and this interest rate is determined by Aave Governance.
