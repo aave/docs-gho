@@ -74,6 +74,7 @@ const config = {
         logo: {
           alt: 'GHO Logo',
           src: 'img/logo.svg',
+          srcDark: 'img/logo_dark.svg',
         },
         items: [
         {

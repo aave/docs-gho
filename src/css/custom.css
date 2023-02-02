@@ -79,7 +79,11 @@
   --ifm-color-primary-lightest: #4a4875;
   
   --ifm-font-color-base: var(--ifm-color-primary);
-  --ifm-background-color: #F1EDFB;
+  
+
+    background-position: 0px -30vh;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(219, 210, 239, 0.1) 0%, rgba(219, 210, 239, 0) 100%);
   --ifm-code-font-size: 95%;
   --ifm-navbar-background-color:rgba(255, 255, 255, 0.2);
   --ifm-card-background-color: background: rgba(98, 96, 108, 0.1);
