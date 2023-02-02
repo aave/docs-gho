@@ -74,7 +74,6 @@ const config = {
         logo: {
           alt: 'GHO Logo',
           src: 'img/logo.svg',
-          srcDark: 'img/logo_dark.svg',
         },
         items: [
         {
@@ -94,16 +93,25 @@ const config = {
           label: 'Contracts',
           position: 'left',
           className: 'V3_active',
-        },
-        // {
+        },        {
+          to: '/GHO-FAQ',
+          label: 'FAQ',
+          position: 'left',
+          className: 'V3_active',
+        },        {
+          to: '/resources',
+          label: 'Resources',
+          position: 'left',
+          className: 'V3_active',
+        },        // {
         //   to: '/sdk/overview',
         //   label: 'SDK',
         //   position: 'left',
         //   className: 'V3_active',
         // },
-                {
+        {
           label: 'Techpaper',
-          to: 'https://google.com',
+          to: 'https://github.com/aave/gho/blob/main/techpaper/GHO_Technical_Paper.pdf',
           position: 'right',
           className: 'persistent',
         },
@@ -113,7 +121,13 @@ const config = {
           //   position: 'left',
           //   label: 'GHO Docs',
           // },
-          {to: 'https://docs.aave.com', label: 'Aave Protocol Docs', position: 'right'},
+        {
+          href: 'https://github.com/aave/gho',
+          label: 'GitHub',
+          position: 'right',
+          className: 'persistent',
+        },
+          {to: 'https://docs.aave.com', label: 'Aave Protocol Docs', position: 'right', className: 'persistent',},
           {
             href: 'https://app.aave.com',
             label: 'App',

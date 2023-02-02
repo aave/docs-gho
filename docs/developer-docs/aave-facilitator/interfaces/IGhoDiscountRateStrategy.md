@@ -4,14 +4,6 @@ Defines the basic interface of the [`GhoDiscountRateStrategy`](../GhoDiscountRat
 
 This page shows the [`view methods`](#view-methods) within the `IGhoDiscountRateStrategy` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoDiscountRateStrategy.sol).
 
-## Interface
-
-- IGhoDiscountRateStrategy.sol
-
-  ```solidity
-
-  ```
-
 ## View Methods
 
 ### calculateDiscountRate

@@ -6,14 +6,6 @@ The `IGhoVariableDebtToken` interface inherits the [`IVariableDebtToken`](https:
 
 This page shows the [`events`](#events), [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoVariableDebtToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoVariableDebtToken.sol).
 
-## Interface
-
-- IGhoVariableDebtToken.sol
-
-  ```solidity
-
-  ```
-
 ## Events
 
 ### ATokenSet

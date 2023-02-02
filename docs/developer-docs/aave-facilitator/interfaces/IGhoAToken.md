@@ -6,14 +6,6 @@ The `IGhoAToken` interface inherits the [`IAToken`](https://github.com/aave/aave
 
 This page shows the [`events`](#events), [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoAToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoAToken.sol).
 
-## Interface
-
-- IGhoAToken.sol
-
-  ```solidity
-
-  ```
-
 ## Events
 
 ### VariableDebtTokenSet
