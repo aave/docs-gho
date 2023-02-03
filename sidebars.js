@@ -50,6 +50,7 @@ const sidebars = {
   ],
   developers: [
     'developer-docs/overview',
+    'developer-docs/integrate-gho/integrate-gho',
     {
       type: 'category',
       label: 'GHO',
