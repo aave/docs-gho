@@ -4,8 +4,6 @@ title: What Is GHO?
 sidebar_position: 1
 ---
 
-## What is GHO?
-
 ### **GHO is a decentralized, overcollateralized stablecoin that is pegged to the U.S. Dollar**
 
 GHO (pronounced "go") is a decentralized multi-collateral stablecoin that is initially only minted from assets supplied to the Aave Protocol. GHO’s value is programmatically aligned to the U.S. Dollar, which will be maintained through market efficiency.
