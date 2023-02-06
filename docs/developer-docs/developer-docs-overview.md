@@ -25,7 +25,7 @@ sidebar_position: 1
 - <a className="links-list" href="https://github.com/aave/gho">GHO contract source</a>
 - <a className="links-list" href="https://docs.aave.com/developers/deployed-contracts/deployed-contracts">Aave protocol deployed contracts</a>
 - <a className="links-list" href="https://github.com/aave/aave-v3-core">Aave V3 contracts</a>
-- <a className="links-list" href="#aave-utilities">Javascript SDK</a>
+- <a className="links-list" href="#frontend">Javascript SDK</a>
 - <a className="links-list" href="https://github.com/bgd-labs/aave-address-book">Solidity + Javascript Address Registry</a>
 
 ## Learn GHO
@@ -89,9 +89,12 @@ Flashmint is useful for a variety of applications such as liquidations, debt swa
 
 ### Discount Dynamics
 
-The [discount rate strategy](concepts/fundamental-concepts/gho-discount-strategy) contract defines the parameters of a user's discount. The strategy can updated by governance and the key parameters are a maximum discount percent (such as 20%), a discount token (such as stkAAVE), and an amount of gho borrowed at a discounted percent per discount token owned (such as 100 GHO per 1 stkAAVE).
+The [discount rate strategy](concepts/fundamental-concepts/gho-disckkount-strategy) contract defines the parameters of a user's discount. The strategy can updated by governance and the key parameters are a maximum discount percent (such as 20%), a discount token (such as stkAAVE), and an amount of gho borrowed at a discounted percent per discount token owned (such as 100 GHO per 1 stkAAVE).
 
 The discount is not applied continuously as a GHO borrower accrues interest. Interest is compounded at the base borrow rate and the discount is applied when the borrow balance is queried by calling `balanceOf` directly or from an internal call such as `repay` or `liquidate`.
+
+![GHO Discount Diagram](../assets/RepayAndLiquidateDark.png#gh-dark-mode-only)
+![GHO DIscount Diagram](../assets/RepayAndLiquidate.png#gh-light-mode-only)
 
 
 ## Integrate GHO
@@ -124,13 +127,13 @@ GHO can be integrated into virtually any application because all data and functi
 
 ### Smart Contracts
 
-TODO
+Checkout the [GHO contracts hub](gho-contracts/overview) to get started with contract integrations.
 
 ### Frontend
 
 [Aave Utilities](https://github.com/aave/aave-utilities) is a JavaScript SDK which can be used to greatly simplify the process of integrating GHO data and functionality.
 
-Setup instructions are available in the Aave Utilities README, and specific examples of using the SDK for GHO can be found in the [data](#data) and [core function](#core-functions) sections.
+Setup instructions are available in the Aave Utilities README, and complete examples of using the SDK for GHO can be found in the [data](#data) and [core function](#core-functions) sections.
 
 ### Data Analytics
 
@@ -158,10 +161,6 @@ TODO
     
 </details>
 
-<details>
-    <summary>Python</summary>
-    
-</details>
 
 ### repay
 
@@ -174,11 +173,6 @@ TODO
 
 <details>
     <summary>JavaScript</summary>
-    
-</details>
-
-<details>
-    <summary>Python</summary>
     
 </details>
 
@@ -196,17 +190,32 @@ TODO
     
 </details>
 
-<details>
-    <summary>Python</summary>
-    
-</details>
-
 ## Data
 
 ### Live Data
 
 Link to updated aave-utilities README + add sample code for UiGhoDataProvider expansion
 
+```
+
+
+```
+Setup
+
+Fetch
+
+Format
+
 ### Historical Data
 
 Link to integrating aave protocol data guide + add sample code for GHO event querying and subgraph once ready
+
+<details>
+    <summary>Query Events RPC</summary>
+
+</details>
+
+<details>
+    <summary>Query Events Etherscan API</summary>
+    
+</details>
