@@ -30,23 +30,31 @@ sidebar_position: 1
 
 ## Learn GHO
 
+- a. [Aave Pool Facilitator](#aave-pool-facilitator)
+    1. [Mint](#mint)
+    2. [Repay](#repay)
+    3. [Liquidate](#liquidate)
+- b. [Flashmint Facilitator](#flashmint-facilitator)
+- c. [Discount Dynamics](#discount-dynamics)
+
 GHO is an ERC20 token minted from contracts designated as facilitators. At launch there are two proposed facilitators:
 
-- Aave V3 Pool
-- Flashmint facilitator
+- Aave Pool
+- Flashmint
 
 ![GHO_Architecture Diagram](../assets/GHO_Architecture_dark.png#gh-dark-mode-only)
 ![GHO_Architecture Diagram](../assets/GHO_Architecture.png#gh-light-mode-only)
 
 Each facilitator has an individual cap for the amount of GHO available to be minted.
 
-### Aave V3 Pool Facilitator
+### Aave Pool Facilitator
 
 Interacting with GHO via the Aave Pool facilitator is very similar to interacting with a typical reserve asset. Below are the technical guides for all GHO actions along with their contract references.
 
 ### Minting
 
-Minting occurs through the `borrow` function of the Pool where GHO is listed, so to mint GHO the process is identical to borrowing any other reserve where you must supply collateral then are enabled to borrow up to a maximum collateral factor.
+Minting occurs through the `borrow` function of the Pool where GHO is listed, so to mint GHO the process is identical to borrowing any other reserve. In order to mint, an address must have sufficient collateral which is performed by approving then calling `supply` on the Aave Pool with an eligible collateral asset. 
+Once an address it is able to borrow up to a maximum collateral factor determined by it's colateral asset composition. 
 
 GHO can be added to an eMode category, which modifies the collateral factor and liquidation treshold. This can be queried with the following fields from the [integrating gho](#integrate-gho) section.
 
@@ -55,22 +63,21 @@ GHO can be added to an eMode category, which modifies the collateral factor and 
 
 Since GHO is created and not borrowed from suppliers, GHO is not subject to restrictions available liquidity, and instead the facilitator cap and collateralization requirements define the limits to which GHO can be minted as calculated below.
 
-`availableFAcilitatorCap = ghoReserveData.aaveFacilitatorButcketMaxCapacity - ghoReserveData.aaveFacilitatorBucketLevel`
+`availableFacilitatorCap = ghoReserveData.aaveFacilitatorButcketMaxCapacity - ghoReserveData.aaveFacilitatorBucketLevel`
 
 ### Repay
 
+GHO is repaid just like any other asset, by approving the Pool contract to spend GHO tokens (by approval tx or [signed permit](https://github.com/aave/aave-utilities#signERC20Approval) and `repayWithPermit`).
 
-Discount is applied, estimate the cumultate effects on the calculator
+What is different about GHO is the calculation of accrued interest. See the [discount dynamics](#discount-dynamics) section for more info on how accrued interest affect balances for repayment.
 
 ### Liquidation
 
-One limitation to available liquidity is market depth
+When an address has a GHO borrow position, they are eligible to be liquidated under the same conditions as any other collateralized address. If the health factor of a GHO borrow falls below one, which occurs when the sum of borrow value exceeds to weighted average of liquidation thresholds of collateral assets, then any address is eligible to make a `liquidationCall` on the Pool contract. 
 
-Link to liquidation docs
+The `liqidationCall` repays up to 100% of the GHO borrow position in exchange for an equivalent USD valuation of collateral plus a liquidation bonus. 
 
-
-
-Discount
+See the developers [liquidation guide](https://docs.aave.com/developers/guides/liquidations) for more information.
 
 ### Flashmint Facilitator
 
@@ -80,12 +87,18 @@ The flashmint facilitator has a separate minting cap than the Aave Pool. Since a
 
 Flashmint is useful for a variety of applications such as liquidations, debt swap, peg arbitrage. More details on this facilitator can be found [here](./flashmint-facilitator/GhoFlashMinter.md).
 
+### Discount Dynamics
+
+The [discount rate strategy](concepts/fundamental-concepts/gho-discount-strategy) contract defines the parameters of a user's discount. The strategy can updated by governance and the key parameters are a maximum discount percent (such as 20%), a discount token (such as stkAAVE), and an amount of gho borrowed at a discounted percent per discount token owned (such as 100 GHO per 1 stkAAVE).
+
+The discount is not applied continuously as a GHO borrower accrues interest. Interest is compounded at the base borrow rate and the discount is applied when the borrow balance is queried by calling `balanceOf` directly or from an internal call such as `repay` or `liquidate`.
+
 
 ## Integrate GHO
 
-TODO: Edit this section
+GHO is operated on the public blockchain making it accessible to plug into any type of application.
 
-GHO is operated on the public blockchain making it accessible to interface with any type of application.
+The ability for an application to interact with the data and functionality of GHO is limited only by the connection to access public blockchain.
 
 Any Ethereum address can access the full functionality of GHO, and the real-time status + complete historical record of GHO transactions can be verified by anyone at anytime.
 
