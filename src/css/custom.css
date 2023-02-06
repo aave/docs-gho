@@ -175,6 +175,7 @@ border: 1.5px solid  var(--gho-border) !important;
 
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  text-align: center;
 }
 
 .clickable-button:hover {
@@ -195,4 +196,12 @@ border: 1.5px solid  var(--gho-border) !important;
     color: #333;
     box-shadow: 2px 2px 5px #333;
   }
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 25%;
 }
