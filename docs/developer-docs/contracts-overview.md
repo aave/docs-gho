@@ -1,6 +1,11 @@
-# Goerli
+---
+id: contracts-overview
+title: Deployed GHO Contracts
+---
 
-- **Purpose:** GHO Community testnet
+<details>
+    <summary>Goerli Deployment</summary>
+    - **Purpose:** GHO Community testnet
 - **Version:** https://github.com/aave/gho/pull/242/commits/c0999cb908d1037bb0515b88eb3cf15321cd3d60
 
 ## Addresses
@@ -91,7 +96,7 @@ Deployments
 │        UiIncentiveDataProviderV3        │ '0xF67B25977cEFf3563BF7F24A531D6CEAe6870a9d' │
 │          UiPoolDataProviderV3           │ '0x3De59b6901e7Ad0A19621D49C5b52cC9a4977e52' │
 │                GhoToken                 │ '0xcbE9771eD31e761b744D3cB9eF78A1f32DD99211' │
-│                GhoOracle                │ '0xDD714B0A68b9c81C6878688c5dc6238f8AC8eadD' ││                GhoOracle                │ '0xDD714B0A68b9c81C6878688c5dc6238f8AC8eadD' │
+│               GhoOracle                │ '0xDD714B0A68b9c81C6878688c5dc6238f8AC8eadD'  │
 │             UiGhoDataProvider           │ '0xE914D574975a1Cd273388035Db4413dda788c0E5' │
 │                GhoAToken                │ '0xbC249A1D91DbD54CEEfBBdC66e01FC515FA3980c' │
 │             StableDebtToken             │ '0x4461AC7d40EFBE8c9E37cC341dA380c57a9B2B78' │
@@ -121,3 +126,5 @@ Reserves
 AaveStakingHelper 0xe914d574975a1cd273388035db4413dda788c0e5
 StakeUIHelper 0x02119C949D827ca1FaFFDb17B14E6A9dEE04f410
 ```
+
+</details>

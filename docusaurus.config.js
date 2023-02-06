@@ -89,17 +89,7 @@ const config = {
           position: 'left',
           className: 'V3_active',
         },
-        {
-          to: '/gho-contracts/overview',
-          label: 'Contracts',
-          position: 'left',
-          className: 'V3_active',
-        },        {
-          to: '/GHO-FAQ',
-          label: 'FAQ',
-          position: 'left',
-          className: 'V3_active',
-        },        {
+     {
           to: '/resources',
           label: 'Resources',
           position: 'left',
@@ -128,7 +118,7 @@ const config = {
           position: 'right',
           className: 'persistent',
         },
-          {to: 'https://docs.aave.com', label: 'Aave Protocol Docs', position: 'right', className: 'persistent',},
+          {to: 'https://docs.aave.com', label: 'Aave Docs', position: 'right', className: 'persistent'},
           {
             href: 'https://app.aave.com',
             label: 'App',

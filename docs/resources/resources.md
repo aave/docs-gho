@@ -14,18 +14,6 @@ Below are the links to all audit reports and formal verification for GHO
 | OpenZeppelin  | 01-11-2021 | [OpenZeppelin_GHO](https://github.com/aave/aave-v3-core/blob/master/audits/01-11-2021_OpenZeppelin_AaveV3.pdf) |
 | Trail of Bits | 07-01-2022 | [SigmaPrime_GHO](https://github.com/aave/aave-v3-core/blob/master/audits/07-01-2022_TrailOfBits_AaveV3.pdf)    |
 
-## Technical Paper
-
-The technical paper for GHO can be found [here](https://github.com/aave/gho/blob/main/techpaper/GHO_Technical_Paper.pdf)
-
-## Community Resources
-
-### GHO Videos
-
-### Articles on GHO
-
-### Podcasts on GHO
-
 ## Glossary
 
 | Term                   | Definition                                                                                                                                                                                                                                                                                     |
