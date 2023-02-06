@@ -30,7 +30,7 @@ sidebar_position: 1
 
 ## Learn GHO
 
-GHO is minted from facilitators. At launch there are two proposed facilitators:
+GHO is an ERC20 token minted from contracts designated as facilitators. At launch there are two proposed facilitators:
 
 - Aave V3 Pool
 - Flashmint facilitator
@@ -42,7 +42,7 @@ Each facilitator has an individual cap for the amount of GHO available to be min
 
 ### Aave V3 Pool Facilitator
 
-Interacting with GHO via the Aave Pool facilitator is very similar to interacting with a typical reserve asset: the same `borrow` and `repay` functions are used. Below are the technical guides for all GHO actions along with their contract references.
+Interacting with GHO via the Aave Pool facilitator is very similar to interacting with a typical reserve asset. Below are the technical guides for all GHO actions along with their contract references.
 
 ### Minting
 
