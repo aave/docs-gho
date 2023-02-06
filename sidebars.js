@@ -47,6 +47,7 @@ const sidebars = {
         'concepts/fundamental-concepts/arbitrage',
       ]
     },
+    'concepts/GHO-faq',
   ],
   developers: [
     'developer-docs/overview',
@@ -103,11 +104,8 @@ const sidebars = {
         }
       ],
     },
-    ],
-    contracts: [
-    'gho-contracts/overview',
-    'gho-contracts/testnet-gho'
-  ],
+        'developer-docs/contracts-overview'
+    ]
 };
   // But you can create a sidebar manually
   /*
