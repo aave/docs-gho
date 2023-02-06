@@ -158,6 +158,50 @@ border: 1.5px solid  var(--gho-border) !important;
 
     }
 
+.links-list {
+  font-size: 18px;
+  list-style-type: square;
+  padding-left: 30px;
+}
 
+.clickable-button {
+  background-color: #403c48;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 5px #ccc;
 
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
 
+.clickable-button:hover {
+  background-color: #fff;
+  color: #3e3e3e;
+  box-shadow: 2px 2px 5px #835e8b;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .clickable-button {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .clickable-button:hover {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 2px 2px 5px #333;
+  }
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 25%;
+}

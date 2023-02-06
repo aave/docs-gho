@@ -130,11 +130,36 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Developers',
             items: [
               {
-                label: 'Home',
-                to: '/concepts/overview',
+                label: 'Developers Home',
+                to: '/developer-docs/overview',
+              },
+              {
+                label: 'Bug Bounty',
+                to: 'https://github.com/aave/bug-bounty',
+              },
+              {
+                label: 'GHO Deployed Contracts',
+                to: '/gho-contracts/overview',
+              },
+            ],
+          },
+          {
+            title: 'Github',
+            items: [
+              {
+                label: 'GHO Contracts',
+                href: 'https://github.com/aave/gho',
+              },
+              {
+                label: 'Aave Interface',
+                href: 'https://github.com/aave/interface',
+              },
+              {
+                label: 'Aave Utilities SDK',
+                href: 'https://github.com/aave/aave-utilities',
               },
             ],
           },
@@ -155,7 +180,7 @@ const config = {
               },
             ],
           },
-        ],
+        ]
       },
       prism: {
         theme: lightCodeTheme,
