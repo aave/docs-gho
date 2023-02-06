@@ -88,7 +88,7 @@ Updates the percentage fee. It is the percentage of the flash-minted amount that
 
 The `newFee` must be less than the [`MAX_FEE`](#max_fee).
 
-Emits the `[FeeUpdated](../flashMinter/interfacess/IGhoFlashMinter.md#feeupdated)` event.
+Emits the `[FeeUpdated](../flashMinter/interfaces/IGhoFlashMinter.md#feeupdated)` event.
 
 ### Input Parameters:
 
@@ -122,7 +122,7 @@ function maxFlashLoan(address token) external view override returns (uint256)
 
 The amount of currency available to be flashminted. GHO is the only supported token. Returns 0 if any other address other than GHO is passed.
 
-From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfacess/IERC3156FlashLender.sol#L20) interface.
+From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L20) interface.
 
 ### Input Parameters:
 
