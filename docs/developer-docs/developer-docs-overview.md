@@ -145,66 +145,60 @@ The [data](#data) section goes into detail with integrating most common live and
 
 ## Core Functions
 
+### setup
+
+
 ### mint
 
 Minting GHO occurs seamlessly through the `borrow` function of the Aave V3 Pool contract.
 
-TODO
 
 <details>
-    <summary>Solidity</summary>
-
-</details>
-
-<details>
-    <summary>JavaScript</summary>
+    <summary>Sample Code (Javascript)</summary>
     
+```js
+```
+
 </details>
 
 
 ### repay
 
-TODO
+
 
 <details>
-    <summary>Solidity</summary>
-
-</details>
-
-<details>
-    <summary>JavaScript</summary>
+    <summary>Sample Code (Javascript)</summary>
     
+```js
+```
+
 </details>
 
 ### flashmint
 
-TODO
+
 
 <details>
-    <summary>Solidity</summary>
-
-</details>
-
-<details>
-    <summary>JavaScript</summary>
+    <summary>Sample Code (Javascript)</summary>
     
+```js
+```
+
 </details>
+
+<br />
 
 ## Data
 
 ### Live Data
 
-Link to updated aave-utilities README + add sample code for UiGhoDataProvider expansion
-
+<details>
+    <summary>Sample Code (Javascript)</summary>
+    
+```js
 ```
 
-
-```
-Setup
-
-Fetch
-
-Format
+</details>
 
 ### Historical Data
 
@@ -213,9 +207,15 @@ Link to integrating aave protocol data guide + add sample code for GHO event que
 <details>
     <summary>Query Events RPC</summary>
 
+```js
+```
+
 </details>
 
 <details>
     <summary>Query Events Etherscan API</summary>
-    
+
+```js
+```
+
 </details>
