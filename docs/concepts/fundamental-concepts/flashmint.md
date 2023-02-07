@@ -14,7 +14,7 @@ Developers see here:
 
 In the current Aave pool, if an asset is supplied, a user is able to perform a Flash Loan transaction with this asset. As GHO is not supplied, performing a Flash Loan is not possible. There is no problem with this, however, the GHO reserve is configured to disable native flashloans.
 
-Therefore, FlashMinting has been introduced. FlashMinting provides the same functionality and follows the current [Flash Loan](https://docs.aave.com/developers/guides/flash-loans) standard (ERC3156) as in the Aave Protocol. Allowing users to access the liquidity of the flashmint facilitator for one transaction, as long as the amount taken plus the fee is returned or (if allowed) debt position is opened by the end of the transaction.
+Therefore, FlashMinting has been introduced. FlashMinting provides the same functionality and follows the current [Flash Loan](https://docs.aave.com/developers/guides/flash-loans) standard (ERC3156) as in the Aave Protocol. Allowing users to access the liquidity of the FlashMint Facilitator for one transaction, as long as the amount taken plus the fee is returned or (if allowed) debt position is opened by the end of the transaction.
 
 The [FlashMinter](../how-gho-works/gho-facilitators.md) Facilitator is an entity that enables FlashMinting. The FlashMinter has a GHO limit to mint and will be proposed as an initial Facilitator to the Aave DAO.
 

@@ -22,7 +22,7 @@ Hash of the `ERC3156FlashBorrower.onFlashLoan` that must be returned by the `onF
   uint256 public constant MAX_FEE = 10000
 ```
 
-The maximum percentage fee of the flashminted amount that the flashFee can be set to (in bps).
+The maximum percentage fee of the FlashMinted amount that the flashFee can be set to (in bps).
 
 ## Immutable State Variables
 
@@ -47,7 +47,7 @@ function flashLoan(
 ) external override returns (bool)
 ```
 
-Initiates a flashmint. GHO is the only supported token.
+Initiates a FlashMint. GHO is the only supported token.
 
 From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L37) interface.
 
@@ -59,7 +59,7 @@ Emits the [`FlashMint`](./interfaces/IGhoFlashMinter#FlashMint) event.
 | -------- | ----------------------- | ------------------------------------------------------------------------ |
 | receiver | `IERC3156FlashBorrower` | The receiver of the tokens in the loan, and the receiver of the callback |
 | token    | `address`               | The loan currency. Only GHO is supported                                 |
-| amount   | `uint256`               | The amount of tokens to flashmint                                        |
+| amount   | `uint256`               | The amount of tokens to FlashMint                                        |
 | data     | `bytes`                 | Arbitrary data structure, intended to contain user-defined parameters    |
 
 ### Return Values:
@@ -102,7 +102,7 @@ Emits the `[FeeUpdated](../flashMinter/interfaces/IGhoFlashMinter.md#feeupdated)
 function updateGhoTreasury(address newGhoTreasury) external override onlyPoolAdmin
 ```
 
-Updates the address of the GHO treasury, where flashmint fees are sent.
+Updates the address of the GHO treasury, where FlashMint fees are sent.
 
 Emits the [`GhoTreasuryUpdated`](../flashmint-facilitator/interfaces/IGhoFlashMinter#ghotreasuryupdated) event.
 
@@ -120,7 +120,7 @@ Emits the [`GhoTreasuryUpdated`](../flashmint-facilitator/interfaces/IGhoFlashMi
 function maxFlashLoan(address token) external view override returns (uint256)
 ```
 
-The amount of currency available to be flashminted. GHO is the only supported token. Returns 0 if any other address other than GHO is passed.
+The amount of currency available to be FlashMinted. GHO is the only supported token. Returns 0 if any other address other than GHO is passed.
 
 From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L20) interface.
 
@@ -134,7 +134,7 @@ From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-co
 
 | Type      | Description                                  |
 | --------- | -------------------------------------------- |
-| `uint256` | The amount of token that can be flashminted. |
+| `uint256` | The amount of token that can be FlashMinted. |
 
 ### flashFee
 
@@ -171,7 +171,7 @@ Returns the percentage of each flash mint taken as a fee.
 
 | Type      | Description                                                                                            |
 | --------- | ------------------------------------------------------------------------------------------------------ |
-| `uint256` | The percentage fee of the flashminted amount that needs to be repaid, on top of the principal (in bps) |
+| `uint256` | The percentage fee of the FlashMinted amount that needs to be repaid, on top of the principal (in bps) |
 
 ### getGhoTreasury
 
