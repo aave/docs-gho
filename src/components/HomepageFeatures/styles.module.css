@@ -50,6 +50,11 @@
 .cardWrapper:hover {
   top: -10px;
   box-shadow: 0px 24px 44px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .cardWrapper:hover {
+  background-color: rgba(98, 96, 108, 0.2);
 }
 
 .featuresContainer {

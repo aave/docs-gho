@@ -162,7 +162,7 @@
 
   /* CARD*/
 
-  --ifm-card-background-color: rgba(98, 96, 108, 0.1)!important;
+  --ifm-card-background-color: rgba(98, 96, 108, 0.1);
   --ifm-card-footer-color: #9C93B2;
 
   /* NAVBAR */
