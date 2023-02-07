@@ -122,7 +122,7 @@ const config = {
         },
           {to: 'https://docs.aave.com', label: 'Aave Docs', position: 'right', className: 'persistent'},
           {
-            href: 'https://app.aave.com',
+            href: 'https://gho.aave.com',
             label: 'App',
             position: 'right',
           },

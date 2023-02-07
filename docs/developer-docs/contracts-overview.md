@@ -3,9 +3,8 @@ id: contracts-overview
 title: Deployed GHO Contracts
 ---
 
-<details>
-    <summary>Goerli Deployment - GHO Community Testnet</summary>
-    Version: https://github.com/aave/gho/pull/242/commits/c0999cb908d1037bb0515b88eb3cf15321cd3d60
+**Goerli Deployment - GHO Community Testnet**
+Version: https://github.com/aave/gho/pull/242/commits/c0999cb908d1037bb0515b88eb3cf15321cd3d60
 
 ## Addresses
 
@@ -125,5 +124,3 @@ Reserves
 AaveStakingHelper 0xe914d574975a1cd273388035db4413dda788c0e5
 StakeUIHelper 0x02119C949D827ca1FaFFDb17B14E6A9dEE04f410
 ```
-
-</details>
