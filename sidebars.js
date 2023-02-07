@@ -47,7 +47,7 @@ const sidebars = {
         'concepts/fundamental-concepts/arbitrage',
       ]
     },
-    'concepts/GHO-faq',
+    'concepts/faq',
   ],
   developers: [
     'developer-docs/overview',
