@@ -4,7 +4,7 @@ title: Developer Docs
 sidebar_position: 1
 ---
 
-<img src="https://aave.com/governanceGhosts.svg" width="100%" />
+![Ghosts](../assets/governanceGhosts.svg)
 
 <h1 className="text--center">GHO is for builders</h1>
 
