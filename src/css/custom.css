@@ -269,7 +269,6 @@ border: 1.5px solid  var(--gho-border) !important;
   font-size: 28px;
 }
 
-.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module .container {
+.container {
   max-width: 100%!important;
-  width: 100%;
 }
