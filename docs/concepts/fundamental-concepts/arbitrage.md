@@ -52,6 +52,6 @@ For example:
 
 This should increase the demand for GHO, and therefore decrease the supply of GHO on the market, while increasing the price.
 
-## Flashminting
+## FlashMinting
 
 [FlashMinting](../fundamental-concepts/flashmint.md) provides the same functionality as the current flashloan standard and can be used in the same way flashloans are regularly used for arbitrage within the Aave protocol. Therefore, FlashMinting can be used for arbitrage between assets, without needing to have the principal amount (borrow position) to execute the arbitrage.
