@@ -55,22 +55,22 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
   1. [Mint](#mint)
   2. [Repay](#repay)
   3. [Liquidate](#liquidate)
-- b. [Flashmint Facilitator](#flashmint-facilitator)
+- b. [FlashMint Facilitator](#flashmint-facilitator)
 - c. [Discount Dynamics](#discount-dynamics)
 
-GHO is an ERC20 token minted from contracts designated as facilitators. At launch there are two proposed facilitators:
+GHO is an ERC20 token minted from contracts designated as Facilitators. At launch there are two proposed Facilitators:
 
 - Aave Pool
-- Flashmint
+- FlashMint
 
 ![GHO_Architecture Diagram](../assets/GHO_Architecture_dark.png#gh-dark-mode-only)
 ![GHO_Architecture Diagram](../assets/GHO_Architecture.png#gh-light-mode-only)
 
-Each facilitator has an individual cap for the amount of GHO available to be minted.
+Each Facilitator has an individual cap for the amount of GHO available to be minted.
 
 ### Aave Pool Facilitator
 
-Interacting with GHO via the Aave Pool facilitator is very similar to interacting with a typical reserve asset. Below are the technical guides for all GHO actions along with their contract references.
+Interacting with GHO via the Aave Pool Facilitator is very similar to interacting with a typical reserve asset. Below are the technical guides for all GHO actions along with their contract references.
 
 ### Minting
 
@@ -82,7 +82,7 @@ GHO can be added to an eMode category, which modifies the collateral factor and 
 `reserve.eModeCategoryId` : id of eMode category reserve belongs to
 `user.userEModeCategoryId`: user's active eMode category
 
-Since GHO is created and not borrowed from suppliers, GHO is not subject to restrictions available liquidity, and instead the facilitator cap and collateralization requirements define the limits to which GHO can be minted as calculated below.
+Since GHO is created and not borrowed from suppliers, GHO is not subject to restrictions available liquidity, and instead the Facilitator cap and collateralization requirements define the limits to which GHO can be minted as calculated below.
 
 `availableFacilitatorCap = ghoReserveData.aaveFacilitatorButcketMaxCapacity - ghoReserveData.aaveFacilitatorBucketLevel`
 
@@ -100,13 +100,13 @@ The `liqidationCall` repays up to 100% of the GHO borrow position in exchange fo
 
 See the developers [liquidation guide](https://docs.aave.com/developers/guides/liquidations) for more information.
 
-### Flashmint Facilitator
+### FlashMint Facilitator
 
-Since GHO is not borrowed like a typical Aave reserve, a separate facilitator is used in place to replicate the `flashloan` functionality of the Aave Pool.
+Since GHO is not borrowed like a typical Aave reserve, a separate Facilitator is used in place to replicate the `flashloan` functionality of the Aave Pool.
 
-The flashmint facilitator has a separate minting cap than the Aave Pool. Since all flashmint transactions are returned in a single transaction, no GHO is ever minted against this facilitator and the cap is applied to each transaction.
+The FlashMint Facilitator has a separate minting cap than the Aave Pool. Since all FlashMint transactions are returned in a single transaction, no GHO is ever minted against this Facilitator and the cap is applied to each transaction.
 
-Flashmint is useful for a variety of applications such as liquidations, debt swap, peg arbitrage. More details on this facilitator can be found [here](./flashmint-facilitator/GhoFlashMinter.md).
+FlashMint is useful for a variety of applications such as liquidations, debt swap, peg arbitrage. More details on this Facilitator can be found [here](./flashmint-facilitator/GhoFlashMinter.md).
 
 ### Discount Dynamics
 
@@ -134,7 +134,7 @@ This guide explains the best practices for integrating GHO into a variety of com
 2.  [Core Functions](#core-functions)
     - a. [mint](#mint)
     - b. [repay](#repay)
-    - c. [flashmint](#flashmint)
+    - c. [FlashMint](#flashmint)
 3.  [Data](#data)
     - a. [Live Data](#live-data)
     - b. [Historical Data](#historical-data)
@@ -189,7 +189,7 @@ Minting GHO occurs seamlessly through the `borrow` function of the Aave V3 Pool 
 
 </details>
 
-### flashmint
+### FlashMint
 
 <details>
     <summary>Sample Code (Javascript)</summary>
