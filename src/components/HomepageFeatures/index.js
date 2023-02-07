@@ -31,7 +31,7 @@ const featureList = [
   },
   {
     title: 'FAQ',
-    link: '/GHO-FAQ',
+    link: '/concepts/faq',
     imageSrc: bubbleImgSrc,
     imageWrapperStyle: styles.bubbleImgWrapper,
     description: (
