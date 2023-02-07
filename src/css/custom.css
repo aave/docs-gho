@@ -162,7 +162,7 @@
 
   /* NAVBAR */
 
-  --ifm-navbar-background-color:rgba(32, 31, 45, 0.2);
+  --ifm-navbar-background-color:#2A2837;
 
   /* HIGHLIGHTER */
 
@@ -213,11 +213,6 @@ border: 1.5px solid  var(--gho-border) !important;
   border-color: var(--ifm-color-primary)!important;
   box-shadow: 0 8px 12px 0 rgb(0 0 0 / 10%)!important;
 }
-
-.navbar {
-    backdrop-filter: blur(14px);
-
-    }
 
 .links-list {
   font-size: 18px;
