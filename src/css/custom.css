@@ -260,3 +260,7 @@ border: 1.5px solid  var(--gho-border) !important;
   height: 304px;
   max-width: 344px;
 }
+
+.builders-title {
+  font-size: 28px;
+}

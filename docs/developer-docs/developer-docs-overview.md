@@ -10,7 +10,7 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
   <img className="ghost-image" src={AaveGhostSrc} alt="aave ghost" />
 </div>
 
-## GHO is for builders
+<h1 className="builders-title">GHO is for builders</h1>
 
 <div className="button-group">
 <a href="#learn-gho">
@@ -31,11 +31,10 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
     GHO contract source
   </a>
 - <a
-    className="links-list"
-    href="https://docs.aave.com/developers/deployed-contracts/deployed-contracts"
-  >
-    Aave protocol deployed contracts
-  </a>
+  className="links-list"
+  href="https://docs.aave.com/developers/deployed-contracts/deployed-contracts"
+  > Aave protocol deployed contracts
+  > </a>
 - <a className="links-list" href="https://github.com/aave/aave-v3-core">
     Aave V3 contracts
   </a>
@@ -43,11 +42,10 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
     Javascript SDK
   </a>
 - <a
-    className="links-list"
-    href="https://github.com/bgd-labs/aave-address-book"
-  >
-    Solidity + Javascript Address Registry
-  </a>
+  className="links-list"
+  href="https://github.com/bgd-labs/aave-address-book"
+  > Solidity + Javascript Address Registry
+  > </a>
 
 ## Learn GHO
 
