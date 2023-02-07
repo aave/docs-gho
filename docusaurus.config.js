@@ -142,7 +142,7 @@ const config = {
               },
               {
                 label: 'GHO Deployed Contracts',
-                to: '/gho-contracts/overview',
+                to: 'developer-docs/contracts-overview',
               },
             ],
           },
