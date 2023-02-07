@@ -174,11 +174,6 @@
   --docsearch-muted-color: rgba(201, 179, 249, 0.5)!important;
 }
 
-article {
-  max-width: 700px;
-
-}
-
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
   font-weight: bold ;
@@ -186,7 +181,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-weight:400;
-  
 }
 
 [data-theme='light'] img[src$='#gh-dark-mode-only'],
@@ -263,4 +257,9 @@ border: 1.5px solid  var(--gho-border) !important;
 
 .builders-title {
   font-size: 28px;
+}
+
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module .container {
+  max-width: 100%!important;
+  width: 100%;
 }
