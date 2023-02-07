@@ -136,6 +136,11 @@
   /* SEARCH */
 
   --docsearch-muted-color: rgba(57, 55, 90, 0.5)!important;
+    
+  /* LINKS */
+
+  --ifm-link-color: #7766DD
+      
 }
 
 /* VARIABLES FOR DARK THEME */
@@ -172,6 +177,11 @@
 
   --docsearch-searchbox-background: rgba(201, 179, 249, 0.05)!important;
   --docsearch-muted-color: rgba(201, 179, 249, 0.5)!important;
+    
+  /* LINKS */
+
+  --ifm-link-color: #8C7CF1
+      
 }
 
 article {
