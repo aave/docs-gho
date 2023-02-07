@@ -1,48 +1,57 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import ghostImgSrc from '@site/static/img/ghost.png';
+import bubbleImgSrc from '@site/static/img/question_bubble.png';
+import toolsImgSrc from '@site/static/img/tools.png';
 
-const FeatureList = [
+const featureList = [
   {
-    title: 'Developers',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'DEVELOPERS',
+    imageSrc: toolsImgSrc,
+    link: '/developer-docs/overview',
+    imageWrapperStyle: styles.toolsImgWrapper,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Build with GHO
       </>
     ),
   },
   {
-    title: 'What is GHO',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'WHAT IS GHO?',
+    link: '/concepts/overview',
+    imageSrc: ghostImgSrc,
+    imageWrapperStyle: styles.ghostImgWrapper,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Learn the basics
       </>
     ),
   },
   {
-    title: 'Resources',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'FAQ',
+    link: '/GHO-FAQ',
+    imageSrc: bubbleImgSrc,
+    imageWrapperStyle: styles.bubbleImgWrapper,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Get answers
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({imageSrc, title, description, imageWrapperStyle, link, navigate}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div className={clsx('card', styles.cardWrapper)} onClick={() => navigate.push(link)}>
+      <div className="card__header">
+        <span className={clsx('badge', styles.cardBadge)}>{title}</span>
       </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+      <div className={clsx(imageWrapperStyle, styles.cardImageWrapper)}>
+        <img src={imageSrc} />
+      </div>
+      <div className={clsx('card__footer', styles.cardFooter)}>
         <p>{description}</p>
       </div>
     </div>
@@ -50,12 +59,13 @@ function Feature({Svg, title, description}) {
 }
 
 export default function HomepageFeatures() {
+  const navigate = useHistory();
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+        <div className={clsx('row', styles.featuresContainer)}>
+          {featureList.map((props) => (
+            <Feature key={props.title} {...props} navigate={navigate} />
           ))}
         </div>
       </div>

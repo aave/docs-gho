@@ -187,6 +187,11 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['solidity']
       },
+      algolia: {
+        appId: 'ALGOLIA_APP_ID',
+        apiKey: 'ALGOLIA_SEARCH_API_KEY',
+        indexName: 'ALGOLIA_INDEX_NAME',
+      },
     }),
 };
 
