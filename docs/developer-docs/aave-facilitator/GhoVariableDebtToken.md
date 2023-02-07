@@ -12,7 +12,7 @@ A number of [operations](#not-supported-methods), such as transfer and approve, 
 
 The `GhoVariableDebtToken` contract inherits the [`DebtTokenBase`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/DebtTokenBase.sol), [`ScaledBalanceTokenBase`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/ScaledBalanceTokenBase.sol) contracts, and the [`IGhoVariableDebtToken`](./interfaces/IGhoVariableDebtToken.md) interface.
 
-This page shows the public [constant state variables]#constant-state-variables), [`structs`](#structs), external [`write methods`](#write-methods), and the [`not supported methods`](#not-supported-methods) within the `GhoVariableDebtToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoVariableDebtToken.sol).
+This page shows the public [`constant state variables`](#constant-state-variables), [`structs`](#structs), external [`write methods`](#write-methods), and the [`not supported methods`](#not-supported-methods) within the `GhoVariableDebtToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoVariableDebtToken.sol).
 
 ## Constant State Variables
 

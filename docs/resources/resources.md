@@ -8,11 +8,12 @@ Below are the links to all audit reports and formal verification for GHO
 
 ## Audit Round 1
 
-| Auditor       | Date       | Report                                                                                                         |
-| ------------- | ---------- | -------------------------------------------------------------------------------------------------------------- |
-| ABDK          | 27-01-2022 | [ABDK_GHO](https://github.com/aave/aave-v3-core/blob/master/audits/27-01-2022_ABDK_AaveV3.pdf)                 |
-| OpenZeppelin  | 01-11-2021 | [OpenZeppelin_GHO](https://github.com/aave/aave-v3-core/blob/master/audits/01-11-2021_OpenZeppelin_AaveV3.pdf) |
-| Trail of Bits | 07-01-2022 | [SigmaPrime_GHO](https://github.com/aave/aave-v3-core/blob/master/audits/07-01-2022_TrailOfBits_AaveV3.pdf)    |
+| Auditor         | Date       | Report                                                                                             |
+| --------------- | ---------- | -------------------------------------------------------------------------------------------------- |
+| ABDK            | 02-02-2023 | [ABDK_GHO](https://github.com/aave/gho/blob/main/audits/02-02-2023-ABDK.pdf)                       |
+| OpenZeppelin-v2 | 10-11-2022 | [OpenZeppelin_GHO_V2](https://github.com/aave/gho/blob/main/audits/10-11-2022-Openzeppelin-v2.pdf) |
+| OpenZeppelin-v1 | 12-08-2022 | [OpenZeppelin_GHO_V1](https://github.com/aave/gho/blob/main/audits/12-08-2022-Openzeppelin-v1.pdf) |
+| Sigma Prime     | 24-12-2022 | [SigmaPrime_GHO](https://github.com/aave/gho/blob/main/audits/24-12-2022-Sigma-Prime.pdf)          |
 
 ## Glossary
 

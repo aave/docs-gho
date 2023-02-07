@@ -21,7 +21,7 @@ sidebar_position: 1
 
 ### Quick Links
 
-- <a className="links-list" href="/gho-contracts/overview">GHO deployed contracts</a>
+- <a className="links-list" href="developer-docs/contracts-overview">GHO deployed contracts</a>
 - <a className="links-list" href="https://github.com/aave/gho">GHO contract source</a>
 - <a className="links-list" href="https://docs.aave.com/developers/deployed-contracts/deployed-contracts">Aave protocol deployed contracts</a>
 - <a className="links-list" href="https://github.com/aave/aave-v3-core">Aave V3 contracts</a>
@@ -31,9 +31,9 @@ sidebar_position: 1
 ## Learn GHO
 
 - a. [Aave Pool Facilitator](#aave-pool-facilitator)
-    1. [Mint](#mint)
-    2. [Repay](#repay)
-    3. [Liquidate](#liquidate)
+  1. [Mint](#mint)
+  2. [Repay](#repay)
+  3. [Liquidate](#liquidate)
 - b. [Flashmint Facilitator](#flashmint-facilitator)
 - c. [Discount Dynamics](#discount-dynamics)
 
@@ -53,8 +53,8 @@ Interacting with GHO via the Aave Pool facilitator is very similar to interactin
 
 ### Minting
 
-Minting occurs through the `borrow` function of the Pool where GHO is listed, so to mint GHO the process is identical to borrowing any other reserve. In order to mint, an address must have sufficient collateral which is performed by approving then calling `supply` on the Aave Pool with an eligible collateral asset. 
-Once an address it is able to borrow up to a maximum collateral factor determined by it's colateral asset composition. 
+Minting occurs through the `borrow` function of the Pool where GHO is listed, so to mint GHO the process is identical to borrowing any other reserve. In order to mint, an address must have sufficient collateral which is performed by approving then calling `supply` on the Aave Pool with an eligible collateral asset.
+Once an address it is able to borrow up to a maximum collateral factor determined by it's colateral asset composition.
 
 GHO can be added to an eMode category, which modifies the collateral factor and liquidation treshold. This can be queried with the following fields from the [integrating gho](#integrate-gho) section.
 
@@ -73,9 +73,9 @@ What is different about GHO is the calculation of accrued interest. See the [dis
 
 ### Liquidation
 
-When an address has a GHO borrow position, they are eligible to be liquidated under the same conditions as any other collateralized address. If the health factor of a GHO borrow falls below one, which occurs when the sum of borrow value exceeds to weighted average of liquidation thresholds of collateral assets, then any address is eligible to make a `liquidationCall` on the Pool contract. 
+When an address has a GHO borrow position, they are eligible to be liquidated under the same conditions as any other collateralized address. If the health factor of a GHO borrow falls below one, which occurs when the sum of borrow value exceeds to weighted average of liquidation thresholds of collateral assets, then any address is eligible to make a `liquidationCall` on the Pool contract.
 
-The `liqidationCall` repays up to 100% of the GHO borrow position in exchange for an equivalent USD valuation of collateral plus a liquidation bonus. 
+The `liqidationCall` repays up to 100% of the GHO borrow position in exchange for an equivalent USD valuation of collateral plus a liquidation bonus.
 
 See the developers [liquidation guide](https://docs.aave.com/developers/guides/liquidations) for more information.
 
@@ -89,13 +89,12 @@ Flashmint is useful for a variety of applications such as liquidations, debt swa
 
 ### Discount Dynamics
 
-The [discount rate strategy](concepts/fundamental-concepts/gho-disckkount-strategy) contract defines the parameters of a user's discount. The strategy can updated by governance and the key parameters are a maximum discount percent (such as 20%), a discount token (such as stkAAVE), and an amount of gho borrowed at a discounted percent per discount token owned (such as 100 GHO per 1 stkAAVE).
+The [discount rate strategy](concepts/fundamental-concepts/gho-discount-strategy) contract defines the parameters of a user's discount. The strategy can updated by governance and the key parameters are a maximum discount percent (such as 20%), a discount token (such as stkAAVE), and an amount of gho borrowed at a discounted percent per discount token owned (such as 100 GHO per 1 stkAAVE).
 
 The discount is not applied continuously as a GHO borrower accrues interest. Interest is compounded at the base borrow rate and the discount is applied when the borrow balance is queried by calling `balanceOf` directly or from an internal call such as `repay` or `liquidate`.
 
 ![GHO Discount Diagram](../assets/RepayAndLiquidateDark.png#gh-dark-mode-only)
 ![GHO DIscount Diagram](../assets/RepayAndLiquidate.png#gh-light-mode-only)
-
 
 ## Integrate GHO
 
@@ -127,7 +126,7 @@ GHO can be integrated into virtually any application because all data and functi
 
 ### Smart Contracts
 
-Checkout the [GHO contracts hub](gho-contracts/overview) to get started with contract integrations.
+Checkout the [GHO contracts hub](./contracts-overview.md) to get started with contract integrations.
 
 ### Frontend
 
@@ -147,11 +146,9 @@ The [data](#data) section goes into detail with integrating most common live and
 
 ### setup
 
-
 ### mint
 
 Minting GHO occurs seamlessly through the `borrow` function of the Aave V3 Pool contract.
-
 
 <details>
     <summary>Sample Code (Javascript)</summary>
@@ -161,10 +158,7 @@ Minting GHO occurs seamlessly through the `borrow` function of the Aave V3 Pool 
 
 </details>
 
-
 ### repay
-
-
 
 <details>
     <summary>Sample Code (Javascript)</summary>
@@ -175,8 +169,6 @@ Minting GHO occurs seamlessly through the `borrow` function of the Aave V3 Pool 
 </details>
 
 ### flashmint
-
-
 
 <details>
     <summary>Sample Code (Javascript)</summary>
@@ -208,6 +200,7 @@ Link to integrating aave protocol data guide + add sample code for GHO event que
     <summary>Query Events RPC</summary>
 
 ```js
+
 ```
 
 </details>
@@ -216,6 +209,7 @@ Link to integrating aave protocol data guide + add sample code for GHO event que
     <summary>Query Events Etherscan API</summary>
 
 ```js
+
 ```
 
 </details>
