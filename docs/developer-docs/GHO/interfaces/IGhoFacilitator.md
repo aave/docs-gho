@@ -62,7 +62,7 @@ The GHO Treasury is where revenue fees are sent to. Update carefully.
 
 :::
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name           | Type      | Description                     |
 | -------------- | --------- | ------------------------------- |
@@ -76,7 +76,7 @@ function getGhoTreasury() external view returns (address)
 
 Returns the address of the GHO Treasury.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                              |
 | --------- | ---------------------------------------- |

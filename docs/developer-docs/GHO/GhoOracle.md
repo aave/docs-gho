@@ -28,7 +28,7 @@ Returns the [price](#ghoprice) of a unit of GHO (USD denominated).
 
 The GHO price is fixed at 1 USD.
 
-### Return Values:
+#### Return Values:
 
 | Type     | Description                                  |
 | -------- | -------------------------------------------- |
@@ -42,7 +42,7 @@ function decimals() external pure returns (uint8)
 
 Returns the number of decimals the price is formatted with, 8.
 
-### Return Values:
+#### Return Values:
 
 | Type    | Description               |
 | ------- | ------------------------- |

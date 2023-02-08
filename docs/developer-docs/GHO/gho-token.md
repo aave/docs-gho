@@ -19,7 +19,7 @@ Only Facilitators with enough bucket capacity available can mint. The bucket lev
 Emits the [`FacilitatorBucketLevelUpdated`](./interfaces/IGhoToken.md#facilitatorbucketlevelupdated) event.
 To track all Facilitator activity, follow this event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name    | Type      | Description                          |
 | ------- | --------- | ------------------------------------ |
@@ -40,7 +40,7 @@ Only active Facilitators (capacity > 0) can burn. The bucket level decreases upo
 
 Emits the [`FacilitatorBucketLevelUpdated`](./interfaces/IGhoToken.md#facilitatorbucketlevelupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description        |
 | ------ | --------- | ------------------ |
@@ -61,7 +61,7 @@ The Facilitator must not have already been added and must have a [`label`](./int
 
 Emits the [`FacilitatorAdded`](./interfaces/IGhoToken.md#facilitatoradded) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type          | Description                            |
 | ------------------ | ------------- | -------------------------------------- |
@@ -88,7 +88,7 @@ The Facilitator must exist as a current Facilitator, and must have a bucket [`le
 
 Emits the [`FacilitatorRemoved`](./interfaces/IGhoToken.md#facilitator) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type      | Description                               |
 | ------------------ | --------- | ----------------------------------------- |
@@ -106,7 +106,7 @@ The owner of the contract is able to increase/decrease the bucket capacity for t
 
 Emits the [`FacilitatorBucketCapacityUpdated`](./interfaces/IGhoToken.md#facilitatorbucketcapacityupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
@@ -123,13 +123,13 @@ function getFacilitator(address facilitator) external view returns (Facilitator 
 
 Returns the `facilitator` data.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
 | facilitator | `address` | The address of the Facilitator |
 
-### Return Values:
+#### Return Values:
 
 | Type        | Description                   |
 | ----------- | ----------------------------- |
@@ -151,13 +151,13 @@ function getFacilitatorBucket(address facilitator) external view returns (uint25
 
 Returns the `facilitator` bucket configuration.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
 | facilitator | `address` | The address of the Facilitator |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                              |
 | --------- | ---------------------------------------- |
@@ -172,7 +172,7 @@ function getFacilitatorsList() external view returns (address[] memory)
 
 Returns the list of addresses of the active Facilitators.
 
-### Return Values:
+#### Return Values:
 
 | Type        | Description                            |
 | ----------- | -------------------------------------- |

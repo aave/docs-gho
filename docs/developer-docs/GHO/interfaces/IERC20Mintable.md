@@ -14,7 +14,7 @@ function mint(address account, uint256 amount) external
 
 Creates an `amount` of new tokens for the `account` address.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name    | Type      | Description                      |
 | ------- | --------- | -------------------------------- |

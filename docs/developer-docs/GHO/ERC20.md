@@ -58,14 +58,14 @@ function approve(address spender, uint256 amount) public virtual returns (bool)
 
 Allows the `spender` to withdraw from the account up to the `amount`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name    | Type      | Description                                           |
 | ------- | --------- | ----------------------------------------------------- |
 | spender | `address` | The address of the user to approve to withdraw tokens |
 | amount  | `uint256` | The amount of tokens the spender can withdraw         |
 
-### Return Values:
+#### Return Values:
 
 | Type   | Description                                                     |
 | ------ | --------------------------------------------------------------- |
@@ -79,14 +79,14 @@ function transfer(address to, uint256 amount) public virtual returns (bool)
 
 Transfers the `amount` of tokens to the `to` address.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                       |
 | ------ | --------- | --------------------------------- |
 | to     | `address` | The address to send the tokens to |
 | amount | `unit256` | The amount of tokens to transfer  |
 
-### Return Values:
+#### Return Values:
 
 | Type   | Description                                                     |
 | ------ | --------------------------------------------------------------- |
@@ -104,7 +104,7 @@ function transferFrom(
 
 Transfers the `amount` of tokens from the `from` address to the `to` address.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                             |
 | ------ | --------- | --------------------------------------- |
@@ -112,7 +112,7 @@ Transfers the `amount` of tokens from the `from` address to the `to` address.
 | to     | `to`      | The address to transfer the tokens to   |
 | amount | `uint256` | The amount of tokens to transfer        |
 
-### Return Values:
+#### Return Values:
 
 | Type   | Description                                                     |
 | ------ | --------------------------------------------------------------- |
@@ -136,7 +136,7 @@ function permit(
 
 Allows a user to permit another account (or contract) to use their funds using a signed message. This enables gas-less transactions and single approval/transfer transactions. Allow passing a signed message to approve spending.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name     | Type      | Description                                                       |
 | -------- | --------- | ----------------------------------------------------------------- |
@@ -156,7 +156,7 @@ function DOMAIN_SEPARATOR() public view virtual returns (bytes32)
 
 Gets the domain separator for the token. Returns the cached value if the chainId matches cache, otherwise recomputes separator.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                        |
 | --------- | -------------------------------------------------- |

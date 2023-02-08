@@ -14,7 +14,7 @@ function burn(uint256 amount) external
 
 Destroys an `amount` tokens from the caller.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                     |
 | ------ | --------- | ------------------------------- |

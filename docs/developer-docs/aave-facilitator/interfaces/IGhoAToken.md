@@ -16,7 +16,7 @@ event VariableDebtTokenSet(address indexed variableDebtToken)
 
 Emitted when a reference to the GHO [variable debt token is set](../GhoAToken.md#setvariabledebttoken).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name              | Type      | Description                                        |
 | ----------------- | --------- | -------------------------------------------------- |
@@ -32,7 +32,7 @@ function setVariableDebtToken(address GhoVariableDebtToken) external
 
 Sets a reference to the GHO variable debt token.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type      | Description                                        |
 | -------------------- | --------- | -------------------------------------------------- |
@@ -48,7 +48,7 @@ function getVariableDebtToken() external view returns (address)
 
 Returns the `address` of the GHO variable debt token.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                        |
 | --------- | -------------------------------------------------- |

@@ -17,14 +17,14 @@ function calculateDiscountRate(uint256 debtBalance, uint256 discountTokenBalance
 
 Calculates the discount rate depending on the debt and discount token balances.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type      | Description                            |
 | -------------------- | --------- | -------------------------------------- |
 | debtBalance          | `uint256` | The debt balance of the user           |
 | discountTokenBalance | `uint256` | The discount token balance of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                             |
 | --------- | ----------------------------------------------------------------------- |

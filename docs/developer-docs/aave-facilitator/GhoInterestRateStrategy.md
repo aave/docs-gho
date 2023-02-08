@@ -32,13 +32,13 @@ As the variable rate is fixed for the current interest rate strategy, parameters
 
 :::
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name     | Type                                                                                                   | Description                                       |
 | -------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
 | `params` | https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/libraries/types/DataTypes.sol#L247 | The parameters needed to calculate interest rates |
 
-### Return Values:
+#### Return Values:
 
 | Name               | Type    | Description                                                                                            |
 | ------------------ | ------- | ------------------------------------------------------------------------------------------------------ |

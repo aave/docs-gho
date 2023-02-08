@@ -76,14 +76,14 @@ The `debtBalance` and `discountTokenBalance` must be above the [`MIN_DEBT_TOKEN_
 
 Please see the [Discount Rate](../../concepts/fundamental-concepts/gho-discount-strategy) page for more information and examples of the discount rate implementation.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type      | Description                                      |
 | -------------------- | --------- | ------------------------------------------------ |
 | debtBalance          | `uint256` | The debt balance of the user                     |
 | discountTokenBalance | `uint256` | The discount token (stkAAVE) balance of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                                |
 | --------- | -------------------------------------------------------------------------- |

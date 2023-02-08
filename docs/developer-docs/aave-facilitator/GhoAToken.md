@@ -1,6 +1,6 @@
 # GhoAToken
 
-The implementation of the interest bearing token for the Aave protocol.
+The implementation of the interest bearing token for the Aave Protocol.
 
 :::info
 
@@ -50,7 +50,7 @@ Initializes the `aToken`.
 
 Emits the [`Initialized`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IInitializableAToken.sol#L24) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type                        | Description                                                         |
 | -------------------- | --------------------------- | ------------------------------------------------------------------- |
@@ -73,7 +73,7 @@ Transfers the underlying asset to `target`.
 
 It performs a mint of GHO on behalf of the `target`. Used by the Pool to transfer assets in `borrow()`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                           |
 | ------ | --------- | ------------------------------------- |
@@ -94,7 +94,7 @@ Handles the underlying received by the aToken after the transfer has been comple
 
 This function transfers the debt interest repaid by a user to the GHO treasury. It burns all the repaid GHO.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name       | Type      | Description                                                      |
 | ---------- | --------- | ---------------------------------------------------------------- |
@@ -126,7 +126,7 @@ Rescues and transfers the tokens locked in this contract to the recipient.
 
 The underlying asset, GHO, cannot be rescued.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                     |
 | ------ | --------- | ------------------------------- |
@@ -144,7 +144,7 @@ Sets a reference to the GHO variable debt token. The variable debt token must no
 
 Emits the [`VariableDebtTokenSet`](./interfaces/IGhoAToken.md#variabledebttokenset) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type       | Description                               |
 | -------------------- | ---------- | ----------------------------------------- |
@@ -160,7 +160,7 @@ Updates the address of the GHO treasury, where interest earned by the protocol i
 
 Emits the [`GhoTreasuryUpdated`](#ghotreasuryupdated)` event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name           | Type      | Description                    |
 | -------------- | --------- | ------------------------------ |
@@ -185,13 +185,13 @@ Returns zero at `GhoAToken`.
 
 Standard [`ERC20`](https://github.com/aave/aave-v3-core/blob/master/contracts/dependencies/openzeppelin/contracts/IERC20.sol#L16) method.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
 | user | `address` | The address of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description |
 | --------- | ----------- |
@@ -207,7 +207,7 @@ Returns zero at `GhoAToken`.
 
 Standard [`ERC20`](https://github.com/aave/aave-v3-core/blob/master/contracts/dependencies/openzeppelin/contracts/IERC20.sol#L11) method.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description |
 | --------- | ----------- |
@@ -221,7 +221,7 @@ function RESERVE_TREASURY_ADDRESS() external view override returns (address)
 
 Returns the `address` of the Aave treasury.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                      |
 | --------- | -------------------------------- |
@@ -235,7 +235,7 @@ function UNDERLYING_ASSET_ADDRESS() external view override returns (address)
 
 Returns the `address` of GHO as it is the underlying asset of this aToken.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                              |
 | --------- | ---------------------------------------- |
@@ -253,7 +253,7 @@ Gets the domain separator for the token. Return cached value if chainId matches 
 
 See [`EIP712Base.DOMAIN_SEPARATOR()`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/EIP712Base.sol#L32) for more detailed documentation.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                            |
 | --------- | ------------------------------------------------------ |
@@ -271,13 +271,13 @@ Returns the nonce of the `owner`.
 
 See [`EIP712Base.nonces()`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/EIP712Base.sol#L44) for more detailed documentation.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name  | Type      | Description              |
 | ----- | --------- | ------------------------ |
 | owner | `address` | The address of the owner |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description            |
 | --------- | ---------------------- |
@@ -291,7 +291,7 @@ function getVariableDebtToken() external view override returns (address)
 
 Returns the `address` of the GHO variable debt token.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                        |
 | --------- | -------------------------------------------------- |
@@ -305,7 +305,7 @@ function getGhoTreasury() external view override returns (address) {
 
 Returns the `address` of the GHO treasury.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                             |
 | --------- | --------------------------------------- |
