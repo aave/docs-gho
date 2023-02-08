@@ -2,7 +2,7 @@
 
 Defines the basic interface of the [`GhoDiscountRateStrategy`](../GhoDiscountRateStrategy).
 
-This page shows the [`view methods`](#view-methods) within the `IGhoDiscountRateStrategy` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoDiscountRateStrategy.sol).
+This page shows the [view](#view-methods) methods within the `IGhoDiscountRateStrategy` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoDiscountRateStrategy.sol).
 
 ## View Methods
 

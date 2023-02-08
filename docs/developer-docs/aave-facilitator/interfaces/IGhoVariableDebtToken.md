@@ -4,7 +4,7 @@ Defines the basic interface of the [`GhoVariableDebtToken`](../GhoVariableDebtTo
 
 The `IGhoVariableDebtToken` interface inherits the [`IVariableDebtToken`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IVariableDebtToken.sol) interface.
 
-This page shows the [`events`](#events), [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoVariableDebtToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoVariableDebtToken.sol).
+This page shows the [events](#events), [write](#write-methods) and [view](#view-methods) methods within the `IGhoVariableDebtToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoVariableDebtToken.sol).
 
 ## Events
 
@@ -46,7 +46,7 @@ Emitted when the [discount rate strategy is updated](../GhoVariableDebtToken#upd
 event DiscountTokenUpdated(address indexed oldDiscountToken, address indexed newDiscountToken)
 ```
 
-Emitted when the [`discount token is updated`](../GhoVariableDebtToken#updatediscounttoken).
+Emitted when the [discount token is updated](../GhoVariableDebtToken#updatediscounttoken).
 
 ### Input Parameters:
 
@@ -64,7 +64,7 @@ event DiscountLockPeriodUpdated(
 )
 ```
 
-Emitted when the [`discount lock period is updated`](../GhoVariableDebtToken#updatediscountlockperiod).
+Emitted when the [discount lock period is updated](../GhoVariableDebtToken#updatediscountlockperiod).
 
 ### Input Parameters:
 

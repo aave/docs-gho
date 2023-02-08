@@ -4,17 +4,17 @@ The implementation of the interest bearing token for the Aave protocol.
 
 :::info
 
-GHO cannot be supplied to the Aave Protoco. However, the GhoAToken is required as it contains logic for GHO to work as a reserve with the Aave Protocol.
+GHO cannot be supplied to the Aave Protocol. However, the `GhoAToken` is required as it contains logic for GHO to work as a reserve with the Aave Protocol.
 
 :::
 
 The `GhoAToken` contract inherits the [`VersionedInitializable`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/libraries/aave-upgradeability/VersionedInitializable.sol), [`ScaledBalanceTokenBase`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/ScaledBalanceTokenBase.sol) and [`EIP712Base`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/EIP712Base.sol) contracts, and the [`IGhoAToken`](./interfaces/IGhoAToken.md) interface.
 
-This page shows the public [`constant state variables`](#constant-state-variables), external [`write`]#write-methods) and [`view`](#view-methods) methods, and the [`not permitted methods`](#not-permitted-methods) within the `GhoAToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoAToken.sol).
+This page shows the public [constant state variables](#constant-state-variables), external [write](#write-methods) and [view](#view-methods) methods, and the ['not permitted methods'](#not-permitted-methods) within the `GhoAToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoAToken.sol).
 
 ## Constant State Variables
 
-The external state variables
+The external state variables.
 
 ### PERMIT_TYPEHASH
 
@@ -158,7 +158,7 @@ function updateGhoTreasury(address newGhoTreasury) external override onlyPoolAdm
 
 Updates the address of the GHO treasury, where interest earned by the protocol is sent.
 
-Emits the [`GhoTreasuryUpdated`](#ghotreasuryupdated)` event.
+Emits the [`GhoTreasuryUpdated`](../GHO/interfaces/IGhoFacilitator.md#ghotreasuryupdated) event.
 
 ### Input Parameters:
 
@@ -168,7 +168,7 @@ Emits the [`GhoTreasuryUpdated`](#ghotreasuryupdated)` event.
 
 ## View Methods
 
-For `balanceOf` and `totalSupply` methods, both return zero. The reason is that GHO cannot be supplied to the Aave Protocol. However, the GhoAToken is required as it contains logic for GHO to work as a reserve with the Aave Protocol.
+The [`balanceOf`](#balanceof) and [`totalSupply`](#totalsupply) methods, both return zero. The reason is that GHO cannot be supplied to the Aave Protocol. However, the `GhoAToken` is required as it contains logic for GHO to work as a reserve with the Aave Protocol.
 
 ### balanceOf
 
@@ -315,7 +315,7 @@ Returns the `address` of the GHO treasury.
 
 The following methods automatically revert with the error from Aave V3 `OPERATION_NOT_SUPPORTED` as they are not permitted to be executed.
 
-For example, `[mint()`](#mint) is not permitted as it is not possible to supply GHO into the pool.
+For example, [`mint()`](#mint) is not permitted as it is not possible to supply GHO into the pool.
 
 ### mint
 
