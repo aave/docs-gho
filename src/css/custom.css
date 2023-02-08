@@ -96,6 +96,7 @@
 
   --ifm-card-background-color: rgba(255, 255, 255, 0.1);
   --ifm-card-footer-color: #616070;
+  --ifm-footer-link-hover-color: var(--ifm-color-emphasis-600);
   --ifm-card-border-radius: 16px;
 
   /* NAVBAR */
@@ -270,4 +271,13 @@ border: 1.5px solid  var(--gho-border) !important;
     align-items: center;
     width: 100%;
     padding: 0 25%;
+}
+
+@media screen and (max-width: 996px) {
+  .footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
 }
