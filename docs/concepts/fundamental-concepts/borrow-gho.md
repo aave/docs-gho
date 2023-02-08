@@ -11,7 +11,7 @@ Borrowing GHO is actually minting GHO ‘under the hood’. GHO will be borrowed
 The video below shows how to borrow GHO using the Aave Protocol interface. This gives an overview of the process and steps involved before looking at how to mint GHO from a smart contract level.
 
 <video controls width="100%" autoPlay>
-  <source src="https://gho.infura-ipfs.io/ipfs/QmeQVomvPSgrksgJZYx11hUJzAoWqq1Emjb88MYsZmuHok"/>
+  <source src="https://gho.infura-ipfs.io/ipfs/QmVFGEyoMTaoYnMCL9oDEg2zwaxK9G2T2vqEHUN7tu8Qtk"/>
 </video>
 
 ## Minting GHO
