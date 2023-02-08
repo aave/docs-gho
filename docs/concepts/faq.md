@@ -4,19 +4,19 @@
 
 GHO is a decentralized multi-collateral stablecoin that is fully backed and native to the Aave Protocol. GHO’s value is pegged to the US Dollar and the peg will be maintained through market efficiency.
 
-As a decentralized stablecoin on the Ethereum Mainnet, GHO will be minted by users (or borrowers). As with all borrowing on the Aave Protocol, a user must supply collateral (at a specific collateral ratio) to be able to mint GHO. Correspondingly, when a user repays a borrow position (or is liquidated), the GHO protocol burns that user’s GHO. All the interest payments accrued by minters of GHO would be directly transferred to the AaveDAO treasury; rather than the standard reserve factor collected when users borrow other assets.
+As a decentralized stablecoin on the Ethereum Mainnet, GHO will be minted by users (or borrowers). As with all borrowing on the Aave Protocol, a user must supply collateral (at a specific collateral ratio) to be able to mint GHO. Correspondingly, when a user repays a borrow position (or is liquidated), the GHO protocol burns that user’s GHO. All the interest payments accrued by minters of GHO would be directly transferred to the [Aave DAO treasury](https://zapper.fi/daos/aave); rather than the standard reserve factor collected when users borrow other assets.
 
 ## Why GHO?
 
 ## How is the value of GHO kept stable?
 
-GHO will be kept stable through market efficiencies. It is envisioned that if GHO were to be valued > $1, the market would arbitrage the value back to $1 as it would be profitable to swap GHO for other stablecoins. If GHO were to be valued < $1, then it would be profitable to pay back debt, and will result in GHO total supply decreasing as debt is repaid will help the peg to be restored.
+GHO will be kept stable through market efficiencies. It is envisioned that if GHO were to be valued > $1, the market would [arbitrage](../concepts/fundamental-concepts/arbitrage.md) the value back to $1 as it would be profitable to swap GHO for other stablecoins. If GHO were to be valued < $1, then it would be profitable to pay back debt, and will result in GHO total supply decreasing as debt is repaid will help the peg to be restored.
 
 ## GHO Interest Rates
 
-Borrow interest rates for GHO will be determined by the AaveDAO, with a stable rate that may be adapted depending on market conditions. This design retains the Aave Protocol’s borrow interest rate model flexibility, and it will be possible in the future to implement any interest rate strategy the Aave community sees fit.
+Borrow interest rates for GHO will be determined by the Aave DAO, with a stable rate that may be adapted depending on market conditions. This design retains the Aave Protocol’s borrow interest rate model flexibility, and it will be possible in the future to implement any interest rate strategy the Aave community sees fit.
 
-The first decision regarding the GHO interest rates can be seen [here](./concepts/fundamental-concepts/gho-discount-strategy)
+The first decision regarding the GHO interest rates can be seen [here](../concepts/fundamental-concepts/gho-discount-strategy.md).
 
 ### Interest Rate Discount Model for stkAAVE
 
