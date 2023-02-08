@@ -38,8 +38,8 @@ It is important to take note of your health factor, changes in the collateral pr
 
 ### What is a Facilitator and what does it mean for GHO?
 
-GHO introduces the concept of Facilitators. A Facilitator (e.g., a protocol, an entity, etc.) has the ability to trustlessly mint (and burn) GHO tokens. To be added as a facilitator they would have to be approved by Aave Governance. Various facilitators will be able to apply different strategies to their generation of GHO. Aave Protocol on Ethereum Mainnet is the first facilitator.
+GHO introduces the concept of Facilitators. A Facilitator (e.g., a protocol, an entity, etc.) has the ability to trustlessly mint (and burn) GHO tokens. To be added as a Facilitator they would have to be approved by Aave Governance. Various Facilitators will be able to apply different strategies to their generation of GHO. Aave Protocol on Ethereum Mainnet is the first Facilitator.
 
-Governance will be able to determine and assign this facilitator a specific bucket capacity to bootstrap the GHO liquidity and the GHO market.
+Governance will be able to determine and assign this Facilitator a specific bucket capacity to bootstrap the GHO liquidity and the GHO market.
 
 ![Untitled](../assets/facilitator.png)

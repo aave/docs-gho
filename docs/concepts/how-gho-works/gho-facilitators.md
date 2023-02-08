@@ -4,8 +4,8 @@
 
 GHO introduces the concept of Facilitators. A Facilitator can trustlessly mint and burn GHO tokens through various strategies. These strategies can be enacted by different entities that may employ varying strategies for integrating GHO (each entity, a Facilitator). The Aave DAO assigns each Facilitator a Bucket with a specified Capacity, which is the upward limit of GHO that a specific Facilitator can mint. This limit is defined and can be changed by the Aave DAO.
 
-![facilitator Diagram](../../assets/facilitator_dark.png#gh-dark-mode-only)
-![facilitator Diagram](../../assets/facilitator.png#gh-light-mode-only)
+![Facilitator Diagram](../../assets/facilitator_dark.png#gh-dark-mode-only)
+![Facilitator Diagram](../../assets/facilitator.png#gh-light-mode-only)
 
 ## Current Facilitators
 

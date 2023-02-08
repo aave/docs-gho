@@ -55,6 +55,7 @@ const config = {
       }),
     ],
   ],
+  plugins : [require.resolve("docusaurus-plugin-image-zoom")],
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
@@ -64,6 +65,7 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
+  
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -120,7 +122,7 @@ const config = {
         },
           {to: 'https://docs.aave.com', label: 'Aave Docs', position: 'right', className: 'persistent'},
           {
-            href: 'https://app.aave.com',
+            href: 'https://gho.aave.com',
             label: 'App',
             position: 'right',
           },
@@ -142,7 +144,7 @@ const config = {
               },
               {
                 label: 'GHO Deployed Contracts',
-                to: '/gho-contracts/overview',
+                to: 'developer-docs/contracts-overview',
               },
             ],
           },
@@ -187,6 +189,15 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['solidity']
       },
+      zoom: {
+      selector: '.markdown :not(em) > img',
+      config: {
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(32, 31, 45)'
+        }
+      }
+    },
       algolia: {
         appId: 'ALGOLIA_APP_ID',
         apiKey: 'ALGOLIA_SEARCH_API_KEY',

@@ -8,11 +8,12 @@ Below are the links to all audit reports and formal verification for GHO
 
 ## Audit Round 1
 
-| Auditor       | Date       | Report                                                                                                         |
-| ------------- | ---------- | -------------------------------------------------------------------------------------------------------------- |
-| ABDK          | 27-01-2022 | [ABDK_GHO](https://github.com/aave/aave-v3-core/blob/master/audits/27-01-2022_ABDK_AaveV3.pdf)                 |
-| OpenZeppelin  | 01-11-2021 | [OpenZeppelin_GHO](https://github.com/aave/aave-v3-core/blob/master/audits/01-11-2021_OpenZeppelin_AaveV3.pdf) |
-| Trail of Bits | 07-01-2022 | [SigmaPrime_GHO](https://github.com/aave/aave-v3-core/blob/master/audits/07-01-2022_TrailOfBits_AaveV3.pdf)    |
+| Auditor         | Date       | Report                                                                                             |
+| --------------- | ---------- | -------------------------------------------------------------------------------------------------- |
+| ABDK            | 02-02-2023 | [ABDK_GHO](https://github.com/aave/gho/blob/main/audits/02-02-2023-ABDK.pdf)                       |
+| OpenZeppelin-v2 | 10-11-2022 | [OpenZeppelin_GHO_V2](https://github.com/aave/gho/blob/main/audits/10-11-2022-Openzeppelin-v2.pdf) |
+| OpenZeppelin-v1 | 12-08-2022 | [OpenZeppelin_GHO_V1](https://github.com/aave/gho/blob/main/audits/12-08-2022-Openzeppelin-v1.pdf) |
+| Sigma Prime     | 24-12-2022 | [SigmaPrime_GHO](https://github.com/aave/gho/blob/main/audits/24-12-2022-Sigma-Prime.pdf)          |
 
 ## Glossary
 
@@ -32,7 +33,7 @@ Below are the links to all audit reports and formal verification for GHO
 | Discount Threshold     | The maximum amount of GHO that can be generated at discount through the borrow interaction within the Aave Protocol, per stkAAVE held.                                                                                                                                                         |
 | Discount Token         | The token that grants discounts off of the the debt interest. Per the current configuration, only stkAAVE is eligible for the GHO borrowing discount.                                                                                                                                          |
 | Facilitator            | A Facilitator can be a protocol or an entity within the crypto ecosystem, that has the ability to trustlessly mint (and burn) GHO tokens. They are assigned by the Aave Governance.                                                                                                            |
-| Maximum Capacity       | The maximum capacity of GHO tokens that a facilitator can mint                                                                                                                                                                                                                                 |
+| Maximum Capacity       | The maximum capacity of GHO tokens that a Facilitator can mint                                                                                                                                                                                                                                 |
 | Ray                    | For internal calculations and to reduce the impact of rounding errors, the concept of Ray Math is used. A Ray is a unit with 27 decimals of precision. All the rates are expressed in Ray.                                                                                                     |
 | Reward Token           | The AAVE token is the reward token accrued when a user stakes in the Safety Module.                                                                                                                                                                                                            |
 | Safety Incentives      | Represents the part of the periodic issuance of AAVE used to incentivize users to stake AAVE in the Safety Module (SM).                                                                                                                                                                        |

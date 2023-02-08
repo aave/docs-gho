@@ -2,7 +2,7 @@
 
 The interface of the [`GhoToken`](../gho-token.md).
 
-The `IGhoToken` interface inherits the [`IERC20Burnable`](IERC20Burnable.md)`, `[IERC20Mintable](IERC20Mintable.md)`, and `[IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)` interfaces.
+The `IGhoToken` interface inherits the [`IERC20Burnable`](IERC20Burnable.md), [`IERC20Mintable`](IERC20Mintable.md), and [`IERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) interfaces.
 
 This page shows the [`structs`](#structs), [`events`](#events), and [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/interfaces/IGhoToken.sol).
 
@@ -119,8 +119,8 @@ Adds the Facilitator passed with the parameters to the Facilitators list.
 
 | Name               | Type          | Description                           |
 | ------------------ | ------------- | ------------------------------------- |
-| facilitatorAddress | `address`     | The address of the facilitator to add |
-| facilitatorConfig  | `facilitator` | The configuration of the facilitator  |
+| facilitatorAddress | `address`     | The address of the Facilitator to add |
+| facilitatorConfig  | `facilitator` | The configuration of the Facilitator  |
 
 ### removeFacilitator
 
@@ -134,7 +134,7 @@ Remove the Facilitator from the Facilitators list.
 
 | Name               | Type      | Description                              |
 | ------------------ | --------- | ---------------------------------------- |
-| facilitatorAddress | `address` | The address of the facilitator to remove |
+| facilitatorAddress | `address` | The address of the Facilitator to remove |
 
 ### setFacilitatorBucketCapacity
 
@@ -165,13 +165,13 @@ Returns the `facilitator` data.
 
 | Name        | Type       | Description                    |
 | ----------- | ---------- | ------------------------------ |
-| facilitator | `address ` | The address of the facilitator |
+| facilitator | `address ` | The address of the Facilitator |
 
 ### Return Values:
 
 | Type          | Description                   |
 | ------------- | ----------------------------- |
-| `facilitator` | The facilitator configuration |
+| `facilitator` | The Facilitator configuration |
 
 ### getFacilitatorBucket
 
@@ -185,14 +185,14 @@ Returns the bucket configuration of the `facilitator`.
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
-| facilitator | `address` | The address of the facilitator |
+| facilitator | `address` | The address of the Facilitator |
 
 ### Return Values:
 
 | Type      | Description                              |
 | --------- | ---------------------------------------- |
-| `uint256` | The capacity of the facilitator’s bucket |
-| `uint256` | The level of the facilitator’s bucket    |
+| `uint256` | The capacity of the Facilitator’s bucket |
+| `uint256` | The level of the Facilitator’s bucket    |
 
 ### getFacilitatorsList
 
@@ -200,10 +200,10 @@ Returns the bucket configuration of the `facilitator`.
 function getFacilitatorsList() external view returns (address[] memory)
 ```
 
-Returns the list of addresses of the active facilitators.
+Returns the list of addresses of the active Facilitators.
 
 ### Return Values:
 
 | Type        | Description                            |
 | ----------- | -------------------------------------- |
-| `address[]` | The list of the facilitators addresses |
+| `address[]` | The list of the Facilitators addresses |
