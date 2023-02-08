@@ -167,10 +167,9 @@ yarn add @aave/contract-helpers@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.
 
 Minting GHO occurs seamlessly through the `borrow` function of the Aave V3 Pool contract.
 
-
 <details>
-    <summary>Sample Code (Javascript)</summary>
-    
+<summary>Sample Code (JavaScript)</summary>
+
 ```js
 import { Pool, InterestRate } from '@aave/contract-helpers';
 
@@ -197,11 +196,8 @@ const txs: EthereumTransactionTypeExtended[] = await lendingPool.borrow({
   referralCode,
 });
 ```
-
 Submit transaction using [these instructions](https://github.com/aave/aave-utilities#submitting-transactions).
-
 </details>
-
 
 ### repay
 
@@ -213,8 +209,8 @@ Repay also occurs seamlessly through the `repay` function of the Aave V3 Pool co
 There are instructions for both routes below:
 
 <details>
-    <summary>Repay Sample Code (Javascript)</summary>
-    
+<summary>Repay Sample Code (JavaScript)</summary>
+
 ```js
 import { Pool } from '@aave/contract-helpers';
 
@@ -238,14 +234,13 @@ const txs: EthereumTransactionTypeExtended[] = await pool.repay({
   onBehalfOf,
 });
 ```
-
 Will return an array with repay transaction and optionally an approval transaction. Submit transaction(s) using [these instructions](https://github.com/aave/aave-utilities#submitting-transactions).
-
 </details>
 
+
 <details>
-    <summary>RepayWithPermit Sample Code (Javascript)</summary>
-    
+<summary>RepayWithPermit Sample Code (JavaScript)</summary>
+
 ```js
 import { Pool } from '@aave/contract-helpers';
 
@@ -262,7 +257,6 @@ const approvalMsg = await pool.signERC20Approval({
    deadline, // determined by you
   )
 })
-
 
 // User signs with wallet method such as ethers signTypedDataV4 and passed as signature variable in next call
 
@@ -282,15 +276,13 @@ const txs: EthereumTransactionTypeExtended[] = await pool.repayWithPermit({
   signature,
 });
 ```
-
 Will return an array with repay transaction and optionally an approval transaction. Submit transaction(s) using [these instructions](https://github.com/aave/aave-utilities#submitting-transactions).
 </details>
 
+
 ### flashmint
 
-Javascript method coming soon. For now this function is only available directly through the flashmint facilitator contract.
-
-<br />
+JavaScript method coming soon. For now this function is only available directly through the flashmint facilitator contract.
 
 ## Data
 
@@ -298,7 +290,7 @@ All facilitator transactions occur through smart contracts, so querying the real
 
 ### Live Data
 
-To query live data for GHO, there are several view contracts which can give summaraized information of markets, incentives, and gho data respectively:
+To query live data for GHO, there are several view contracts which can give summarized information of markets, incentives, and gho data respectively:
 
 - UiPoolDataProvider: Queries for all market and user data
 - UiIncentiveDataProvider: QUeries for all available and user claimable incentives
@@ -307,8 +299,8 @@ To query live data for GHO, there are several view contracts which can give summ
 The following code uses the Aave Utilities library to fetch and format data from all of these contracts together. To setup these packages see the [setup](#setup) section.
 
 <details>
-    <summary>Sample Code (Javascript)</summary>
-    
+<summary>Sample Code (JavaScript)</summary>
+
 ```js
 import { ethers } from 'ethers';
 import {
@@ -392,7 +384,6 @@ async function fetchContractData() {
 
 fetchContractData();
 ```
-
 </details>
 
 ### Historical Data
@@ -401,11 +392,10 @@ Transactions of the GHO facilitator are queryable through events on the GHO cont
 
 Shown below are 2 methods for generalized event queries using RPCs and the Etherscan API which can be used with the GHO deployed contracts to index historical data for GHO integrations.
 
-<details>
-    <summary>Query Events RPC</summary>
-
-
 Note: An archival node may be necessary for the rpcUrl to query historical events
+
+<details>
+<summary>Query Events RPC</summary>
 
 ```js
 const { providers, Contract, utils } = require("ethers");
@@ -435,11 +425,10 @@ async function fetchEvents() {
 }
 fetchEvents();
 ```
-
 </details>
 
 <details>
-    <summary>Query Events Etherscan API</summary>
+<summary>Query Events Etherscan API</summary>
 
 ```js
 const ethers = require("ethers");
@@ -496,5 +485,4 @@ async function fetchEvents() {
 }
 fetchEvents();
 ```
-
 </details>
