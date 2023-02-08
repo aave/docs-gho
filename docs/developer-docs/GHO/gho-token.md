@@ -57,7 +57,7 @@ function addFacilitator(
 
 Add the Facilitator passed with the parameters to the Facilitators list.
 
-The Facilitator must not have already been added and must have a [`label`](./interfaces/IGhoToken.md#facilitator). The bucket configuration must be valid, with the bucket [`level`](./interfaces/IGhoToken.md#facilitator) equal to 0.
+The Facilitator must not have already been added and must have a [`label`](./interfaces/IGhoToken.md#facilitator). The bucket configuration must be valid, with the [`bucketLevel`](./interfaces/IGhoToken.md#facilitator) equal to 0.
 
 Emits the [`FacilitatorAdded`](./interfaces/IGhoToken.md#facilitatoradded) event.
 
@@ -84,9 +84,9 @@ function removeFacilitator(address facilitatorAddress) external onlyOwner
 
 Remove the Facilitator from the Facilitators list.
 
-The Facilitator must exist as a current Facilitator, and must have a bucket [`level`](./interfaces/IGhoToken.md#facilitator) equal to 0.
+The Facilitator must exist as a current Facilitator, and must have a [`bucketLevel`](./interfaces/IGhoToken.md#facilitator) equal to 0.
 
-Emits the [`FacilitatorRemoved`](./interfaces/IGhoToken.md#facilitator) event.
+Emits the [`FacilitatorRemoved`](./interfaces/IGhoToken.md#facilitatorremoved) event.
 
 ### Input Parameters:
 

@@ -140,7 +140,7 @@ const config = {
               },
               {
                 label: 'Bug Bounty',
-                to: 'https://github.com/aave/bug-bounty',
+                to: 'https://github.com/aave/gho-bug-bounty',
               },
               {
                 label: 'GHO Deployed Contracts',

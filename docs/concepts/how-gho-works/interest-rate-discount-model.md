@@ -8,7 +8,7 @@ sidebar_position: 2
 
 Compared to other assets within the Aave Protocol, GHO smart contracts do not follow the usual supply and demand dynamics that can often impact interest rates.
 
-For GHO, the Aave Protocol integration requires interest rates to be determined by a coordination entity, specifically Aave Governance. The interest rates are set by Aave Governance, which statically adjusts interest rates depending on the need for the GHO supply to contract or expand.
+For GHO, the Aave Protocol integration requires interest rates to be determined by a coordination entity, specifically [Aave Governance](https://governance.aave.com/). The interest rates are set by Aave Governance, which statically adjusts interest rates depending on the need for the GHO supply to contract or expand.
 
 Any changes to the interest rates require a governance proposal. This design works as a stability mechanism and retains the Aave Protocol’s borrow interest rate model flexibility. It will be possible in the future to implement any interest rate strategy the Aave Governance community sees fit.
 
@@ -16,7 +16,7 @@ Any changes to the interest rates require a governance proposal. This design wor
 
 The interest rate is the cornerstone of GHO stability, and, as in all decentralized protocols, it is built into the code.
 
-The GHO price is fixed to $1 on the Aave Protocol; however, the price of GHO can be different in other markets (please see the Arbitrage page for further information). When this happens, Aave Governance can vote to increase or decrease the interest rates to encourage users to mint GHO or repay their GHO.
+The GHO price is fixed to $1 on the Aave Protocol; however, the price of GHO can be different in other markets (please see the [Arbitrage](../fundamental-concepts/arbitrage.md) page for further information). When this happens, Aave Governance can vote to increase or decrease the interest rates to encourage users to mint GHO or repay their GHO.
 
 ### GHO Price is Above 1 Dollar
 
@@ -28,7 +28,7 @@ If the market price of GHO is below 1 USD, Aave Governance can increase the inte
 
 ## Discount Rate Model
 
-Given the nature of the asset, this integration allows for innovative features that provide greater utility for Aave Governance and community participants. The implementation of GHO includes a Discount Strategy mechanism, which allows for Safety Module participants (i.e., stkAAVE holders) to access a discount on the GHO borrow rate. The strategy sets a certain amount of GHO at discount per stkAAVE supplied and a discount on the interest rates that can vary from 0% (i.e., no discount) to 100% (i.e., full discount).
+Given the nature of the asset, this integration allows for innovative features that provide greater utility for Aave Governance and community participants. The implementation of GHO includes a [Discount Strategy](../fundamental-concepts/gho-discount-strategy.md) mechanism, which allows for Safety Module participants (i.e., stkAAVE holders) to access a discount on the GHO borrow rate. The strategy sets a certain amount of GHO at discount per stkAAVE supplied and a discount on the interest rates that can vary from 0% (i.e., no discount) to 100% (i.e., full discount).
 
 Discounts are available to borrowers staking AAVE in the Safety Module, which is a smart contract-based risk mitigation tool that is leveraged in the event of a shortfall event. By contributing to the Safety Module, users assume the risk that their stake will be slashed to cover the deficit in the event of bad debt arising in the Aave Protocol. To incentivize users to participate in staking and reward them for assuming this risk, users staking AAVE can receive a discount on their interest rate.
 
@@ -60,4 +60,4 @@ When a user receives a discount, it is assigned to them and can be locked for a 
 
 This may also happen if a user triggers a discount update, such as borrowing and repaying GHO and updating their stkAAVE balance.
 
-Please see the Discount Rate page for more information on the technical implementation of the discount rate.
+Please see the [Discount Rate Strategy](../fundamental-concepts/gho-discount-strategy.md) page for more information on the technical implementation of the discount rate.

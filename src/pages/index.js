@@ -12,7 +12,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <meta name="description" content="GHO is a decentralized multi-collateral stablecoin, transparent and native to the Aave Protocol. "/>
-        <meta property="og:url" content="https://gho.docs.com/"/>
+        <meta property="og:url" content="https://docs.gho.xyz/"/>
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="GHO Document Hub | Stablecoin by Aave"/>
         <meta property="og:description" content="GHO is a decentralized multi-collateral stablecoin, transparent and native to the Aave Protocol. "/>
