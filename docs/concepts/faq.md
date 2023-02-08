@@ -2,9 +2,9 @@
 
 ## What is GHO?
 
-GHO is a decentralized multi-collateral stablecoin that is fully backed and native to the Aave Protocol. GHO’s value is pegged to the US Dollar and the peg will be maintained through market efficiency.
+GHO (pronounced "go") is a decentralized multi-collateral stablecoin that is initially only minted from assets supplied to the Aave Protocol. GHO’s value is programmatically aligned to the U.S. Dollar, which will be maintained through market efficiency.
 
-As a decentralized stablecoin on the Ethereum Mainnet, GHO will be minted by users (or borrowers). As with all borrowing on the Aave Protocol, a user must supply collateral (at a specific collateral ratio) to be able to mint GHO. Correspondingly, when a user repays a borrow position (or is liquidated), the GHO protocol burns that user’s GHO. All the interest payments accrued by minters of GHO would be directly transferred to the [Aave DAO treasury](https://zapper.fi/daos/aave); rather than the standard reserve factor collected when users borrow other assets.
+As a decentralized stablecoin on the Ethereum Mainnet, GHO will be minted by users. As with all borrowing on the Aave Protocol, a user must supply collateral (at a specific collateral ratio) to be able to mint GHO. Correspondingly, when a user repays a borrow position (or is liquidated), the GHO is returned to the Aave pool and burned. All the interest payments accrued by minters of GHO will go directly to the [Aave DAO treasury](https://zapper.fi/daos/aave), in contrast to the standard reserve factor collected when users borrow other assets, and the principal is burned.
 
 ## Why GHO?
 
@@ -23,8 +23,6 @@ The first decision regarding the GHO interest rates can be seen [here](../concep
 Given the nature of the asset, this integration allows for innovative features that provide greater utility for governance and community participants. The implementation of GHO includes a Discount Strategy mechanism. The initial discount strategy allows for Safety Module participants (stkAAVE holders) to access a discount on the GHO borrow rate. The strategy will set a certain amount of GHO at discount per stkAAVE supplied, and a discount on the interest rates that can vary from 0% (no discount) to 100% (full discount). These parameters are controlled by Aave governance.
 
 The parameters for Ethereum Mainnet still need to be voted on by the community.
-
-[https://docs.google.com/spreadsheets/d/1icTBIL3VijAbdn3mHIDkeScdphDGn_LVue3j2e7Ssoo/edit#gid=474599885](https://docs.google.com/spreadsheets/d/1icTBIL3VijAbdn3mHIDkeScdphDGn_LVue3j2e7Ssoo/edit#gid=474599885)
 
 ## How can I mint GHO?
 
