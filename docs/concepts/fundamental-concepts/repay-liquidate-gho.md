@@ -35,7 +35,7 @@ Normal assets direct the majority of interest earned to users who have supplied 
 
 ## Liquidations
 
-Users can be liquidated on their GHO borrow positions, the same as any other asset in the Aave protocol.
+Users can be liquidated on their GHO borrow positions, the same as any other asset in the Aave Protocol.
 
 When a liquidation occurs, liquidators repay up to 50% of the outstanding borrowed amount on behalf of the borrower. In return, they can buy the collateral at a discount and keep the difference (liquidation penalty) as a bonus.
 
@@ -43,6 +43,6 @@ It is important to be mindful of price fluctuations due to market conditions, as
 
 ### FlashMint
 
-[FlashMinting](flashmint.md) provides the same functionality as the current flashloan standard. Therefore, FlashMinting can be used to liquidate borrow positions, the same way flashloans are regularly used to liquidate user positions within the Aave protocol. Additionally, users approved by the Aave DAO as “_FlashBorrowers_” have the ability to execute flash mints free of charge. This works in the same way as the “flashLoan” function of the Aave V3 protocol.
+[FlashMinting](flashmint.md) provides the same functionality as the current flashloan standard. Therefore, FlashMinting can be used to liquidate borrow positions, the same way flashloans are regularly used to liquidate user positions within the Aave Protocol. Additionally, users approved by the Aave DAO as “_FlashBorrowers_” have the ability to execute flash mints free of charge. This works in the same way as the “flashLoan” function of the Aave V3 protocol.
 
 For more information, please read the liquidation pages in the [FAQs](https://docs.aave.com/faq/liquidations) and [V3 Developer Docs](https://docs.aave.com/developers/guides/liquidations).

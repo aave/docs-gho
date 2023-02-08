@@ -20,7 +20,7 @@ For example:
 
 - The price of GHO on the market is above peg, at $1.05
 
-- A user mints 1 GHO from the Aave protocol for $1
+- A user mints 1 GHO from the Aave Protocol for $1
 
 - This user can then sell their GHO on the market for $1.05
 
@@ -30,7 +30,7 @@ For example:
 
 - The user can then buy GHO on the market at $1
 
-- The user can repay their $1 worth of debt to the Aave protocol
+- The user can repay their $1 worth of debt to the Aave Protocol
 
 - The user keeps the difference of what they sold their GHO at, $0.05 profit
 
@@ -54,4 +54,4 @@ This should increase the demand for GHO, and therefore decrease the supply of GH
 
 ## FlashMinting
 
-[FlashMinting](../fundamental-concepts/flashmint.md) provides the same functionality as the current flashloan standard and can be used in the same way flashloans are regularly used for arbitrage within the Aave protocol. Therefore, FlashMinting can be used for arbitrage between assets, without needing to have the principal amount (borrow position) to execute the arbitrage.
+[FlashMinting](../fundamental-concepts/flashmint.md) provides the same functionality as the current flashloan standard and can be used in the same way flashloans are regularly used for arbitrage within the Aave Protocol. Therefore, FlashMinting can be used for arbitrage between assets, without needing to have the principal amount (borrow position) to execute the arbitrage.
