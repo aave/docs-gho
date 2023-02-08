@@ -22,7 +22,7 @@ If a user supplies USDC and would like to borrow GHO, there is no requirement fo
 
 This provides more flexibility than regular assets in the pool as GHO is minted on demand, the user does not have to rely on assets being supplied.
 
-Facilitators will have the ability to mint GHO. Please see the Facilitators page to read about the role that Facilitators play for GHO.
+Facilitators will have the ability to mint GHO. Please see the [Facilitators](gho-facilitators.md) page to read about the role that Facilitators play for GHO.
 
 ## The GHO Oracle Price is Fixed at One U.S. Dollar
 
@@ -48,7 +48,7 @@ With GHO, there are no suppliers, which means that interest rates work different
 
 The interest rate is stable and will be adapted periodically depending on market conditions by Aave Governance to help control price stability. If the price of GHO increases, the interest rate should decrease to encourage the creation of GHO (i.e., GHO supply expands -> GHO rebalances down). If the GHO price decreases, the interest rate should increase to incentivize repayment (i.e., GHO supply contracts -> GHO prices rebalance up).
 
-Please see the Interest and Discount Rates page for more information.
+Please see the [Interest and Discount Rates](interest-rate-discount-model.md) page for more information.
 
 ## Repaid Interest is Re-directed to the Aave DAO Rather Than to Suppliers
 
@@ -62,7 +62,7 @@ If GHO is not supplied, there are no suppliers to pay and therefore GHO does not
 
 ## Facilitators
 
-If approved by the Aave community, the Aave V3 Ethereum Pool and FlashMinter Facilitator will be the first Facilitators on Ethereum Mainnet. In the future, there may be other Facilitators. Facilitators will have the ability to mint GHO and will be able to apply different strategies to their generation of GHO.
+If approved by the Aave community, the [Aave V3 Ethereum Pool](./gho-facilitators.md#aave-v3-ethereum-pool) and [FlashMinter](./gho-facilitators.md#flashminter) Facilitator will be the first Facilitators on Ethereum Mainnet. In the future, there may be other Facilitators. Facilitators will have the ability to mint GHO and will be able to apply different strategies to their generation of GHO.
 
 ### Collateral
 
@@ -78,7 +78,7 @@ GHO can be [FlashMinted](../fundamental-concepts/flashmint.md) via the FlashMint
 
 ### Isolation Mode
 
-Isolation mode on V3 Aave Governance can limit exposure to the amount of GHO that can be minted based on collateral from riskier assets. If the community determines that a specific asset weight in GHO collateral is ‘too high,’ limits can be changed by a governance vote as Aave Governance sees fit. In this example, isolation mode reduces risk and keeps GHO collateralized.
+[Isolation mode](https://docs.aave.com/developers/whats-new/isolation-mode) on V3 Aave Governance can limit exposure to the amount of GHO that can be minted based on collateral from riskier assets. If the community determines that a specific asset weight in GHO collateral is ‘too high,’ limits can be changed by a governance vote as Aave Governance sees fit. In this example, isolation mode reduces risk and keeps GHO collateralized.
 
 ### Bridges
 

@@ -22,7 +22,7 @@ The system has been designed to be safe and secure and to meet the highest secur
 
 Smart contract risk can never be eliminated completely; however, through conservative development processes, it can be reduced.
 
-The audit reports and formal verification for GHO can be found on the Resources page.
+The audit reports and formal verification for GHO can be found on the [Resources](../../resources/resources.md) page.
 
 ## Stability Mechanism
 
@@ -31,4 +31,4 @@ The following stability mechanisms have been implemented to ensure that GHO is s
 - Locked oracle pricing
 - Governance set interest rates
 
-Please see the How GHO Works page for detailed explanations of each stability mechanism.
+Please see the "[GHO Implementation](gho-implementation.md)" page for explanations of the stability mechanisms.

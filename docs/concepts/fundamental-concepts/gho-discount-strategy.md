@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Given the nature of the asset, this integration allows for innovative features that provide greater utility for Governance and community participants. The implementation of GHO includes a Discount Strategy mechanism. The initial discount strategy allows Safety Module participants (users who have [staked AAVE](https://docs.aave.com/faq/#aave-aave-token) and now hold stkAAVE) to access a discount on the GHO borrow rate. The strategy sets a certain amount of GHO at a discount per stkAAVE , and a discount on the interest rates that can vary from 0% (no discount) to 100% (full discount). Only stkAAVE is eligible for the GHO borrowing discount.
 
-The configuration of the discount rate is controlled by Aave Governance. Aave Governance has the right to determine the discount model parameters and eventually propose changes to the current implementation.
+The configuration of the discount rate is controlled by [Aave Governance](https://governance.aave.com/). Aave Governance has the right to determine the discount model parameters and eventually propose changes to the current implementation.
 
 By contributing to the Safety Module, users are taking a risk that they in the case of bad debt arising in the Aave protocol. To incentivize users to participate in staking, and reward them for taking this risk, users staking AAVE can receive a discount on their interest rate.
 
