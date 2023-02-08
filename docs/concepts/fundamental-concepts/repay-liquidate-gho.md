@@ -10,7 +10,9 @@ When a user repays their GHO (or is liquidated), that user’s GHO is burned by 
 
 The video below shows how to repay GHO using the Aave Protocol interface. This gives an overview of the process and steps involved before looking at how to repay GHO from a smart contract level.
 
-VIDEO OF REPAYING ON INTERFACE
+<video controls width="100%" autoPlay>
+  <source src="https://gho.infura-ipfs.io/ipfs/QmPyAUsHBv385WgBaWB2rvrAyzAzGzuqRPzsnPUj5Jtsix"/>
+</video>
 
 ## Repaying or Liquidating GHO
 
