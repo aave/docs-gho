@@ -4,17 +4,19 @@ sidebar_position: 2
 
 # Borrow GHO
 
-Borrowing GHO is actually minting GHO ‘under the hood’. GHO will be borrowed by users (or borrowers) via Facilitators. As with all borrowing on the Aave Protocol, a user must supply collateral (at a specific collateral ratio) to mint GHO.
+Borrowing GHO is actually minting GHO ‘under the hood’. GHO will be borrowed by users (or borrowers) via [Facilitators](../how-gho-works/gho-facilitators.md). As with all borrowing on the Aave Protocol, a user must supply collateral (at a specific collateral ratio) to mint GHO.
 
 ## Borrowing on the Aave Interface
 
 The video below shows how to borrow GHO using the Aave Protocol interface. This gives an overview of the process and steps involved before looking at how to mint GHO from a smart contract level.
 
-VIDEO OF INTERFACE
+<video controls width="100%" autoPlay>
+  <source src="https://gho.infura-ipfs.io/ipfs/QmVFGEyoMTaoYnMCL9oDEg2zwaxK9G2T2vqEHUN7tu8Qtk"/>
+</video>
 
 ## Minting GHO
 
-GHO is created (‘minted’) by Facilitators. GHO is collateralized by the supply of crypto assets in excess of the value of GHO to be minted. This over-collateralization is intended as a stabilization mechanism to reduce the impact of any price fluctuations on the value of the underlying collateral during periods of volatility.
+GHO is created (‘[minted](../../developer-docs/overview#minting)’) by Facilitators. GHO is collateralized by the supply of crypto assets in excess of the value of GHO to be minted. This over-collateralization is intended as a stabilization mechanism to reduce the impact of any price fluctuations on the value of the underlying collateral during periods of volatility.
 
 ![Borrow Diagram](../../assets/GHO_borrow_process.png#gh-dark-mode-only)
 ![Borrow Diagram](../../assets/GHO_borrow_process_dark.png#gh-light-mode-only)

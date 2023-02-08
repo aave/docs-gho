@@ -47,7 +47,7 @@ const sidebars = {
         'concepts/fundamental-concepts/arbitrage',
       ]
     },
-    'concepts/GHO-faq',
+    'concepts/faq',
   ],
   developers: [
     'developer-docs/overview',
@@ -92,7 +92,7 @@ const sidebars = {
     },
       {
       type: 'category',
-      label: 'Flashmint Facilitator',
+      label: 'FlashMinter Facilitator',
       items: [
         'developer-docs/flashmint-facilitator/GhoFlashMinter',
         {

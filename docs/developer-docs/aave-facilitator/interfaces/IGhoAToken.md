@@ -4,7 +4,7 @@ Defines the basic interface of the [`GhoAToken`](../GhoAToken.md).
 
 The `IGhoAToken` interface inherits the [`IAToken`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IAToken.sol) and [`IGhoFacilitator`](../../GHO/interfaces/IGhoFacilitator) interface.
 
-This page shows the [`events`](#events), [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoAToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoAToken.sol).
+This page shows the [events](#events), [write](#write-methods) and [view](#view-methods) methods within the `IGhoAToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoAToken.sol).
 
 ## Events
 
@@ -16,7 +16,7 @@ event VariableDebtTokenSet(address indexed variableDebtToken)
 
 Emitted when a reference to the GHO [variable debt token is set](../GhoAToken.md#setvariabledebttoken).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name              | Type      | Description                                        |
 | ----------------- | --------- | -------------------------------------------------- |
@@ -32,7 +32,7 @@ function setVariableDebtToken(address GhoVariableDebtToken) external
 
 Sets a reference to the GHO variable debt token.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type      | Description                                        |
 | -------------------- | --------- | -------------------------------------------------- |
@@ -48,7 +48,7 @@ function getVariableDebtToken() external view returns (address)
 
 Returns the `address` of the GHO variable debt token.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                        |
 | --------- | -------------------------------------------------- |

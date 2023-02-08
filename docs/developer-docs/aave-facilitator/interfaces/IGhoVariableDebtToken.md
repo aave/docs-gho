@@ -4,7 +4,7 @@ Defines the basic interface of the [`GhoVariableDebtToken`](../GhoVariableDebtTo
 
 The `IGhoVariableDebtToken` interface inherits the [`IVariableDebtToken`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IVariableDebtToken.sol) interface.
 
-This page shows the [`events`](#events), [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoVariableDebtToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoVariableDebtToken.sol).
+This page shows the [events](#events), [write](#write-methods) and [view](#view-methods) methods within the `IGhoVariableDebtToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/interfaces/IGhoVariableDebtToken.sol).
 
 ## Events
 
@@ -16,7 +16,7 @@ event ATokenSet(address indexed aToken)
 
 Emitted when the address of the GHO [`aToken is set`](../GhoVariableDebtToken#setatoken).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                             |
 | ------ | --------- | --------------------------------------- |
@@ -33,7 +33,7 @@ event DiscountRateStrategyUpdated(
 
 Emitted when the [discount rate strategy is updated](../GhoVariableDebtToken#updatediscountratestrategy).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                    | Type      | Description                                    |
 | ----------------------- | --------- | ---------------------------------------------- |
@@ -46,9 +46,9 @@ Emitted when the [discount rate strategy is updated](../GhoVariableDebtToken#upd
 event DiscountTokenUpdated(address indexed oldDiscountToken, address indexed newDiscountToken)
 ```
 
-Emitted when the [`discount token is updated`](../GhoVariableDebtToken#updatediscounttoken).
+Emitted when the [discount token is updated](../GhoVariableDebtToken#updatediscounttoken).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name             | Type      | Description                           |
 | ---------------- | --------- | ------------------------------------- |
@@ -64,9 +64,9 @@ event DiscountLockPeriodUpdated(
 )
 ```
 
-Emitted when the [`discount lock period is updated`](../GhoVariableDebtToken#updatediscountlockperiod).
+Emitted when the [discount lock period is updated](../GhoVariableDebtToken#updatediscountlockperiod).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                  | Type      | Description                             |
 | --------------------- | --------- | --------------------------------------- |
@@ -86,7 +86,7 @@ event DiscountPercentLocked(
 
 Emitted when the internal function [`_refreshDiscountPercent`](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoVariableDebtToken.sol#L522) is called, which updates the discount percent of the user according to current discount rate strategy.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type      | Description                                                   |
 | ------------------ | --------- | ------------------------------------------------------------- |
@@ -105,7 +105,7 @@ function setAToken(address ghoAToken) external
 
 Sets a reference to the GHO aToken.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name      | Type      | Description                           |
 | --------- | --------- | ------------------------------------- |
@@ -119,7 +119,7 @@ function updateDiscountRateStrategy(address newDiscountRateStrategy) external
 
 Updates the Discount Rate Strategy.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                    | Type      | Description                                     |
 | ----------------------- | --------- | ----------------------------------------------- |
@@ -133,7 +133,7 @@ function updateDiscountToken(address newDiscountToken) external
 
 Updates the Discount Token.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name             | Type      | Description                           |
 | ---------------- | --------- | ------------------------------------- |
@@ -153,7 +153,7 @@ function updateDiscountDistribution(
 
 Updates the discount percents of the users when a discount token transfer occurs.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                          | Type      | Description                                    |
 | ----------------------------- | --------- | ---------------------------------------------- |
@@ -171,7 +171,7 @@ function decreaseBalanceFromInterest(address user, uint256 amount) external
 
 Decrease the `amount` of interests accumulated by the `user`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description               |
 | ------ | --------- | ------------------------- |
@@ -186,7 +186,7 @@ function rebalanceUserDiscountPercent(address user) external
 
 Rebalances the discount percent of a `user` if they are past their rebalance timestamp.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
@@ -200,7 +200,7 @@ function updateDiscountLockPeriod(uint256 newLockPeriod) external
 
 Updates the discount percent lock period.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name          | Type      | Description                               |
 | ------------- | --------- | ----------------------------------------- |
@@ -216,7 +216,7 @@ function getAToken() external view returns (address)
 
 Returns the `address` of the GHO aToken.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                           |
 | --------- | ------------------------------------- |
@@ -230,7 +230,7 @@ function getDiscountRateStrategy() external view returns (address)
 
 Returns the `address` of the Discount Rate Strategy.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                     |
 | --------- | ----------------------------------------------- |
@@ -244,7 +244,7 @@ function getDiscountToken() external view returns (address)
 
 Returns the `address` of the Discount Token.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                  |
 | --------- | ---------------------------- |
@@ -258,13 +258,13 @@ function getDiscountPercent(address user) external view returns (uint256)
 
 Returns the discount percent being applied to the debt interest of the `user`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
 | user | `address` | The address of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                             |
 | --------- | --------------------------------------- |
@@ -278,13 +278,13 @@ function getBalanceFromInterest(address user) external view returns (uint256)
 
 Returns the amount of interests accumulated by the `user`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
 | user | `address` | The address of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                     |
 | --------- | ----------------------------------------------- |
@@ -298,7 +298,7 @@ function getDiscountLockPeriod() external view returns (uint256)
 
 Returns the discount percent lock period.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                   |
 | --------- | --------------------------------------------- |
@@ -312,13 +312,13 @@ function getUserRebalanceTimestamp(address user) external view returns (uint256)
 
 Returns the timestamp at which a discount percent can be rebalanced for a `user`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description                                                   |
 | ---- | --------- | ------------------------------------------------------------- |
 | user | `address` | The address of the user’s rebalance timestamp being requested |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                      |
 | --------- | ------------------------------------------------ |

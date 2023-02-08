@@ -4,17 +4,19 @@ sidebar_position: 3
 
 # Repay and Liquidate GHO
 
-When a user repays their GHO (or is liquidated), that user’s GHO is burned by the Facilitator.
+When a user repays their GHO (or is liquidated), that user’s GHO is burned by the [Facilitator](../how-gho-works/gho-facilitators.md).
 
 ## Repaying on the Aave Interface
 
 The video below shows how to repay GHO using the Aave Protocol interface. This gives an overview of the process and steps involved before looking at how to repay GHO from a smart contract level.
 
-VIDEO OF REPAYING ON INTERFACE
+<video controls width="100%" autoPlay>
+  <source src="https://gho.infura-ipfs.io/ipfs/QmPyAUsHBv385WgBaWB2rvrAyzAzGzuqRPzsnPUj5Jtsix"/>
+</video>
 
 ## Repaying or Liquidating GHO
 
-When repaying (or liquidating) GHO, first there are automatic smart contract-based collateralization checks. GHO is then returned to the pool from the user (or liquidator) and burned.
+When [repaying](../../developer-docs/overview#repay) (or [liquidating](../../developer-docs/overview#liquidation)) GHO, first there are automatic smart contract-based collateralization checks. GHO is then returned to the pool from the user (or liquidator) and burned.
 
 Normal assets direct the majority of interest earned to users who have supplied the corresponding asset, and a small portion is directed to the DAO. In this instance, since there are no suppliers to pay, the interest (accrued by minters of GHO) that is repaid is automatically transferred to the Aave DAO treasury. While the original amount of GHO is burned, and the Bucket level for the Facilitator is decreased.
 
@@ -33,7 +35,7 @@ Normal assets direct the majority of interest earned to users who have supplied 
 
 ## Liquidations
 
-Users can be liquidated on their GHO borrow positions, the same as any other asset in the Aave protocol.
+Users can be liquidated on their GHO borrow positions, the same as any other asset in the Aave Protocol.
 
 When a liquidation occurs, liquidators repay up to 50% of the outstanding borrowed amount on behalf of the borrower. In return, they can buy the collateral at a discount and keep the difference (liquidation penalty) as a bonus.
 
@@ -41,6 +43,6 @@ It is important to be mindful of price fluctuations due to market conditions, as
 
 ### FlashMint
 
-[FlashMinting](flashmint.md) provides the same functionality as the current flashloan standard. Therefore, FlashMinting can be used to liquidate borrow positions, the same way flashloans are regularly used to liquidate user positions within the Aave protocol. Additionally, users approved by the Aave DAO as “_FlashBorrowers_” have the ability to execute flash mints free of charge. This works in the same way as the “flashLoan” function of the Aave V3 protocol.
+[FlashMinting](flashmint.md) provides the same functionality as the current flashloan standard. Therefore, FlashMinting can be used to liquidate borrow positions, the same way flashloans are regularly used to liquidate user positions within the Aave Protocol. Additionally, users approved by the Aave DAO as “_FlashBorrowers_” have the ability to execute flash mints free of charge. This works in the same way as the “flashLoan” function of the Aave V3 protocol.
 
 For more information, please read the liquidation pages in the [FAQs](https://docs.aave.com/faq/liquidations) and [V3 Developer Docs](https://docs.aave.com/developers/guides/liquidations).

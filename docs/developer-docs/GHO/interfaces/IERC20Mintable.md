@@ -2,7 +2,7 @@
 
 The interface of a mintable ERC20 token.
 
-This page shows the [`write methods`](#write-methods) within the `IERC20Mintable` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/interfaces/IERC20Mintable.sol).
+This page shows the [write](#write-methods) methods within the `IERC20Mintable` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/interfaces/IERC20Mintable.sol).
 
 ## Write Methods
 
@@ -14,7 +14,7 @@ function mint(address account, uint256 amount) external
 
 Creates an `amount` of new tokens for the `account` address.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name    | Type      | Description                      |
 | ------- | --------- | -------------------------------- |

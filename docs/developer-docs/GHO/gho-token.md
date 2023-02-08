@@ -14,12 +14,12 @@ function mint(address account, uint256 amount) external override
 
 Mints the requested `amount` of tokens to the `account` address.
 
-Only facilitators with enough bucket capacity available can mint. The bucket level increases upon minting (`newBucketLevel = currentBucketLevel + amount`), and must be less than or equal to the bucket capacity.
+Only Facilitators with enough bucket capacity available can mint. The bucket level increases upon minting (`newBucketLevel = currentBucketLevel + amount`), and must be less than or equal to the bucket capacity.
 
 Emits the [`FacilitatorBucketLevelUpdated`](./interfaces/IGhoToken.md#facilitatorbucketlevelupdated) event.
 To track all Facilitator activity, follow this event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name    | Type      | Description                          |
 | ------- | --------- | ------------------------------------ |
@@ -36,11 +36,11 @@ Burns the requested `amount` of tokens from the account address.
 
 The amount of tokens to burn must be greater than 0.
 
-Only active facilitators (capacity > 0) can burn. The bucket level decreases upon burning (`newBucketLevel = currentBucketLevel - amount`).
+Only active Facilitators (capacity > 0) can burn. The bucket level decreases upon burning (`newBucketLevel = currentBucketLevel - amount`).
 
 Emits the [`FacilitatorBucketLevelUpdated`](./interfaces/IGhoToken.md#facilitatorbucketlevelupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description        |
 | ------ | --------- | ------------------ |
@@ -55,17 +55,17 @@ function addFacilitator(
 ) external onlyOwner
 ```
 
-Add the Facilitator passed with the parameters to the facilitators list.
+Add the Facilitator passed with the parameters to the Facilitators list.
 
-The Facilitator must not have already been added and must have a [`label`](./interfaces/IGhoToken.md#facilitator). The bucket configuration must be valid, with the bucket [`level`](./interfaces/IGhoToken.md#facilitator) equal to 0.
+The Facilitator must not have already been added and must have a [`label`](./interfaces/IGhoToken.md#facilitator). The bucket configuration must be valid, with the [`bucketLevel`](./interfaces/IGhoToken.md#facilitator) equal to 0.
 
 Emits the [`FacilitatorAdded`](./interfaces/IGhoToken.md#facilitatoradded) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type          | Description                            |
 | ------------------ | ------------- | -------------------------------------- |
-| facilitatorAddress | `address`     | The address of the facilitators to add |
+| facilitatorAddress | `address`     | The address of the Facilitators to add |
 | facilitatorConfig  | `Facilitator` | The configuration of the Facilitator   |
 
 The [`Facilitator`](./interfaces/IGhoToken.md#facilitator) struct is composed of the following fields:
@@ -84,11 +84,11 @@ function removeFacilitator(address facilitatorAddress) external onlyOwner
 
 Remove the Facilitator from the Facilitators list.
 
-The Facilitator must exist as a current Facilitator, and must have a bucket [`level`](./interfaces/IGhoToken.md#facilitator) equal to 0.
+The Facilitator must exist as a current Facilitator, and must have a [`bucketLevel`](./interfaces/IGhoToken.md#facilitator) equal to 0.
 
-Emits the [`FacilitatorRemoved`](./interfaces/IGhoToken.md#facilitator) event.
+Emits the [`FacilitatorRemoved`](./interfaces/IGhoToken.md#facilitatorremoved) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type      | Description                               |
 | ------------------ | --------- | ----------------------------------------- |
@@ -106,11 +106,11 @@ The owner of the contract is able to increase/decrease the bucket capacity for t
 
 Emits the [`FacilitatorBucketCapacityUpdated`](./interfaces/IGhoToken.md#facilitatorbucketcapacityupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
-| facilitator | `address` | The address of the facilitator |
+| facilitator | `address` | The address of the Facilitator |
 | newCapacity | `uint128` | The new capacity of the bucket |
 
 ## View Methods
@@ -123,17 +123,17 @@ function getFacilitator(address facilitator) external view returns (Facilitator 
 
 Returns the `facilitator` data.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
-| facilitator | `address` | The address of the facilitator |
+| facilitator | `address` | The address of the Facilitator |
 
-### Return Values:
+#### Return Values:
 
 | Type        | Description                   |
 | ----------- | ----------------------------- |
-| Facilitator | The facilitator configuration |
+| Facilitator | The Facilitator configuration |
 
 The [`Facilitator`](./interfaces/IGhoToken.md#facilitator) struct is composed of the following fields:
 
@@ -151,18 +151,18 @@ function getFacilitatorBucket(address facilitator) external view returns (uint25
 
 Returns the `facilitator` bucket configuration.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
-| facilitator | `address` | The address of the facilitator |
+| facilitator | `address` | The address of the Facilitator |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                              |
 | --------- | ---------------------------------------- |
-| `uint128` | The capacity of the facilitator’s bucket |
-| `uint128` | The level of the facilitator’s bucket    |
+| `uint128` | The capacity of the Facilitator’s bucket |
+| `uint128` | The level of the Facilitator’s bucket    |
 
 ### getFacilitatorsList
 
@@ -170,10 +170,10 @@ Returns the `facilitator` bucket configuration.
 function getFacilitatorsList() external view returns (address[] memory)
 ```
 
-Returns the list of addresses of the active facilitators.
+Returns the list of addresses of the active Facilitators.
 
-### Return Values:
+#### Return Values:
 
 | Type        | Description                            |
 | ----------- | -------------------------------------- |
-| `address[]` | The list of the facilitators addresses |
+| `address[]` | The list of the Facilitators addresses |

@@ -4,7 +4,7 @@ This contract enables FlashMinting of GHO. It is based heavily on the [EIP3156](
 
 The `GhoFlashMinter` contract inherits the [`IGhoFlashMinter`](./interfaces/IGhoFlashMinter) interface.
 
-This page shows the public [`constant`](#constant-state-variables) and [`immutable`](#immutable-state-variables) state variables, and external [`write`](#write-methods) and [`view`](#view-methods) methods within the `GhoFlashMinter` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/flashMinter/GhoFlashMinter.sol).
+This page shows the public [constant](#constant-state-variables) and [immutable](#immutable-state-variables) state variables, and external [write](#write-methods) and [view](#view-methods) methods within the `GhoFlashMinter` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/flashMinter/GhoFlashMinter.sol).
 
 ## Constant State Variables
 
@@ -22,7 +22,7 @@ Hash of the `ERC3156FlashBorrower.onFlashLoan` that must be returned by the `onF
   uint256 public constant MAX_FEE = 10000
 ```
 
-The maximum percentage fee of the flashminted amount that the flashFee can be set to (in bps).
+The maximum percentage fee of the FlashMinted amount that the flashFee can be set to (in bps).
 
 ## Immutable State Variables
 
@@ -47,22 +47,22 @@ function flashLoan(
 ) external override returns (bool)
 ```
 
-Initiates a flashmint. GHO is the only supported token.
+Initiates a FlashMint. GHO is the only supported token.
 
 From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L37) interface.
 
-Emits the [`FlashMint`](./interfaces/IGhoFlashMinter#FlashMint) event.
+Emits the [`FlashMint`](./interfaces/IGhoFlashMinter#flashmint) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name     | Type                    | Description                                                              |
 | -------- | ----------------------- | ------------------------------------------------------------------------ |
 | receiver | `IERC3156FlashBorrower` | The receiver of the tokens in the loan, and the receiver of the callback |
 | token    | `address`               | The loan currency. Only GHO is supported                                 |
-| amount   | `uint256`               | The amount of tokens to flashmint                                        |
+| amount   | `uint256`               | The amount of tokens to FlashMint                                        |
 | data     | `bytes`                 | Arbitrary data structure, intended to contain user-defined parameters    |
 
-### Return Values:
+#### Return Values:
 
 | Type   | Description                                                         |
 | ------ | ------------------------------------------------------------------- |
@@ -76,7 +76,7 @@ function distributeFeesToTreasury() external virtual override
 
 Distribute accumulated fees to the GHO treasury.
 
-Emits the [`FeesDistributedToTreasury`](../flashmint-facilitator/interfaces/IGhoFlashMinter#FeesDistributedToTreasury) event.
+Emits the [`FeesDistributedToTreasury`](../GHO/interfaces/IGhoFacilitator.md#feesdistributedtotreasury) event.
 
 ### updateFee
 
@@ -88,9 +88,9 @@ Updates the percentage fee. It is the percentage of the flash-minted amount that
 
 The `newFee` must be less than the [`MAX_FEE`](#max_fee).
 
-Emits the `[FeeUpdated](../flashMinter/interfaces/IGhoFlashMinter.md#feeupdated)` event.
+Emits the [`FeeUpdated`](../flashmint-facilitator/interfaces/IGhoFlashMinter.md#feeupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                     |
 | ------ | --------- | ------------------------------- |
@@ -102,11 +102,11 @@ Emits the `[FeeUpdated](../flashMinter/interfaces/IGhoFlashMinter.md#feeupdated)
 function updateGhoTreasury(address newGhoTreasury) external override onlyPoolAdmin
 ```
 
-Updates the address of the GHO treasury, where flashmint fees are sent.
+Updates the address of the GHO treasury, where FlashMint fees are sent.
 
-Emits the [`GhoTreasuryUpdated`](../flashmint-facilitator/interfaces/IGhoFlashMinter#ghotreasuryupdated) event.
+Emits the [`GhoTreasuryUpdated`](../GHO/interfaces/IGhoFacilitator.md#ghotreasuryupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name           | Type      | Description                    |
 | -------------- | --------- | ------------------------------ |
@@ -120,21 +120,21 @@ Emits the [`GhoTreasuryUpdated`](../flashmint-facilitator/interfaces/IGhoFlashMi
 function maxFlashLoan(address token) external view override returns (uint256)
 ```
 
-The amount of currency available to be flashminted. GHO is the only supported token. Returns 0 if any other address other than GHO is passed.
+The amount of currency available to be FlashMinted. GHO is the only supported token. Returns 0 if any other address other than GHO is passed.
 
 From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L20) interface.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name  | Type      | Description             |
 | ----- | --------- | ----------------------- |
 | token | `address` | The loan currency (GHO) |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                  |
 | --------- | -------------------------------------------- |
-| `uint256` | The amount of token that can be flashminted. |
+| `uint256` | The amount of token that can be FlashMinted. |
 
 ### flashFee
 
@@ -146,14 +146,14 @@ The fee to be charged for a given loan. GHO is the only supported token.
 
 From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L28) interface.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description               |
 | ------ | --------- | ------------------------- |
 | token  | `address` | The loan currency         |
 | amount | `uint256` | The amount of tokens lent |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                                      |
 | --------- | -------------------------------------------------------------------------------- |
@@ -167,11 +167,11 @@ function getFee() external view returns (uint256)
 
 Returns the percentage of each flash mint taken as a fee.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                                                            |
 | --------- | ------------------------------------------------------------------------------------------------------ |
-| `uint256` | The percentage fee of the flashminted amount that needs to be repaid, on top of the principal (in bps) |
+| `uint256` | The percentage fee of the FlashMinted amount that needs to be repaid, on top of the principal (in bps) |
 
 ### getGhoTreasury
 
@@ -181,7 +181,7 @@ function getGhoTreasury() external view returns (address)
 
 Returns the address of the GHO treasury.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                             |
 | --------- | --------------------------------------- |

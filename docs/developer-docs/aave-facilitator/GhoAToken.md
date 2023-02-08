@@ -1,20 +1,20 @@
 # GhoAToken
 
-The implementation of the interest bearing token for the Aave protocol.
+The implementation of the interest bearing token for the Aave Protocol.
 
 :::info
 
-GHO cannot be supplied to the Aave Protoco. However, the GhoAToken is required as it contains logic for GHO to work as a reserve with the Aave Protocol.
+GHO cannot be supplied to the Aave Protocol. However, the `GhoAToken` is required as it contains logic for GHO to work as a reserve with the Aave Protocol.
 
 :::
 
 The `GhoAToken` contract inherits the [`VersionedInitializable`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/libraries/aave-upgradeability/VersionedInitializable.sol), [`ScaledBalanceTokenBase`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/ScaledBalanceTokenBase.sol) and [`EIP712Base`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/EIP712Base.sol) contracts, and the [`IGhoAToken`](./interfaces/IGhoAToken.md) interface.
 
-This page shows the public [`constant state variables`](#constant-state-variables), external [`write`]#write-methods) and [`view`](#view-methods) methods, and the [`not permitted methods`](#not-permitted-methods) within the `GhoAToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoAToken.sol).
+This page shows the public [constant state variables](#constant-state-variables), external [write](#write-methods) and [view](#view-methods) methods, and the ['not permitted methods'](#not-permitted-methods) within the `GhoAToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoAToken.sol).
 
 ## Constant State Variables
 
-The external state variables
+The external state variables.
 
 ### PERMIT_TYPEHASH
 
@@ -50,7 +50,7 @@ Initializes the `aToken`.
 
 Emits the [`Initialized`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IInitializableAToken.sol#L24) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type                        | Description                                                         |
 | -------------------- | --------------------------- | ------------------------------------------------------------------- |
@@ -73,7 +73,7 @@ Transfers the underlying asset to `target`.
 
 It performs a mint of GHO on behalf of the `target`. Used by the Pool to transfer assets in `borrow()`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                           |
 | ------ | --------- | ------------------------------------- |
@@ -94,7 +94,7 @@ Handles the underlying received by the aToken after the transfer has been comple
 
 This function transfers the debt interest repaid by a user to the GHO treasury. It burns all the repaid GHO.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name       | Type      | Description                                                      |
 | ---------- | --------- | ---------------------------------------------------------------- |
@@ -126,7 +126,7 @@ Rescues and transfers the tokens locked in this contract to the recipient.
 
 The underlying asset, GHO, cannot be rescued.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                     |
 | ------ | --------- | ------------------------------- |
@@ -144,7 +144,7 @@ Sets a reference to the GHO variable debt token. The variable debt token must no
 
 Emits the [`VariableDebtTokenSet`](./interfaces/IGhoAToken.md#variabledebttokenset) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type       | Description                               |
 | -------------------- | ---------- | ----------------------------------------- |
@@ -158,9 +158,9 @@ function updateGhoTreasury(address newGhoTreasury) external override onlyPoolAdm
 
 Updates the address of the GHO treasury, where interest earned by the protocol is sent.
 
-Emits the [`GhoTreasuryUpdated`](#ghotreasuryupdated)` event.
+Emits the [`GhoTreasuryUpdated`](../GHO/interfaces/IGhoFacilitator.md#ghotreasuryupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name           | Type      | Description                    |
 | -------------- | --------- | ------------------------------ |
@@ -168,7 +168,7 @@ Emits the [`GhoTreasuryUpdated`](#ghotreasuryupdated)` event.
 
 ## View Methods
 
-For `balanceOf` and `totalSupply` methods, both return zero. The reason is that GHO cannot be supplied to the Aave Protocol. However, the GhoAToken is required as it contains logic for GHO to work as a reserve with the Aave Protocol.
+The [`balanceOf`](#balanceof) and [`totalSupply`](#totalsupply) methods, both return zero. The reason is that GHO cannot be supplied to the Aave Protocol. However, the `GhoAToken` is required as it contains logic for GHO to work as a reserve with the Aave Protocol.
 
 ### balanceOf
 
@@ -185,13 +185,13 @@ Returns zero at `GhoAToken`.
 
 Standard [`ERC20`](https://github.com/aave/aave-v3-core/blob/master/contracts/dependencies/openzeppelin/contracts/IERC20.sol#L16) method.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
 | user | `address` | The address of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description |
 | --------- | ----------- |
@@ -207,7 +207,7 @@ Returns zero at `GhoAToken`.
 
 Standard [`ERC20`](https://github.com/aave/aave-v3-core/blob/master/contracts/dependencies/openzeppelin/contracts/IERC20.sol#L11) method.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description |
 | --------- | ----------- |
@@ -221,7 +221,7 @@ function RESERVE_TREASURY_ADDRESS() external view override returns (address)
 
 Returns the `address` of the Aave treasury.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                      |
 | --------- | -------------------------------- |
@@ -235,7 +235,7 @@ function UNDERLYING_ASSET_ADDRESS() external view override returns (address)
 
 Returns the `address` of GHO as it is the underlying asset of this aToken.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                              |
 | --------- | ---------------------------------------- |
@@ -253,7 +253,7 @@ Gets the domain separator for the token. Return cached value if chainId matches 
 
 See [`EIP712Base.DOMAIN_SEPARATOR()`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/EIP712Base.sol#L32) for more detailed documentation.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                            |
 | --------- | ------------------------------------------------------ |
@@ -271,13 +271,13 @@ Returns the nonce of the `owner`.
 
 See [`EIP712Base.nonces()`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/EIP712Base.sol#L44) for more detailed documentation.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name  | Type      | Description              |
 | ----- | --------- | ------------------------ |
 | owner | `address` | The address of the owner |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description            |
 | --------- | ---------------------- |
@@ -291,7 +291,7 @@ function getVariableDebtToken() external view override returns (address)
 
 Returns the `address` of the GHO variable debt token.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                        |
 | --------- | -------------------------------------------------- |
@@ -305,7 +305,7 @@ function getGhoTreasury() external view override returns (address) {
 
 Returns the `address` of the GHO treasury.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                             |
 | --------- | --------------------------------------- |
@@ -315,7 +315,7 @@ Returns the `address` of the GHO treasury.
 
 The following methods automatically revert with the error from Aave V3 `OPERATION_NOT_SUPPORTED` as they are not permitted to be executed.
 
-For example, `[mint()`](#mint) is not permitted as it is not possible to supply GHO into the pool.
+For example, [`mint()`](#mint) is not permitted as it is not possible to supply GHO into the pool.
 
 ### mint
 

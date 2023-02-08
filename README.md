@@ -1,41 +1,23 @@
-# Website
+# GHO Document Hub
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This repository contains all the documentation for GHO, a decentralized, multi-collateralized stablecoin pegged to the U.S. dollar. The docs [website](docs.gho.xyz) has been built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-### Installation
+## Documentation
 
-```
-$ yarn
-```
+The GHO documentation covers a general overview of concepts, and developer docs.
 
-### Local Development
+### Concepts
 
-```
-$ yarn start
-```
+These pages cover the core concepts to help users learn the basics of GHO. This includes:
+- What is GHO?
+- Why GHO?
+- How GHO works (Facilitators, interest and discount rate models, and more)
+- Fundamentals (how to interact with GHO, FlashMinting)
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Developer Docs
 
-### Build
+Developers can look into the technical implementation of GHO, smart contracts, how to integrate GHO, and find the deployed contracts addresses.
 
-```
-$ yarn build
-```
+### Other Resources
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Alongside these main sections, users can find FAQs, audits, a glossary and the techpaper. 
