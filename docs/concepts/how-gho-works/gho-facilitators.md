@@ -33,7 +33,7 @@ Frameworks on how to apply to become a Facilitator will be open to community dis
 
 GHO will be minted through various strategies. Eventually, Facilitators will be able to apply different strategies to their generation of GHO. This will allow Aave Governance to manage its exposure to different strategies across the ecosystem, and some strategies may help GHO maintain its peg.
 
-As it will be up to Facilitators to decide their minting strategies, we expect to see exciting creativity in this area. For example, the Aave V3 Market, one of the proposed initial Facilitators of GHO, operates on an overcollateralized model. As a result, GHO will be overcollateralized.
+As it will be up to Facilitators to decide their minting strategies, we expect to see exciting creativity in this area. For example, the Aave V3 Pool, one of the proposed initial Facilitators of GHO, operates on an overcollateralized model. As a result, GHO will be overcollateralized.
 
 Aave Governance may attract varied Facilitators in different ways. If new and additional Facilitators are approved by Aave Governance, the possibilities are endless.
 

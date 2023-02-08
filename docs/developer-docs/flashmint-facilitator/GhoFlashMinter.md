@@ -53,7 +53,7 @@ From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-co
 
 Emits the [`FlashMint`](./interfaces/IGhoFlashMinter#flashmint) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name     | Type                    | Description                                                              |
 | -------- | ----------------------- | ------------------------------------------------------------------------ |
@@ -62,7 +62,7 @@ Emits the [`FlashMint`](./interfaces/IGhoFlashMinter#flashmint) event.
 | amount   | `uint256`               | The amount of tokens to FlashMint                                        |
 | data     | `bytes`                 | Arbitrary data structure, intended to contain user-defined parameters    |
 
-### Return Values:
+#### Return Values:
 
 | Type   | Description                                                         |
 | ------ | ------------------------------------------------------------------- |
@@ -90,7 +90,7 @@ The `newFee` must be less than the [`MAX_FEE`](#max_fee).
 
 Emits the [`FeeUpdated`](../flashmint-facilitator/interfaces/IGhoFlashMinter.md#feeupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                     |
 | ------ | --------- | ------------------------------- |
@@ -106,7 +106,7 @@ Updates the address of the GHO treasury, where FlashMint fees are sent.
 
 Emits the [`GhoTreasuryUpdated`](../GHO/interfaces/IGhoFacilitator.md#ghotreasuryupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name           | Type      | Description                    |
 | -------------- | --------- | ------------------------------ |
@@ -124,13 +124,13 @@ The amount of currency available to be FlashMinted. GHO is the only supported to
 
 From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L20) interface.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name  | Type      | Description             |
 | ----- | --------- | ----------------------- |
 | token | `address` | The loan currency (GHO) |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                  |
 | --------- | -------------------------------------------- |
@@ -146,14 +146,14 @@ The fee to be charged for a given loan. GHO is the only supported token.
 
 From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L28) interface.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description               |
 | ------ | --------- | ------------------------- |
 | token  | `address` | The loan currency         |
 | amount | `uint256` | The amount of tokens lent |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                                      |
 | --------- | -------------------------------------------------------------------------------- |
@@ -167,7 +167,7 @@ function getFee() external view returns (uint256)
 
 Returns the percentage of each flash mint taken as a fee.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                                                            |
 | --------- | ------------------------------------------------------------------------------------------------------ |
@@ -181,7 +181,7 @@ function getGhoTreasury() external view returns (address)
 
 Returns the address of the GHO treasury.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                             |
 | --------- | --------------------------------------- |

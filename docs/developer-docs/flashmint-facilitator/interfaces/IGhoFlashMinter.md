@@ -53,7 +53,7 @@ function updateFee(uint256 newFee) external
 
 Updates the percentage fee. It is the percentage of the flash-minted amount that needs to be repaid. The fee is expressed in bps. A value of 100, results in 1.00%
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                     |
 | ------ | --------- | ------------------------------- |
@@ -69,7 +69,7 @@ function ADDRESSES_PROVIDER() external view returns (IPoolAddressesProvider)
 
 Returns the address of the Aave Pool Addresses Provider contract.
 
-### Return Values:
+#### Return Values:
 
 | Type                     | Description                              |
 | ------------------------ | ---------------------------------------- |
@@ -83,7 +83,7 @@ function MAX_FEE() external view returns (uint256)
 
 Returns the maximum value the fee can be set to.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                                                    |
 | --------- | ---------------------------------------------------------------------------------------------- |
@@ -97,7 +97,7 @@ function getFee() external view returns (uint256)
 
 Returns the percentage of each flash mint taken as a fee.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                                                             |
 | --------- | ------------------------------------------------------------------------------------------------------- |

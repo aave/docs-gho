@@ -92,7 +92,7 @@ const sidebars = {
     },
       {
       type: 'category',
-      label: 'FlashMint Facilitator',
+      label: 'FlashMinter Facilitator',
       items: [
         'developer-docs/flashmint-facilitator/GhoFlashMinter',
         {

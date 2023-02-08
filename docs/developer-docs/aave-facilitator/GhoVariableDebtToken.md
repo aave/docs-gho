@@ -62,7 +62,7 @@ Initializes the debt token.
 
 Emits the [`Initialized`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IInitializableDebtToken.sol#L23) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                 | Type                        | Description                                                   |
 | -------------------- | --------------------------- | ------------------------------------------------------------- |
@@ -90,7 +90,7 @@ function mint(
 - The discount percent of the user is applied to the accumulated interest.
 - DiscountPercent is rebalanced and “locked for the next period of time”
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name       | Type       | Description                                                                                                                                                      |
 | ---------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -99,7 +99,7 @@ function mint(
 | amount     | `uint256`  | The amount of debt tokens being minted                                                                                                                           |
 | index      | `uint256`  | The next variable debt liquidity index of the reserve                                                                                                            |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                        |
 | --------- | ------------------------------------------------------------------ |
@@ -118,7 +118,7 @@ function burn(
 
 Burns the user variable debt token. Implements the basic logic to burn a scaled balance token.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description                                    |
 | ------ | --------- | ---------------------------------------------- |
@@ -126,7 +126,7 @@ Burns the user variable debt token. Implements the basic logic to burn a scaled 
 | amount | `uint256` | The amount being burned                        |
 | index  | `uint256` | The variable debt index of the reserve         |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                          |
 | --------- | ------------------------------------ |
@@ -144,7 +144,7 @@ This function can only be called by the [Pool Admin](../contracts-overview.md#ac
 
 Emits the [`ATokenSet`](./interfaces/IGhoVariableDebtToken#atokenset) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name      | Type      | Description                           |
 | --------- | --------- | ------------------------------------- |
@@ -165,7 +165,7 @@ This function can only be called by the [Pool Admin](../contracts-overview.md#ac
 
 Emits the [`DiscountRateStrategyUpdated`](./interfaces/IGhoVariableDebtToken.md#discountratestrategyupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                    | Type      | Description                                      |
 | ----------------------- | --------- | ------------------------------------------------ |
@@ -183,7 +183,7 @@ This function can only be called by the [Pool Admin](../contracts-overview.md#ac
 
 Emits the [`DiscountTokenUpdated`](./interfaces/IGhoVariableDebtToken.md#discounttokenupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name             | Type      | Description                           |
 | ---------------- | --------- | ------------------------------------- |
@@ -209,7 +209,7 @@ This function can only be called by the discount token.
 
 Emits the [`Transfer`](https://github.com/aave/aave-v3-core/blob/master/contracts/dependencies/openzeppelin/contracts/IERC20.sol#L73) and [`Mint`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IScaledBalanceToken.sol#L18) events.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name                          | Type      | Description                                    |
 | ----------------------------- | --------- | ---------------------------------------------- |
@@ -229,7 +229,7 @@ Decreases the amount of interest accumulated by the user.
 
 This function can only be called by the AToken.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name   | Type      | Description               |
 | ------ | --------- | ------------------------- |
@@ -248,7 +248,7 @@ This can only be called if the the discount lock period has finished and the use
 
 Emits the [`Transfer`](https://github.com/aave/aave-v3-core/blob/master/contracts/dependencies/openzeppelin/contracts/IERC20.sol#L73) and [`Mint`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IScaledBalanceToken.sol#L18) events.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
@@ -266,7 +266,7 @@ This function can only be called by the [Pool Admin](../contracts-overview.md#ac
 
 Emits the [`DiscountLockPeriodUpdated`](./interfaces/IGhoVariableDebtToken.md#discountlockperiodupdated) event.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name          | Type      | Description                                       |
 | ------------- | --------- | ------------------------------------------------- |
@@ -284,13 +284,13 @@ Returns the amount of tokens owned by the `user`.
 
 Standard [`ERC20`](https://github.com/aave/aave-v3-core/blob/master/contracts/dependencies/openzeppelin/contracts/IERC20.sol#L16) method.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
 | user | `address` | The address of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                            |
 | --------- | -------------------------------------- |
@@ -308,7 +308,7 @@ It does not account for active discounts of the users. The discount is deducted 
 
 Standard [`ERC20`](https://github.com/aave/aave-v3-core/blob/master/contracts/dependencies/openzeppelin/contracts/IERC20.sol#L11) method.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                                                         |
 | --------- | ----------------------------------------------------------------------------------- |
@@ -322,7 +322,7 @@ function UNDERLYING_ASSET_ADDRESS() external view override returns (address)
 
 Returns the address of the underlying asset of this debtToken, GHO for variableDebtGHO.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                         |
 | --------- | ----------------------------------- |
@@ -336,7 +336,7 @@ function getAToken() external view override returns (address)
 
 Returns the address of the [`GhoAToken`](GhoAToken.md) contract.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                           |
 | --------- | ------------------------------------- |
@@ -350,7 +350,7 @@ function getDiscountRateStrategy() external view override returns (address)
 
 Returns the address of the Discount Rate Strategy.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                      |
 | --------- | ------------------------------------------------ |
@@ -364,7 +364,7 @@ function getDiscountToken() external view override returns (address)
 
 Returns the address of the Discount Token.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                   |
 | --------- | ----------------------------- |
@@ -378,13 +378,13 @@ function getDiscountPercent(address user) external view override returns (uint25
 
 Returns the discount percent that will be applied to the accumulated borrow interest of the user.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
 | user | `address` | The address of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                             |
 | --------- | --------------------------------------- |
@@ -398,13 +398,13 @@ function getBalanceFromInterest(address user) external view override returns (ui
 
 Returns the amount of interest accumulated by the user.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description             |
 | ---- | --------- | ----------------------- |
 | user | `address` | The address of the user |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                    |
 | --------- | ---------------------------------------------- |
@@ -418,7 +418,7 @@ function getDiscountLockPeriod() external view override returns (uint256)
 
 Returns the discount percent lock period.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                   |
 | --------- | --------------------------------------------- |
@@ -432,13 +432,13 @@ function getUserRebalanceTimestamp(address user) external view override returns 
 
 Returns the timestamp at which a user’s discount percent can be rebalanced.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name | Type      | Description                                                   |
 | ---- | --------- | ------------------------------------------------------------- |
 | user | `address` | The address of the user’s rebalance timestamp being requested |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                                               |
 | --------- | --------------------------------------------------------- |

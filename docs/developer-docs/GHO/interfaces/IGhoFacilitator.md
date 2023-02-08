@@ -56,9 +56,13 @@ function updateGhoTreasury(address newGhoTreasury) external
 
 Updates the address of the GHO Treasury.
 
-🚨The GHO Treasury is where revenue fees are sent to. Update carefully.
+:::caution
 
-### Input Parameters:
+The GHO Treasury is where revenue fees are sent to. Update carefully.
+
+:::
+
+#### Input Parameters:
 
 | Name           | Type      | Description                     |
 | -------------- | --------- | ------------------------------- |
@@ -72,7 +76,7 @@ function getGhoTreasury() external view returns (address)
 
 Returns the address of the GHO Treasury.
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                              |
 | --------- | ---------------------------------------- |

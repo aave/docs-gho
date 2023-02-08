@@ -40,7 +40,7 @@ event FacilitatorAdded(
 
 Emitted when a new Facilitator is [added](../gho-token.md#addfacilitator).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type      | Description                                            |
 | ------------------ | --------- | ------------------------------------------------------ |
@@ -56,7 +56,7 @@ event FacilitatorRemoved(address indexed facilitatorAddress)
 
 Emitted when a Facilitator is [removed](../gho-token.md#removefacilitator).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type      | Description                            |
 | ------------------ | --------- | -------------------------------------- |
@@ -74,7 +74,7 @@ event FacilitatorBucketCapacityUpdated(
 
 Emitted when the bucket capacity of a Facilitator is [updated](../gho-token.md#setfacilitatorbucketcapacity).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type      | Description                                                           |
 | ------------------ | --------- | --------------------------------------------------------------------- |
@@ -94,7 +94,7 @@ event FacilitatorBucketLevelUpdated(
 
 Emitted when the bucket level has changed. This occurs when tokens have been [minted](../gho-token.md#mint) and [burned](../gho-token.md#burn).
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type      | Description                                                        |
 | ------------------ | --------- | ------------------------------------------------------------------ |
@@ -115,7 +115,7 @@ function addFacilitator(
 
 Adds the Facilitator passed with the parameters to the Facilitators list.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type          | Description                           |
 | ------------------ | ------------- | ------------------------------------- |
@@ -130,7 +130,7 @@ function removeFacilitator(address facilitatorAddress) external
 
 Remove the Facilitator from the Facilitators list.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name               | Type      | Description                              |
 | ------------------ | --------- | ---------------------------------------- |
@@ -144,7 +144,7 @@ function setFacilitatorBucketCapacity(address facilitator, uint128 newCapacity) 
 
 Set the bucket capacity of the `facilitator`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
@@ -161,13 +161,13 @@ function getFacilitator(address facilitator) external view returns (Facilitator 
 
 Returns the `facilitator` data.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type       | Description                    |
 | ----------- | ---------- | ------------------------------ |
 | facilitator | `address ` | The address of the Facilitator |
 
-### Return Values:
+#### Return Values:
 
 | Type          | Description                   |
 | ------------- | ----------------------------- |
@@ -181,13 +181,13 @@ function getFacilitatorBucket(address facilitator) external view returns (uint25
 
 Returns the bucket configuration of the `facilitator`.
 
-### Input Parameters:
+#### Input Parameters:
 
 | Name        | Type      | Description                    |
 | ----------- | --------- | ------------------------------ |
 | facilitator | `address` | The address of the Facilitator |
 
-### Return Values:
+#### Return Values:
 
 | Type      | Description                              |
 | --------- | ---------------------------------------- |
@@ -202,7 +202,7 @@ function getFacilitatorsList() external view returns (address[] memory)
 
 Returns the list of addresses of the active Facilitators.
 
-### Return Values:
+#### Return Values:
 
 | Type        | Description                            |
 | ----------- | -------------------------------------- |

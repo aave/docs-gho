@@ -56,7 +56,7 @@ The following examples help to explain the above equation:
 
 ### Example 1
 
-The current interest rate is 2%, and the user ($*u*$) has not staked any AAVE in the Safety Module.
+The current interest rate is 2%, and the user ($u$) has not staked any AAVE in the Safety Module.
 
 Given:
 
