@@ -4,7 +4,7 @@ Defines the behavior of the [GHOFlashMinter](../GhoFlashMinter).
 
 The `IGhoFlashMinter` interface inherits the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol) and [`IGhoFacilitator`](../../GHO/interfaces/IGhoFacilitator.md) interfaces.
 
-This page shows the [`events`](#events), [`write`](#write-methods) and [`view`](#view-methods) methods within the `IGhoFlashMinter` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/flashMinter/interfaces/IGhoFlashMinter.sol).
+This page shows the [events](#events), [write](#write-methods) and [view](#view-methods) methods within the `IGhoFlashMinter` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/flashMinter/interfaces/IGhoFlashMinter.sol).
 
 ## Events
 

@@ -12,7 +12,7 @@ A number of [operations](#not-supported-methods), such as transfer and approve, 
 
 The `GhoVariableDebtToken` contract inherits the [`DebtTokenBase`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/DebtTokenBase.sol), [`ScaledBalanceTokenBase`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/ScaledBalanceTokenBase.sol) contracts, and the [`IGhoVariableDebtToken`](./interfaces/IGhoVariableDebtToken.md) interface.
 
-This page shows the public [`constant state variables`](#constant-state-variables), [`structs`](#structs), external [`write methods`](#write-methods), and the [`not supported methods`](#not-supported-methods) within the `GhoVariableDebtToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoVariableDebtToken.sol).
+This page shows the public [constant state variables](#constant-state-variables), [structs](#structs), external [write](#write-methods) methods, and the ['not supported methods'](#not-supported-methods) within the `GhoVariableDebtToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoVariableDebtToken.sol).
 
 ## Constant State Variables
 
@@ -60,7 +60,7 @@ function initialize(
 
 Initializes the debt token.
 
-Emits the [`Initialized`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IInitializableDebtToken.sol#L23)` event.
+Emits the [`Initialized`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IInitializableDebtToken.sol#L23) event.
 
 #### Input Parameters:
 
@@ -94,7 +94,7 @@ function mint(
 
 | Name       | Type       | Description                                                                                                                                                      |
 | ---------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| user       | `addres`s` | The address performing the mint. The address receives the borrowed underlying, being the delegatee in case of credit delegation, or same as onBehalfOf otherwise |
+| user       | `address` | The address performing the mint. The address receives the borrowed underlying, being the delegatee in case of credit delegation, or same as onBehalfOf otherwise |
 | onBehalfOf | `address`  | The address of the user that will receive the scaled debt tokens tokens                                                                                          |
 | amount     | `uint256`  | The amount of debt tokens being minted                                                                                                                           |
 | index      | `uint256`  | The next variable debt liquidity index of the reserve                                                                                                            |
@@ -140,7 +140,7 @@ function setAToken(address ghoAToken) external override onlyPoolAdmin
 
 Sets a reference to the [`GhoAToken`](GhoAToken.md) contract. Checks the AToken has not already been set.
 
-This function can only be called by the Pool Admin.
+This function can only be called by the [Pool Admin](../contracts-overview.md#accounts-after-deployment).
 
 Emits the [`ATokenSet`](./interfaces/IGhoVariableDebtToken#atokenset) event.
 
@@ -161,7 +161,7 @@ function updateDiscountRateStrategy(address newDiscountRateStrategy)
 
 Updates the Discount Rate Strategy.
 
-This function can only be called by the [Pool Admin].
+This function can only be called by the [Pool Admin](../contracts-overview.md#accounts-after-deployment).
 
 Emits the [`DiscountRateStrategyUpdated`](./interfaces/IGhoVariableDebtToken.md#discountratestrategyupdated) event.
 
@@ -179,7 +179,7 @@ function updateDiscountToken(address newDiscountToken) external override onlyPoo
 
 Updates the Discount Token.
 
-This function can only be called by the [Pool Admin].
+This function can only be called by the [Pool Admin](../contracts-overview.md#accounts-after-deployment).
 
 Emits the [`DiscountTokenUpdated`](./interfaces/IGhoVariableDebtToken.md#discounttokenupdated) event.
 
@@ -262,7 +262,7 @@ function updateDiscountLockPeriod(uint256 newLockPeriod) external override onlyP
 
 Updates the discount percent lock period.
 
-This function can only be called by the [Pool Admin].
+This function can only be called by the [Pool Admin](../contracts-overview.md#accounts-after-deployment).
 
 Emits the [`DiscountLockPeriodUpdated`](./interfaces/IGhoVariableDebtToken.md#discountlockperiodupdated) event.
 

@@ -4,7 +4,7 @@ This abstract contract is a gas-efficient ERC20 and EIP-2612 implementation. It 
 
 The contract is `ERC20` compliant and inherits the standard [`IERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) interface.
 
-This page is split up differently (than other contract pages) showing the public metadata, ERC20 and EIP-2612 storage variables, and the [ERC20](#erc20) and EIP-2612 logic within the `ERC20` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/ERC20.sol).
+This page is split up differently (than other contract pages) showing the public [metadata](#metadata-storage), [`ERC20`](#erc20-storage) and [`EIP-2612`](#eip-2612-storage) storage variables, and the [`ERC20`](#erc20-logic) and [`EIP-2612`](#eip-2612-logic) logic within the `ERC20` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/ERC20.sol).
 
 ## Metadata Storage
 

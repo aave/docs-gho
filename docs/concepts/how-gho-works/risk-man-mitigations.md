@@ -16,13 +16,13 @@ The exposure and risk of a flash crash exist in all markets; however, the Aave P
 
 ## Smart Contract Risk
 
-GHO has been developed with security as a top priority. GHO has been reviewed as thoroughly as possible before being activated by Aave Governance. There is an active bug bounty where any security vulnerabilities can be reported and awarded the bounty if the criteria is met.
+GHO has been developed with security as a top priority. GHO has been reviewed as thoroughly as possible before being activated by Aave Governance. There is an active [bug bounty](https://github.com/aave/gho-bug-bounty) where any security vulnerabilities can be reported and awarded the bounty if the criteria is met.
 
-The system has been designed to be safe and secure and to meet the highest security standards. The GHO smart contracts have been developed following responsible development practices, which includes both internal and external code reviews and formal verification from auditors and community contributors.
+The system has been designed to be safe and secure and to meet the highest security standards. The GHO smart contracts have been developed following responsible development practices, which includes both internal and external code reviews and formal verification from [auditors](../../resources/resources.md#audit-round-1) and community contributors.
 
 Smart contract risk can never be eliminated completely; however, through conservative development processes, it can be reduced.
 
-The audit reports and formal verification for GHO can be found on the Resources page.
+The audit reports and formal verification for GHO can be found on the [Resources](../../resources/resources.md) page.
 
 ## Stability Mechanism
 
@@ -31,4 +31,4 @@ The following stability mechanisms have been implemented to ensure that GHO is s
 - Locked oracle pricing
 - Governance set interest rates
 
-Please see the How GHO Works page for detailed explanations of each stability mechanism.
+Please see the "[GHO Implementation](gho-implementation.md)" page for explanations of the stability mechanisms.

@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Repay and Liquidate GHO
 
-When a user repays their GHO (or is liquidated), that user’s GHO is burned by the Facilitator.
+When a user repays their GHO (or is liquidated), that user’s GHO is burned by the [Facilitator](../how-gho-works/gho-facilitators.md).
 
 ## Repaying on the Aave Interface
 
@@ -16,7 +16,7 @@ The video below shows how to repay GHO using the Aave Protocol interface. This g
 
 ## Repaying or Liquidating GHO
 
-When repaying (or liquidating) GHO, first there are automatic smart contract-based collateralization checks. GHO is then returned to the pool from the user (or liquidator) and burned.
+When [repaying](../../developer-docs/overview#repay) (or [liquidating](../../developer-docs/overview#liquidation)) GHO, first there are automatic smart contract-based collateralization checks. GHO is then returned to the pool from the user (or liquidator) and burned.
 
 Normal assets direct the majority of interest earned to users who have supplied the corresponding asset, and a small portion is directed to the DAO. In this instance, since there are no suppliers to pay, the interest (accrued by minters of GHO) that is repaid is automatically transferred to the Aave DAO treasury. While the original amount of GHO is burned, and the Bucket level for the Facilitator is decreased.
 

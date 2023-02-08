@@ -16,13 +16,13 @@ In the current Aave pool, if an asset is supplied, a user is able to perform a F
 
 Therefore, FlashMinting has been introduced. FlashMinting provides the same functionality and follows the current [Flash Loan](https://docs.aave.com/developers/guides/flash-loans) standard (ERC3156) as in the Aave Protocol. Allowing users to access the liquidity of the FlashMint Facilitator for one transaction, as long as the amount taken plus the fee is returned or (if allowed) debt position is opened by the end of the transaction.
 
-The [FlashMinter](../how-gho-works/gho-facilitators.md) Facilitator is an entity that enables FlashMinting. The FlashMinter has a GHO limit to mint and will be proposed as an initial Facilitator to the Aave DAO.
+The [FlashMinter Facilitator](../how-gho-works/gho-facilitators#flashminter) is an entity that enables FlashMinting. The FlashMinter has a GHO limit to mint and will be proposed as an initial Facilitator to the Aave DAO.
 
 ## Execution Flow
 
 For developers, a helpful mental model to consider when developing a solution is as follows:
 
-1. Your contract calls the FlashMinter Facilitator, requesting to FlashMint a certain amount of GHO using `flashLoan()`.
+1. Your contract calls the FlashMinter Facilitator, requesting to FlashMint a certain amount of GHO using [`flashLoan()`](../../developer-docs/flashmint-facilitator/GhoFlashMinter#flashloan).
 2. If the requested amount is lower or equal to the Facilitator's capacity, the FlashMinter Facilitator mints and transfers the GHO amount to your contract, then calls `onFlashLoan()` on receiver contract.
 3. Your contract, now holding the FlashMinted amount, executes any arbitrary operation in its code.
    - You approve the FlashMinter Facilitator for FlashMinted amount + fee. If you are an authorized flashborrower by the Aave DAO, your fee is 0.
@@ -34,7 +34,7 @@ For developers, a helpful mental model to consider when developing a solution is
 
 1. **Setting Up**
 
-Your contract that receives the FlashMinted amount of GHO must conform to the ERC3156 standard. The `IERC3156FlashBorrower.sol` interface defines the relevant `onFlashLoan()` function that needs to be overridden by your arbitrary code.
+Your contract that receives the FlashMinted amount of GHO must conform to the ERC3156 standard. The [`IERC3156FlashBorrower.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashBorrower.sol) interface defines the relevant `onFlashLoan()` function that needs to be overridden by your arbitrary code.
 
 Also note that since the owed GHO amount will be pulled from your contract, your contract must give allowance to the FlashMinter Facilitator to pull those funds to pay back the FlashMinted amount + fee.
 

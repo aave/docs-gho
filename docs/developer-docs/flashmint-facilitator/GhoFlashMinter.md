@@ -4,7 +4,7 @@ This contract enables FlashMinting of GHO. It is based heavily on the [EIP3156](
 
 The `GhoFlashMinter` contract inherits the [`IGhoFlashMinter`](./interfaces/IGhoFlashMinter) interface.
 
-This page shows the public [`constant`](#constant-state-variables) and [`immutable`](#immutable-state-variables) state variables, and external [`write`](#write-methods) and [`view`](#view-methods) methods within the `GhoFlashMinter` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/flashMinter/GhoFlashMinter.sol).
+This page shows the public [constant](#constant-state-variables) and [immutable](#immutable-state-variables) state variables, and external [write](#write-methods) and [view](#view-methods) methods within the `GhoFlashMinter` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/flashMinter/GhoFlashMinter.sol).
 
 ## Constant State Variables
 
@@ -51,7 +51,7 @@ Initiates a FlashMint. GHO is the only supported token.
 
 From the [`IERC3156FlashLender`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC3156FlashLender.sol#L37) interface.
 
-Emits the [`FlashMint`](./interfaces/IGhoFlashMinter#FlashMint) event.
+Emits the [`FlashMint`](./interfaces/IGhoFlashMinter#flashmint) event.
 
 #### Input Parameters:
 
@@ -76,7 +76,7 @@ function distributeFeesToTreasury() external virtual override
 
 Distribute accumulated fees to the GHO treasury.
 
-Emits the [`FeesDistributedToTreasury`](../flashmint-facilitator/interfaces/IGhoFlashMinter#FeesDistributedToTreasury) event.
+Emits the [`FeesDistributedToTreasury`](../GHO/interfaces/IGhoFacilitator.md#feesdistributedtotreasury) event.
 
 ### updateFee
 
@@ -88,7 +88,7 @@ Updates the percentage fee. It is the percentage of the flash-minted amount that
 
 The `newFee` must be less than the [`MAX_FEE`](#max_fee).
 
-Emits the `[FeeUpdated](../flashMinter/interfaces/IGhoFlashMinter.md#feeupdated)` event.
+Emits the [`FeeUpdated`](../flashmint-facilitator/interfaces/IGhoFlashMinter.md#feeupdated) event.
 
 #### Input Parameters:
 
@@ -104,7 +104,7 @@ function updateGhoTreasury(address newGhoTreasury) external override onlyPoolAdm
 
 Updates the address of the GHO treasury, where FlashMint fees are sent.
 
-Emits the [`GhoTreasuryUpdated`](../flashmint-facilitator/interfaces/IGhoFlashMinter#ghotreasuryupdated) event.
+Emits the [`GhoTreasuryUpdated`](../GHO/interfaces/IGhoFacilitator.md#ghotreasuryupdated) event.
 
 #### Input Parameters:
 

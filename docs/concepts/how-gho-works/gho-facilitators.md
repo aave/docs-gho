@@ -13,9 +13,9 @@ It has been proposed to the Aave community that the Aave V3 Ethereum Pool and Fl
 
 ### Aave V3 Ethereum Pool
 
-The Aave V3 Ethereum Pool has been proposed to the Aave DAO to serve as one of the initial Facilitators on the Ethereum Mainnet due to the risk-reducing features of this version of the protocol, including efficiency mode (“eMode”), isolation mode, siloed borrowing, and caps. In addition, it will assist with bootstrapping the GHO supply in a decentralized and permissionless fashion.
+The Aave V3 Ethereum Pool has been proposed to the Aave DAO to serve as one of the initial Facilitators on the Ethereum Mainnet due to the risk-reducing features of this version of the protocol, including [efficiency mode](https://docs.aave.com/developers/whats-new/efficiency-mode-emode) (“eMode”), [isolation mode](https://docs.aave.com/developers/whats-new/isolation-mode), [siloed borrowing](https://docs.aave.com/developers/whats-new/siloed-borrowing), and [caps](https://docs.aave.com/developers/whats-new/supply-borrow-caps). In addition, it will assist with bootstrapping the GHO supply in a decentralized and permissionless fashion.
 
-The Aave Protocol is a liquidity protocol available on Ethereum and various other L1 and L2 networks. Aave allows users to supply a range of assets and borrow against them while simultaneously earning yield, as well as participating in liquidations. The Aave Protocol operates on an overcollateralized model. Accordingly, GHO will be overcollateralized as well.
+The [Aave Protocol](https://aave.com/) is a liquidity protocol available on Ethereum and various other L1 and L2 networks. Aave allows users to supply a range of assets and borrow against them while simultaneously earning yield, as well as participating in liquidations. The Aave Protocol operates on an overcollateralized model. Accordingly, GHO will be overcollateralized as well.
 
 ### FlashMinter
 
@@ -25,7 +25,7 @@ As FlashMinting provides the same functionality as the current [flashloan](https
 
 ### Become a Facilitator
 
-Each Facilitator must be approved by Aave Governance. Aave Governance will be able to determine and assign a Facilitator a specific Bucket capacity to bootstrap GHO liquidity and the GHO market.
+Each Facilitator must be approved by [Aave Governance](https://governance.aave.com/). Aave Governance will be able to determine and assign a Facilitator a specific Bucket capacity to bootstrap GHO liquidity and the GHO market.
 
 Frameworks on how to apply to become a Facilitator will be open to community discussion.
 
