@@ -163,7 +163,7 @@
 
   /* CARD*/
 
-  --ifm-card-background-color: rgba(98, 96, 108, 0.1)!important;
+  --ifm-card-background-color: rgba(98, 96, 108, 0.1);
   --ifm-card-footer-color: #9C93B2;
 
   /* NAVBAR */
@@ -185,11 +185,6 @@
       
 }
 
-article {
-  max-width: 700px;
-
-}
-
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
   font-weight: bold ;
@@ -197,7 +192,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-weight:400;
-  
 }
 
 [data-theme='light'] img[src$='#gh-dark-mode-only'],
@@ -232,45 +226,52 @@ border: 1.5px solid  var(--gho-border) !important;
 }
 
 .clickable-button {
-  background-color: #403c48;
-  color: #fff;
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
   font-size: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 8px 24px;
+  border-radius: 600px;
   border: none;
-  box-shadow: 2px 2px 5px #ccc;
-
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
   text-align: center;
+  font-family: 'NB International';
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .clickable-button:hover {
-  background-color: #fff;
-  color: #3e3e3e;
-  box-shadow: 2px 2px 5px #835e8b;
+  background-color: var(--ifm-color-primary-lightest)!important;
+  color: var(--ifm-background-color)!important;
+  box-shadow: none!important;
+  border: none;
   cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  .clickable-button {
-    background-color: #333;
-    color: #fff;
-  }
-
-  .clickable-button:hover {
-    background-color: #fff;
-    color: #333;
-    box-shadow: 2px 2px 5px #333;
-  }
+[data-theme='dark'] .clickable-button:hover {
+  background-color: var(--ifm-color-primary-light)!important;;
 }
 
 .button-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 25%;
+    gap: 28px;
+}
+
+.ghost-container {
+  max-width: 298px;
+  max-height: 258px;
+}
+
+.ghost-image {
+  width: 344px;
+  height: 304px;
+  max-width: 344px;
+}
+
+.builders-title {
+  font-size: 28px;
+}
+
+.container {
+  max-width: 100%!important;
 }
 
 @media screen and (max-width: 996px) {
