@@ -56,7 +56,11 @@ function updateGhoTreasury(address newGhoTreasury) external
 
 Updates the address of the GHO Treasury.
 
-🚨The GHO Treasury is where revenue fees are sent to. Update carefully.
+:::caution
+
+The GHO Treasury is where revenue fees are sent to. Update carefully.
+
+:::
 
 ### Input Parameters:
 
