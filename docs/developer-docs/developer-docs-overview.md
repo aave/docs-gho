@@ -33,7 +33,7 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
 - <a
   className="links-list"
   href="https://docs.aave.com/developers/deployed-contracts/deployed-contracts"
-  > Aave protocol deployed contracts
+  > Aave Protocol deployed contracts
   > </a>
 - <a className="links-list" href="https://github.com/aave/aave-v3-core">
     Aave V3 contracts
@@ -53,7 +53,7 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
   1. [Mint](#mint)
   2. [Repay](#repay)
   3. [Liquidate](#liquidate)
-- b. [FlashMint Facilitator](#flashmint-facilitator)
+- b. [FlashMinter Facilitator](#flashmint-facilitator)
 - c. [Discount Dynamics](#discount-dynamics)
 
 GHO is an ERC20 token minted from contracts designated as Facilitators. At launch there are two proposed Facilitators:
@@ -98,11 +98,11 @@ The `liqidationCall` repays up to 100% of the GHO borrow position in exchange fo
 
 See the developers [liquidation guide](https://docs.aave.com/developers/guides/liquidations) for more information.
 
-### FlashMint Facilitator
+### FlashMinter Facilitator
 
 Since GHO is not borrowed like a typical Aave reserve, a separate Facilitator is used in place to replicate the `flashloan` functionality of the Aave Pool.
 
-The FlashMint Facilitator has a separate minting cap than the Aave Pool. Since all FlashMint transactions are returned in a single transaction, no GHO is ever minted against this Facilitator and the cap is applied to each transaction.
+The FlashMinter Facilitator has a separate minting cap than the Aave Pool. Since all FlashMint transactions are returned in a single transaction, no GHO is ever minted against this Facilitator and the cap is applied to each transaction.
 
 FlashMint is useful for a variety of applications such as liquidations, debt swap, peg arbitrage. More details on this Facilitator can be found [here](./flashmint-facilitator/GhoFlashMinter.md).
 
@@ -213,7 +213,7 @@ Minting GHO occurs seamlessly through the `borrow` function of the Aave V3 Pool 
 
 ### Historical Data
 
-Link to integrating aave protocol data guide + add sample code for GHO event querying and subgraph once ready
+Link to integrating Aave Protocol data guide + add sample code for GHO event querying and subgraph once ready
 
 <details>
     <summary>Query Events RPC</summary>
