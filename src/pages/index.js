@@ -17,7 +17,7 @@ function HomepageHeader() {
       <meta property="og:type" content="website" />
       <meta property="og:title" content="GHO Document Hub | Stablecoin by Aave" />
       <meta property="og:description" content="GHO is a decentralized multi-collateral stablecoin, transparent and native to the Aave Protocol. " />
-      <meta property="og:image" content="https://docs.gho.xyz/img/gho-docs-og.jpg"></meta>
+      <meta property="og:image" content="https://docs.gho.xyz/img/gho-docs-og.jpg"/>
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="docs.gho.xyz" />
       <meta property="twitter:url" content="https://docs.gho.xyz/" />
