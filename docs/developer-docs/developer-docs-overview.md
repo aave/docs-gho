@@ -184,9 +184,7 @@ yarn add @aave/contract-helpers@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.
 
 ### borrow
 
-The most common method of minting GHO is through the `borrow` of the Aave Pool facilitator. Other factilitators such as the [flashminter](#flashminter-facilitator) will have different methods for interacting with GHO.
-
-The `borrow` method can be accessed from the `Pool` import of the contract-helpers package. The pre-requisite to `borrow` is that the address incurring the borrow position must have sufficient collateral. This is achieved by the caller supplying collateral or if the caller has been approved a credit delegation and passes in the delegators address in the `onBehalfOf` field.
+GHO is minted through the `borrow` method of the Aave Pool facilitator which can be accessed from the `Pool` import of the contract-helpers package. The pre-requisite to `borrow` is that the address incurring the borrow position must have sufficient collateral. This is achieved by the caller supplying collateral or if the caller has been approved a credit delegation and passes in the delegators address in the `onBehalfOf` field.
 
 <details>
 <summary>Sample Code (JavaScript)</summary>
