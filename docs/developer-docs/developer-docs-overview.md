@@ -134,10 +134,11 @@ This guide explains the best practices for integrating GHO into a variety of com
     - a. [Smart Contracts](#smart-contracts)
     - b. [Frontend](#frontend)
     - c. [Data Analytics](#data-analytics)
-2.  [Core Functions](#core-functions)
-    - a. [mint](#mint)
+2.  [GHO SDK](#gho-sdk)
+    - a. [borrow](#borrow)
     - b. [repay](#repay-1)
     - c. [FlashMint](#flashmint)
+    - d. [Interface Live Data](#interface-live-data)
 3.  [Data](#data)
     - a. [Live Data](#live-data)
     - b. [Historical Data](#historical-data)
@@ -154,7 +155,7 @@ Check out the [deployed GHO contracts](./contracts-overview.md) to get started w
 
 [Aave Utilities](https://github.com/aave/aave-utilities) is a JavaScript SDK that can be used to greatly simplify the process of integrating GHO data and functionality.
 
-Setup instructions are available in the Aave Utilities README, and complete examples of using the SDK for GHO can be found in the [data](#data) and [core functions](#core-functions) sections.
+It provides imports for fetching data, formatting data, and building transactions. Tutorials with sample code for utilizaing this SDK can be found [here](#gho-sdk)
 
 ### Data Analytics
 
@@ -162,11 +163,11 @@ The current state of GHO, and the complete historical record data are accessible
 
 The [data](#data) section goes into detail about integrating the most common live and historical data queries for JavaScript and Python applications.
 
-## Core Functions
+## GHO SDK
 
 ### setup
 
-The [Aave Utilities Javascript SDK](https://github.com/aave/aave-utilities) is a utilty for fetching data and building transactions. There is a custom version extended for usage with GHO contracts. The source of this branch is located [here](https://github.com/aave/aave-utilities/pull/445). The sections below will use these package versions to interact with GHO.
+The [Aave Utilities Javascript SDK](https://github.com/aave/aave-utilities) is a utilty for fetching data and building transactions. Since GHO is under active development, it is not available in the main package versions. GHO versions are published from [this branch](https://github.com/aave/aave-utilities/pull/445) and the current version in use on the [GHO testnet app](https://gho.aave.com) are listed below:
 
 ```
 npm install @aave/math-utils@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.0
@@ -180,9 +181,11 @@ yarn add @aave/math-utils@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.0
 yarn add @aave/contract-helpers@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.0
 ```
 
-### mint
+### borrow
 
-Minting GHO occurs seamlessly through the `borrow` function of the Aave V3 Pool contract.
+The most common method of minting GHO is through the `borrow` of the Aave Pool facilitator. Other factilitators such as the [flashminter](#flashminter-facilitator) will have different methods for interacting with GHO.
+
+The `borrow` method can be accessed from the `Pool` import of the contract-helpers package. The pre-requisite to `borrow` is that the address incurring the borrow position must have sufficient collateral. This is achieved by the caller supplying collateral or if the caller has been approved a credit delegation and passes in the delegators address in the `onBehalfOf` field.
 
 <details>
 <summary>Sample Code (JavaScript)</summary>
@@ -254,8 +257,6 @@ const txs: EthereumTransactionTypeExtended[] = await pool.repay({
 Will return an array with repay transaction and optionally an approval transaction. Submit transaction(s) using [these instructions](https://github.com/aave/aave-utilities#submitting-transactions).
 </details>
 
-### FlashMint
-
 <details>
 <summary>RepayWithPermit Sample Code (JavaScript)</summary>
 
@@ -295,44 +296,52 @@ const txs: EthereumTransactionTypeExtended[] = await pool.repayWithPermit({
 });
 ```
 Will return an array with repay transaction and optionally an approval transaction. Submit transaction(s) using [these instructions](https://github.com/aave/aave-utilities#submitting-transactions).
+
 </details>
 
-## Data
+### flashmint
 
-All facilitator transactions occur through smart contracts, so querying the real-time state of facilitator and market data is possible through contract queries. The following guides will give sample code fetch live and historical data for GHO directly from contract queries and events.
+Coming soon to GHO SDK. In the meantime, can be accessed by following the [contracts documentation](./flashmint-facilitator/GhoFlashMinter.md). 
 
-### Live Data
+### Interface Live Data
 
-To query live data for GHO, there are several view contracts which can give summarized information of markets, incentives, and gho data respectively:
-
-- UiPoolDataProvider: Queries for all market and user data
-- UiIncentiveDataProvider: QUeries for all available and user claimable incentives
-- UiGhoDataProvider: Queries for Aave Pool facilitator and user discount
-
-The following code uses the Aave Utilities library to fetch and format data from all of these contracts together. To setup these packages see the [setup](#setup) section.
+There are several view contracts used to provide a summarized data source for market, incentives, and gho data. The utilities SDK exposes helper methods to fetch and format data from these contracts. To setup these packages see the [setup](#setup) section.
 
 <details>
 <summary>Sample Code (JavaScript)</summary>
 
 ```js
 import { ethers } from 'ethers';
+import { dayjs } from 'dayjs';
 import {
   UiPoolDataProvider,
   UiIncentiveDataProvider,
   ChainId,
+  GhoService,
 } from '@aave/contract-helpers';
-import * as markets from '@bgd-labs/aave-address-book';
+import {
+  formatGhoReserveData,
+  formatGhoUserData,
+  formatReservesAndIncentives,
+  formatUserSummaryAndIncentives,
+} from '@aave/math-utils';
 
 // ES5 Alternative imports
 //  const {
 //    ChainId,
 //    UiIncentiveDataProvider,
 //    UiPoolDataProvider,
+//    GhoService,
 //  } = require('@aave/contract-helpers');
-//  const markets = require('@bgd-labs/aave-address-book');
+//  const {
+//    formatGhoReserveData,
+//    formatGhoUserData,
+//    formatReservesAndIncentives,
+//    formatUserSummaryAndIncentives,
+//  } = require('@aave/math-utils');
 //  const ethers = require('ethers');
 
-// Sample RPC address for querying ETH mainnet
+// Sample RPC address for querying ETH goerli
 const provider = new ethers.providers.JsonRpcProvider(
   'https://eth-goerli.public.blastapi.io',
 );
@@ -341,20 +350,21 @@ const provider = new ethers.providers.JsonRpcProvider(
 const currentAccount = '0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c';
 
 // View contract used to fetch all reserves data (including market base currency data), and user reserves
-// Using Aave V3 Eth Mainnet address for demo
+// Using Aave V3 Eth goerli address for demo
 const poolDataProviderContract = new UiPoolDataProvider({
   uiPoolDataProviderAddress: '0x3De59b6901e7Ad0A19621D49C5b52cC9a4977e52', // Goerli GHO Market
   provider,
   chainId: ChainId.goerli,
 });
+const currentTimestamp = dayjs().unix()
 
 // View contract used to fetch all reserve incentives (APRs), and user incentives
-// Using Aave V3 Eth Mainnet address for demo
+// Using Aave V3 Eth goerli address for demo
 const incentiveDataProviderContract = new UiIncentiveDataProvider({
   uiIncentiveDataProviderAddress:
     '0xF67B25977cEFf3563BF7F24A531D6CEAe6870a9d', // Goerli GHO Market
   provider,
-  chainId: ChainId.mainnet,
+  chainId: ChainId.goerli,
 });
 
 const ghoService = new GhoService({
@@ -392,12 +402,72 @@ async function fetchContractData() {
    const ghoReserveData = await ghoService.getGhoReserveData();
    const ghoUserData = await ghoService.getGhoUserData(currentAccount);
 
-   console.log({ reserves, userReserves, reserveIncentives, userIncentives, ghoReserveData, ghoUserData });
+  const formattedGhoReserveData = formatGhoReserveData({
+    ghoReserveData,
+  });
+  const formattedGhoUserData = formatGhoUserData({
+    ghoReserveData,
+    ghoUserData,
+    currentTimestamp,
+  });
+
+  const formattedPoolReserves = formatReservesAndIncentives({
+    reserves: reserves.reservesData,
+    currentTimestamp,
+    marketReferenceCurrencyDecimals: reserves.baseCurrencyData.marketReferenceCurrencyDecimals,
+    marketReferencePriceInUsd: reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd,
+    reserveIncentives: reserveIncentives,
+  })
+
+  const userSummary = formatUserSummaryAndIncentives({
+    currentTimestamp,
+    marketReferencePriceInUsd: reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd,
+    marketReferenceCurrencyDecimals: reserves.baseCurrencyData.marketReferenceCurrencyDecimals,
+    userReserves: userReserves.userReserves,
+    formattedReserves: formattedPoolReserves,
+    userEmodeCategoryId: userReserves.userEmodeCategoryId,
+    reserveIncentives: reserveIncentives,
+    userIncentives: userIncentives,
+  });
+
+let formattedUserSummary = userSummary;
+  // Factor discounted GHO interest into cumulative user fields
+  if (formattedGhoUserData.userDiscountedGhoInterest > 0) {
+    const userSummaryWithDiscount = formatUserSummaryWithDiscount({
+      userGhoDiscountedInterest: formattedGhoUserData.userDiscountedGhoInterest,
+      user,
+      marketReferenceCurrencyPriceUSD: Number(
+        formatUnits(reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd, USD_DECIMALS)
+      ),
+    });
+    formattedUserSummary = {
+      ...userSummary,
+      ...userSummaryWithDiscount,
+    };
+  }
+
+   console.log({ formattedGhoReserveData, formattedGhoUserData, formattedPoolReserves, formattedUserSummary });
 }
 
 fetchContractData();
 ```
 </details>
+
+<br />
+
+## Data
+
+All facilitator transactions occur through smart contracts, so querying the real-time state of facilitator and market data is possible through contract queries. The following guides will give sample code fetch live and historical data for GHO directly from contract queries and events.
+
+### Live Data
+
+To query live data for GHO, there are several view contracts which can give summarized information of markets, incentives, and gho data respectively:
+
+- UiPoolDataProvider: Queries for all market and user data
+- UiIncentiveDataProvider: QUeries for all available and user claimable incentives
+- UiGhoDataProvider: Queries for Aave Pool facilitator and user discount
+
+A complete example of fetching and formatting data from these contracts can be found in the GHO SDK [live data](#interface-live-data) section. These steps could also be adapted for other languages or use cases.
 
 ### Historical Data
 
