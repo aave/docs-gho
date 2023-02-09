@@ -14,7 +14,9 @@ The Aave Companies [introduced GHO](https://governance.aave.com/t/introducing-gh
 
 Following a period of discussion, the community voted to greenlight GHO via [Snapshot](https://snapshot.org/#/aave.eth/proposal/0xb17b3294dcb08316cb623c717add7f82df54948d558992f886be59d0958e9b24).
 
-A [GHO Development Update](https://governance.aave.com/t/gho-development-update/10267) was published on October 14, 2022.
+The first [GHO Development Update](https://governance.aave.com/t/gho-development-update/10267) was published on October 14, 2022.
+
+The second [GHO Development Update (Testnet Release)](https://governance.aave.com/t/gho-development-update-testnet-release/11631) was published on February 9, 2023.
 
 ## Governance Role
 
