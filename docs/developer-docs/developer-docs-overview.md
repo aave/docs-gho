@@ -38,8 +38,8 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
 - <a className="links-list" href="https://github.com/aave/aave-v3-core">
     Aave V3 Contract Source Code
   </a>
-- <a className="links-list" href="#frontend">
-    Aave Utilities JavaScript SDK
+- <a className="links-list" href="#gho-sdk>
+    GHO JavaScript SDK
   </a>
 - <a
   className="links-list"
