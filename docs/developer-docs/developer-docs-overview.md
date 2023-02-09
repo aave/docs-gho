@@ -50,18 +50,18 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
 ## Learn GHO
 
 - a. [Aave V3 Ethereum Pool Facilitator](#aave-v3-ethereum-pool-facilitator)
-  1. [Mint](#minting)
+  1. [Minting](#minting)
   2. [Repay](#repay)
   3. [Liquidate](#liquidation)
 - b. [FlashMinter Facilitator](#flashminter-facilitator)
 - c. [Discount Dynamics](#discount-dynamics)
 
-GHO natively fits into the existing Aave Protocol as a new asset, meaning that interacting with the protocol to borrow GHO will be similar to interacting with other assets in the Aave market:
+GHO is an ERC20 token minted from contracts designated as [Facilitators](../concepts/how-gho-works/gho-facilitators.md). It has been proposed to the Aave community that the [Aave V3 Ethereum Pool](../concepts/how-gho-works/gho-facilitators.md#aave-v3-ethereum-pool) and [FlashMinter](../concepts/how-gho-works/gho-facilitators.md#flashminter) Facilitator will be the first Facilitators of GHO.
+
+The Aave Pool facilitator will facilitate the minting and burning of GHO through the standard `borrow` and `repay` function which are utilizaed by all other Aave reserves. The flashminter facilitator will provide flashloan functionality to GHO which is not available by default.
 
 ![GHO_Architecture Diagram](../assets/GHO_Architecture_dark.png#gh-dark-mode-only)
 ![GHO_Architecture Diagram](../assets/GHO_Architecture.png#gh-light-mode-only)
-
-GHO is an ERC20 token minted from contracts designated as [Facilitators](../concepts/how-gho-works/gho-facilitators.md). It has been proposed to the Aave community that the [Aave V3 Ethereum Pool](../concepts/how-gho-works/gho-facilitators.md#aave-v3-ethereum-pool) and [FlashMinter](../concepts/how-gho-works/gho-facilitators.md#flashminter) Facilitator will be the first Facilitators of GHO.
 
 A Facilitator can trustlessly mint and burn GHO tokens through various strategies. The Aave DAO assigns each Facilitator a Bucket with a specified Capacity, which is the upward limit of GHO that a specific Facilitator can mint. This limit is defined and can be changed by the Aave DAO.
 
