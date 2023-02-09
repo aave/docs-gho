@@ -50,7 +50,7 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
 ## Learn GHO
 
 - a. [Aave V3 Ethereum Pool Facilitator](#aave-v3-ethereum-pool-facilitator)
-  1. [Minting](#minting)
+  1. [Mint](#minting)
   2. [Repay](#repay)
   3. [Liquidate](#liquidation)
 - b. [FlashMinter Facilitator](#flashminter-facilitator)
