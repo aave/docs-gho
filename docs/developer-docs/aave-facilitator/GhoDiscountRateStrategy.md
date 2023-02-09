@@ -4,7 +4,7 @@ This contract implements the calculation of the discount rate depending on the c
 
 The `GhoDiscountRateStrategy` contract inherits the [`IGhoDiscountRateStrategy`](./interfaces/IGhoDiscountRateStrategy) interface.
 
-This page shows the public [constant state variables](#constant-state-variables), and external [pure methods](#pure-methods) within the `GhoDiscountRateStrategy` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/interestStrategy/GhoDiscountRateStrategy.sol).
+This page shows the public [constant state variables](#constant-state-variables), and external [pure methods](#pure-methods) within the `GhoDiscountRateStrategy` contract. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/facilitators/aave/interestStrategy/GhoDiscountRateStrategy.sol).
 
 <aside>
 

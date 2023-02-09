@@ -104,7 +104,7 @@ const config = {
         // },
         {
           label: 'Techpaper',
-          to: 'https://github.com/aave/gho/blob/main/techpaper/GHO_Technical_Paper.pdf',
+          to: 'https://github.com/aave/gho-core/blob/main/techpaper/GHO_Technical_Paper.pdf',
           position: 'right',
           className: 'persistent',
         },
@@ -115,7 +115,7 @@ const config = {
           //   label: 'GHO Docs',
           // },
         {
-          href: 'https://github.com/aave/gho',
+          href: 'https://github.com/aave/gho-core',
           label: 'GitHub',
           position: 'right',
           className: 'persistent',
@@ -153,7 +153,7 @@ const config = {
             items: [
               {
                 label: 'GHO Contracts',
-                href: 'https://github.com/aave/gho',
+                href: 'https://github.com/aave/gho-core',
               },
               {
                 label: 'Aave Interface',

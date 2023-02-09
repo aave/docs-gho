@@ -2,7 +2,7 @@
 
 Interface to define the behavior of a GhoFacilitator. Designed to be implemented by Facilitators, to add common logic related to GHO Treasury.
 
-This page shows the [events](#events), and [write](#write-methods) methods within the `IGhoFacilitator` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/interfaces/IGhoFacilitator.sol).
+This page shows the [events](#events), and [write](#write-methods) methods within the `IGhoFacilitator` interface. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/gho/interfaces/IGhoFacilitator.sol).
 
 ## Events
 

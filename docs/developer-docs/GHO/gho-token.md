@@ -2,7 +2,7 @@
 
 The `GhoToken` contract inherits the [`ERC20`](ERC20) and [`Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) contracts, and the [`IGhoToken`](./interfaces/IGhoToken) interface.
 
-This page shows the external [write](#write-methods) and [view](#view-methods) methods within the `GhoToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/GhoToken.sol).
+This page shows the external [write](#write-methods) and [view](#view-methods) methods within the `GhoToken` contract. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/gho/GhoToken.sol).
 
 ## Write Methods
 

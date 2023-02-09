@@ -2,7 +2,7 @@
 
 The interface of a mintable ERC20 token.
 
-This page shows the [write](#write-methods) methods within the `IERC20Mintable` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/interfaces/IERC20Mintable.sol).
+This page shows the [write](#write-methods) methods within the `IERC20Mintable` interface. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/gho/interfaces/IERC20Mintable.sol).
 
 ## Write Methods
 

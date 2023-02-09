@@ -34,7 +34,7 @@ Despite demand, there is a lack of decentralized stablecoins in the current DeFi
 
 Decentralized stablecoins, like GHO, provide censorship resistance, and most importantly, transparency for users.
 
-GHO is decentralized and intentionally does not have one single concentrated point of control. GHO will be controlled by Aave Governance and the Aave Protocol’s community. With Aave Governance making all decisions relating to GHO, there is increased transparency with this asset in comparison to other stablecoins in the market. In addition, all [GHO code](https://github.com/aave/gho) is open source and has been [audited](../resources/resources.md#audit-round-1) extensively by security firms prior to launch. All protocol upgrades and updates to interest rates/risk parameters will be public and must be agreed upon in advance by Aave Governance prior to execution.
+GHO is decentralized and intentionally does not have one single concentrated point of control. GHO will be controlled by Aave Governance and the Aave Protocol’s community. With Aave Governance making all decisions relating to GHO, there is increased transparency with this asset in comparison to other stablecoins in the market. In addition, all [GHO code](https://github.com/aave/gho-core) is open source and has been [audited](../resources/resources.md#audit-round-1) extensively by security firms prior to launch. All protocol upgrades and updates to interest rates/risk parameters will be public and must be agreed upon in advance by Aave Governance prior to execution.
 
 ### Interest and Discount Rate Model
 

@@ -6,7 +6,7 @@ The variable borrow interest rate is fixed at deployment time. The Aave Governan
 
 The `GhoInterestRateStrategy` contract inherits the [`IReserveInterestRateStrategy`](https://github.com/aave/aave-v3-core/blob/master/contracts/interfaces/IReserveInterestRateStrategy.sol) interface.
 
-This page shows the external [view](#view-methods) methods within the `GhoInterestRateStrategy` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/interestStrategy/GhoInterestRateStrategy.sol).
+This page shows the external [view](#view-methods) methods within the `GhoInterestRateStrategy` contract. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/facilitators/aave/interestStrategy/GhoInterestRateStrategy.sol).
 
 ## View Methods
 

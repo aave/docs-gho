@@ -4,7 +4,7 @@ This contract enables FlashMinting of GHO. It is based heavily on the [EIP3156](
 
 The `GhoFlashMinter` contract inherits the [`IGhoFlashMinter`](./interfaces/IGhoFlashMinter) interface.
 
-This page shows the public [constant](#constant-state-variables) and [immutable](#immutable-state-variables) state variables, and external [write](#write-methods) and [view](#view-methods) methods within the `GhoFlashMinter` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/flashMinter/GhoFlashMinter.sol).
+This page shows the public [constant](#constant-state-variables) and [immutable](#immutable-state-variables) state variables, and external [write](#write-methods) and [view](#view-methods) methods within the `GhoFlashMinter` contract. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/facilitators/flashMinter/GhoFlashMinter.sol).
 
 ## Constant State Variables
 

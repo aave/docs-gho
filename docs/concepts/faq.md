@@ -2,42 +2,57 @@
 
 ## What is GHO?
 
-GHO (pronounced "go") is a decentralized multi-collateral stablecoin that is initially only minted from assets supplied to the Aave Protocol. GHO’s value is programmatically aligned to the U.S. Dollar, which will be maintained through market efficiency.
-
-As a decentralized stablecoin on the Ethereum Mainnet, GHO will be minted by users. As with all borrowing on the Aave Protocol, a user must supply collateral (at a specific collateral ratio) to be able to mint GHO. Correspondingly, when a user repays a borrow position (or is liquidated), the GHO is returned to the Aave pool and burned. All the interest payments accrued by minters of GHO will go directly to the [Aave DAO treasury](https://zapper.fi/daos/aave), in contrast to the standard reserve factor collected when users borrow other assets, and the principal is burned.
-
-## Why GHO?
+GHO is a decentralized multi-collateral stablecoin that is fully backed, transparent and native to the Aave Protocol.
 
 ## How is the value of GHO kept stable?
 
 GHO will be kept stable through market efficiencies. It is envisioned that if GHO were to be valued > $1, the market would [arbitrage](../concepts/fundamental-concepts/arbitrage.md) the value back to $1 as it would be profitable to swap GHO for other stablecoins. If GHO were to be valued < $1, then it would be profitable to pay back debt, and will result in GHO total supply decreasing as debt is repaid will help the peg to be restored.
 
-## GHO Interest Rates
+## How to mint GHO?
 
-Borrow interest rates for GHO will be determined by the Aave DAO, with a stable rate that may be adapted depending on market conditions. This design retains the Aave Protocol’s borrow interest rate model flexibility, and it will be possible in the future to implement any interest rate strategy the Aave community sees fit.
+Borrowers and suppliers can mint GHO using assets they have supplied into V3 as collateral on Ethereum markets, while continuing to earn interests on their underlying assets.
 
-The first decision regarding the GHO interest rates can be seen [here](../concepts/fundamental-concepts/gho-discount-strategy.md).
+## How to borrow GHO
 
-### Interest Rate Discount Model for stkAAVE
+The GHO pool will function differently from existing assets but to borrow it will work similarly as other available assets on the different markets in the protocol. 
 
-Given the nature of the asset, this integration allows for innovative features that provide greater utility for governance and community participants. The implementation of GHO includes a Discount Strategy mechanism. The initial discount strategy allows for Safety Module participants (stkAAVE holders) to access a discount on the GHO borrow rate. The strategy will set a certain amount of GHO at discount per stkAAVE supplied, and a discount on the interest rates that can vary from 0% (no discount) to 100% (full discount). These parameters are controlled by Aave governance.
+1. Supply Collateral
+2. Borrow GHO
+3. Repay GHO and Accrued Interest (real-time)
+4. Repaid interest will be redirected to the DAO, rather than an asset supplier, contributing to the DAO treasury
 
-The parameters for Ethereum Mainnet still need to be voted on by the community.
+The video below shows how to borrow GHO using the Aave Protocol interface.
 
-## How can I mint GHO?
+<video controls width="100%" autoPlay>
+  <source src="https://gho.infura-ipfs.io/ipfs/QmVFGEyoMTaoYnMCL9oDEg2zwaxK9G2T2vqEHUN7tu8Qtk"/>
+</video>
 
-To mint GHO, you first need to supply assets as collateral to the Aave Protocol. Once the collateral has been deposited, then you mint GHO. See the below GIF to see how to mint GHO.
+## How is GHO different from the other assets listed on the Aave markets?
 
-—Insert GIF on how to mint GHO.
+Unlike many stablecoins, the oracle price for GHO will be fixed. Decentralized stablecoins such as GHO are transparent and cannot be changed. Interest rates are defined by the Aave DAO and repaid interest is redirected to the DAO instead of the asset suppliers. Discounts are available to borrowers staking AAVE in the Safety Module.
 
-It is important to take note of your health factor, changes in the collateral price will impact your health factor and if your health factor falls below 1, your collateral will be liquidated. See more information regarding [liquidations](https://docs.aave.com/developers/guides/liquidations).
+## Which assets can be used as collateral to borrow GHO?
 
-## Facilitators
+Assets that are available in the Aave Protocol can be used to back GHO. Initially, the Ethereum V3 pool will be the first facilitator to launch because of V3’s extensive risk-mitigation features, including e-mode, isolation mode, and supply caps.
 
-### What is a Facilitator and what does it mean for GHO?
+## Who manages the GHO supply?
 
-GHO introduces the concept of Facilitators. A Facilitator (e.g., a protocol, an entity, etc.) has the ability to trustlessly mint (and burn) GHO tokens. To be added as a Facilitator they would have to be approved by Aave Governance. Various Facilitators will be able to apply different strategies to their generation of GHO. Aave Protocol on Ethereum Mainnet is the first Facilitator.
+The Aave DAO will manage the supply of GHO, the interest rates and determine risk parameters.
 
-Governance will be able to determine and assign this Facilitator a specific bucket capacity to bootstrap the GHO liquidity and the GHO market.
+## What is a Facilitator and what does it mean for GHO?
 
-![Untitled](../assets/facilitator.png)
+GHO introduces the concept of [Facilitators](../concepts/how-gho-works/gho-facilitators.md). A Facilitator (e.g., a protocol, an entity, etc.) has the ability to trustlessly mint (and burn) GHO tokens. To be added as a Facilitator they would have to be approved by Aave Governance. Various Facilitators will be able to apply different strategies to their generation of GHO. 
+
+## Can you explain more about the discount model for GHO?
+
+Users that have staked AAVE tokens in the Safety Module (stkAave) are eligible for a discount on GHO.
+
+For each stkAave there will be a discount on the borrowing rate for 100 GHO. The discount model is interchangeable and can be redesigned and replaced if needed by The Aave DAO. The first decision regarding the GHO interest and discount rates can be seen [here](../concepts/fundamental-concepts/gho-discount-strategy.md).
+
+## Is only stkAAVE used for discount or is aBPT eligible? If not, why?
+
+Currently only stkAAVE.
+
+## Can GHO be flashloaned?
+
+GHO can be [FlashMinted](../concepts/fundamental-concepts/flashmint.md). FlashMinting provides the same functionality and follows the current Flash Loan standard (ERC3156) as in the Aave Protocol.

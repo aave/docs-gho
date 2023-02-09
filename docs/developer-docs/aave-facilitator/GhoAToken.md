@@ -10,7 +10,7 @@ GHO cannot be supplied to the Aave Protocol. However, the `GhoAToken` is require
 
 The `GhoAToken` contract inherits the [`VersionedInitializable`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/libraries/aave-upgradeability/VersionedInitializable.sol), [`ScaledBalanceTokenBase`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/ScaledBalanceTokenBase.sol) and [`EIP712Base`](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/tokenization/base/EIP712Base.sol) contracts, and the [`IGhoAToken`](./interfaces/IGhoAToken.md) interface.
 
-This page shows the public [constant state variables](#constant-state-variables), external [write](#write-methods) and [view](#view-methods) methods, and the ['not permitted methods'](#not-permitted-methods) within the `GhoAToken` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/tokens/GhoAToken.sol).
+This page shows the public [constant state variables](#constant-state-variables), external [write](#write-methods) and [view](#view-methods) methods, and the ['not permitted methods'](#not-permitted-methods) within the `GhoAToken` contract. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/facilitators/aave/tokens/GhoAToken.sol).
 
 ## Constant State Variables
 
