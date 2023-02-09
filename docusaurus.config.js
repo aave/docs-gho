@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/logo.svg',
 
   // Set the production url of your site here
-  url: 'https://ghodocs.aave.com',
+  url: 'https://docs.gho.xyz',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -44,10 +44,6 @@ const config = {
           routeBasePath: '/', // Serve the docs at the site's root
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -70,7 +66,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/gho-docs-og.jpg',
       navbar: {
         title: 'GHO Docs',
         logo: {
