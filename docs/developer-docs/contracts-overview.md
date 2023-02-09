@@ -4,7 +4,7 @@ title: Deployed GHO Contracts
 ---
 
 **Goerli Deployment - GHO Community Testnet**
-Version: https://github.com/aave/gho/pull/242/commits/c0999cb908d1037bb0515b88eb3cf15321cd3d60
+Version: https://github.com/aave/gho-core/pull/242/commits/c0999cb908d1037bb0515b88eb3cf15321cd3d60
 
 ## Addresses
 

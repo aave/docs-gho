@@ -4,7 +4,7 @@ The price feed for GHO is fixed and denominated in USD. The price is fixed at 1 
 
 The Aave Protocol will be programmed to always use to price of 1 GHO = $1. This is different from using market pricing via oracles for other crypto assets. This creates stabilizing [arbitrage](../../concepts/fundamental-concepts/arbitrage) opportunities when the price of GHO fluctuates.
 
-This page shows the public [constant state variables](#constant-state-variables), and [pure](#pure-methods) methods within the `GhoOracle` contract. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/facilitators/aave/oracle/GhoOracle.sol).
+This page shows the public [constant state variables](#constant-state-variables), and [pure](#pure-methods) methods within the `GhoOracle` contract. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/facilitators/aave/oracle/GhoOracle.sol).
 
 ## Constant State Variables
 

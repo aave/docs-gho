@@ -4,7 +4,7 @@ The interface of the [`GhoToken`](../gho-token.md).
 
 The `IGhoToken` interface inherits the [`IERC20Burnable`](IERC20Burnable.md), [`IERC20Mintable`](IERC20Mintable.md), and [`IERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) interfaces.
 
-This page shows the [structs](#structs), [events](#events), and [write](#write-methods) and [view](#view-methods) methods within the `IGhoToken` interface. The source code is available on [GitHub](https://github.com/aave/gho/blob/main/src/contracts/gho/interfaces/IGhoToken.sol).
+This page shows the [structs](#structs), [events](#events), and [write](#write-methods) and [view](#view-methods) methods within the `IGhoToken` interface. The source code is available on [GitHub](https://github.com/aave/gho-core/blob/main/src/contracts/gho/interfaces/IGhoToken.sol).
 
 ## Structs
 

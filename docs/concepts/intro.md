@@ -12,4 +12,4 @@ As a decentralized stablecoin on the Ethereum Mainnet, GHO will be minted by use
 
 Significant demand exists for a stablecoin that is truly decentralized, over-collateralized, and configurable. Recent events have demonstrated the use case for decentralized stablecoins as a means of maintaining a stable value during periods of market volatility. GHO, a stablecoin controlled by Aave Governance, has the potential to become an integral part of the continued growth of the DeFi ecosystem with community support.
 
-Explore the GHO documentation to understand how it works and why the development of GHO is essential for the broader ecosystem. The [Technical Paper](https://github.com/aave/gho/blob/main/techpaper/GHO_Technical_Paper.pdf) and Smart Contracts pages will provide guidance on how to integrate GHO.
+Explore the GHO documentation to understand how it works and why the development of GHO is essential for the broader ecosystem. The [Technical Paper](https://github.com/aave/gho-core/blob/main/techpaper/GHO_Technical_Paper.pdf) and Smart Contracts pages will provide guidance on how to integrate GHO.
