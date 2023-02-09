@@ -205,7 +205,7 @@ const pool = new Pool(provider, {
 - @param @optional `debtTokenAddress` The ethereum address of the debt token of the asset you want to borrow. Only needed if the reserve is ETH mock address 
 - @param @optional `onBehalfOf` The ethereum address for which user is borrowing. It will default to the user address 
 */
-const txs: EthereumTransactionTypeExtended[] = await lendingPool.borrow({
+const txs: EthereumTransactionTypeExtended[] = await pool.borrow({
   user,
   reserve: '0xcbE9771eD31e761b744D3cB9eF78A1f32DD99211', // Goerli GHO market
   amount,
