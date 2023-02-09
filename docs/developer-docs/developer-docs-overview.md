@@ -27,7 +27,7 @@ import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
 - <a className="links-list" href="contracts-overview">
     Deployed GHO Contracts
   </a>
-- <a className="links-list" href="https://github.com/aave/gho">
+- <a className="links-list" href="https://github.com/aave/gho-core">
     GHO Contract Source Code
   </a>
 - <a
