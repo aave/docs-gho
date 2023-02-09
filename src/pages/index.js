@@ -26,9 +26,9 @@ function HomepageHeader() {
       <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.title}</h1>
         <p className={clsx('hero__subtitle', styles.heroSubtitle)}>{siteConfig.tagline}</p>
-        <div className={styles.searchBarWrapper}>
+        {/* <div className={styles.searchBarWrapper}>
           <SearchBar />
-        </div>
+        </div> */}
       </div>
     </header>
   );
