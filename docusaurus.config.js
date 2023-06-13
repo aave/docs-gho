@@ -44,6 +44,8 @@ const config = {
           routeBasePath: '/', // Serve the docs at the site's root
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          editUrl: 'https://github.com/aave/docs-gho/tree/main/',
+
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
