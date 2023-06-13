@@ -41,7 +41,7 @@ The Aave DAO will manage the supply of GHO, the interest rates and determine ris
 
 ## What is a Facilitator and what does it mean for GHO?
 
-GHO introduces the concept of [Facilitators](../concepts/how-gho-works/gho-facilitators.md). A Facilitator (e.g., a protocol, an entity, etc.) has the ability to trustlessly mint (and burn) GHO tokens. To be added as a Facilitator they would have to be approved by Aave Governance. Various Facilitators will be able to apply different strategies to their generation of GHO. 
+GHO introduces the concept of [Facilitators](../concepts/how-gho-works/gho-facilitators.md). A Facilitator (e.g., a protocol, an entity, etc.) has the ability to trustlessly mint (and burn) GHO tokens. To be added as a Facilitator they would have to be approved by Aave Governance. Various Facilitators will be able to apply different strategies to their generation of GHO.
 
 ## Can you explain more about the discount model for GHO?
 
@@ -55,4 +55,4 @@ Currently only stkAAVE.
 
 ## Can GHO be flashloaned?
 
-GHO can be [FlashMinted](../concepts/fundamental-concepts/flashmint.md). FlashMinting provides the same functionality and follows the current Flash Loan standard (ERC3156) as in the Aave Protocol.
+GHO can be [FlashMinted](../concepts/fundamental-concepts/flashmint.md). FlashMinting provides the same functionality and follows the current Flashloan standard (ERC3156) as in the Aave Protocol.
