@@ -1,0 +1,269 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+/* TT Travels */
+@font-face {
+    font-family: 'TT Travels';
+    src: url('../fonts/tt_travels/TT_Travels_DemiBold.woff2') format('woff2'),
+        url('../fonts/tt_travels/TT_Travels_DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Travels';
+    src: url('../fonts/tt_travels/TT_Travels_Bold.woff2') format('woff2'),
+        url('../fonts/tt_travels/TT_Travels_Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* NB International */
+@font-face {
+    font-family: 'NB International';
+    src: url('../fonts/nb_international/nbinternationalproreg-webfont.woff2') format('woff2'),
+        url('../fonts/nb_international/nbinternationalproreg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NB International';
+    src: url('../fonts/nb_international/nbinternationalprobol-webfont.woff2') format('woff2'),
+        url('../fonts/nb_international/nbinternationalprobol-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* VARIABLES FOR BOTH LIGHT AND DARK THEMES (if defined again in dark or light variables they will overwrite this ones) */
+:root {
+  /* THEME COLORS */
+
+  --gho-border: rgba(98, 96, 108, 0.1);
+  --ifm-color-primary: #39375a;
+  --ifm-color-primary-dark: #333151;
+  --ifm-color-primary-darker: #302f4d;
+  --ifm-color-primary-darkest: #28263f;
+  --ifm-color-primary-light: #3f3d63;
+  --ifm-color-primary-lighter: #423f68;
+  --ifm-color-primary-lightest: #4a4875;
+  --ifm-color-info-contrast-background: rgba(98, 96, 108, 0.1);
+  --ifm-color-success-contrast-background: rgba(98, 96, 108, 0.1);
+  --ifm-color-warning-contrast-background: rgba(98, 96, 108, 0.1);
+
+  /* GENERAL */
+
+  --ifm-background-color: #DBD2EF;
+
+  /* FONT */
+
+  --ifm-font-color-base: var(--ifm-color-primary);
+  --ifm-font-family-base:'NB International';
+  --ifm-heading-font-family: 'TT Travels';
+  --ifm-line-height-base: 1.65;
+  --ifm-heading-line-height: 1.05;
+
+  /* HEADING */
+
+  --ifm-heading-color: var(--ifm-color-primary);
+
+  /* CARD */
+
+  --ifm-card-background-color: rgba(255, 255, 255, 0.1);
+  --ifm-card-footer-color: #616070;
+  --ifm-footer-link-hover-color: var(--ifm-color-emphasis-600);
+  --ifm-card-border-radius: 16px;
+
+  /* NAVBAR */
+
+  --ifm-navbar-background-color:rgb(255, 255, 255);
+
+  /* HERO */
+
+  --ifm-hero-text-color: var(--ifm-color-primary);
+  --ifm-hero-background-color: transparent;
+
+  /* BADGE */
+
+  --ifm-badge-color: var(--ifm-background-color);
+  --ifm-badge-background-color: var(--ifm-color-primary);
+
+  /* HIGHLIGHTER */
+
+  --ifm-code-font-size: 95%;
+  --ifm-background-surface-color: background: linear-gradient(90deg,rgba(36,33,37,.06) 80%,rgba(98,96,108,.1));
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+
+  /* SEARCH */
+
+  --docsearch-text-color: var(--ifm-color-primary)!important;
+}
+
+/* VARIABLES FOR LIGHT THEME */
+
+[data-theme='light'] {
+
+  /* GENERAL */
+
+  background-position: 0px -30vh;
+  background: radial-gradient(50% 50% at 50% 50%, #DBD2EF 0%, #EFEAF9 100%);
+
+  /* SEARCH */
+
+  --docsearch-muted-color: rgba(57, 55, 90, 0.5)!important;
+    
+  /* LINKS */
+
+  --ifm-link-color: #7766DD
+      
+}
+
+/* VARIABLES FOR DARK THEME */
+
+[data-theme='dark'] {
+  /* THEME COLORS */
+
+  --ifm-color-primary: #c9b3f9;
+  --ifm-color-primary-dark: #ad8bf6;
+  --ifm-color-primary-darker: #9f77f4;
+  --ifm-color-primary-darkest: #743cf0;
+  --ifm-color-primary-light: #e5dbfc;
+  --ifm-color-primary-lighter: #f3effe;
+  --ifm-color-primary-lightest: #ffffff;
+
+  /* GENERAL */
+
+  --ifm-background-color: #201F2D!important;
+
+  /* CARD*/
+
+  --ifm-card-background-color: rgba(98, 96, 108, 0.1);
+  --ifm-card-footer-color: #9C93B2;
+
+  /* NAVBAR */
+
+  --ifm-navbar-background-color:#2A2837;
+
+  /* HIGHLIGHTER */
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* SEARCH */
+
+  --docsearch-searchbox-background: rgba(201, 179, 249, 0.05)!important;
+  --docsearch-muted-color: rgba(201, 179, 249, 0.5)!important;
+    
+  /* LINKS */
+
+  --ifm-link-color: #8C7CF1
+      
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-weight: bold ;
+}
+
+p {
+  font-weight:400;
+}
+
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
+}
+
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  --ifm-link-color: var(--ifm-color-emphasis-800);
+  --ifm-link-hover-color: var(--ifm-color-emphasis-700);
+  --ifm-link-hover-decoration: none;
+
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 5%)!important;
+
+
+border: 1.5px solid  var(--gho-border) !important;
+
+
+  transition: all var(--ifm-transition-fast) ease;
+  transition-property: border, box-shadow;
+}
+
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module:hover {
+  border-color: var(--ifm-color-primary)!important;
+  box-shadow: 0 8px 12px 0 rgb(0 0 0 / 10%)!important;
+}
+
+.links-list {
+  font-size: 18px;
+  list-style-type: square;
+  padding-left: 30px;
+}
+
+.clickable-button {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
+  font-size: 20px;
+  padding: 8px 24px;
+  border-radius: 600px;
+  border: none;
+  text-align: center;
+  font-family: 'NB International';
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.clickable-button:hover {
+  background-color: var(--ifm-color-primary-lightest)!important;
+  color: var(--ifm-background-color)!important;
+  box-shadow: none!important;
+  border: none;
+  cursor: pointer;
+}
+
+[data-theme='dark'] .clickable-button:hover {
+  background-color: var(--ifm-color-primary-light)!important;;
+}
+
+.button-group {
+    display: flex;
+    gap: 28px;
+}
+
+.ghost-container {
+  max-width: 298px;
+  max-height: 258px;
+}
+
+.ghost-image {
+  width: 344px;
+  height: 304px;
+  max-width: 344px;
+}
+
+.builders-title {
+  font-size: 28px;
+}
+
+.container {
+  max-width: 100%!important;
+}
+
+@media screen and (max-width: 996px) {
+  .footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+}
