@@ -197,9 +197,9 @@ const config = {
       }
     },
       algolia: {
-        appId: 'ALGOLIA_APP_ID',
-        apiKey: 'ALGOLIA_SEARCH_API_KEY',
-        indexName: 'ALGOLIA_INDEX_NAME',
+        appId: '8F1IJUONRX',
+        apiKey: 'd89685d77517a1843fc0f5c1a4059395',
+        indexName: 'gho',
       },
     }),
 };
