@@ -123,6 +123,12 @@ const sidebars = {
       type: 'category',
       label: 'Deployed GHO Contracts',
       items: [
+       
+        {
+          type: 'link',
+          label: 'Ethereum Mainnet GHO Deployment',
+          href: '/developer-docs/contracts-overview#ethereummainnet-gho-deployment',
+        },
         {
           type: 'link',
           label: 'Goerli GHO Deployment - Community Testnet',
