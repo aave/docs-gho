@@ -5,34 +5,10 @@
   width: 100%;
 }
 
-.toolsImgWrapper {
-  top: 56px;
-}
-
-.toolsImgWrapper img {
-  width: 144px;
-  height: 131px;
-}
-
-.ghostImgWrapper {
-  top: 56px;
-}
-
-.ghostImgWrapper img {
-  width: 190px;
-  height: 189px;
-}
-
-.bubbleImgWrapper {
-  top: 45px;
-}
-.bubbleImgWrapper img {
-  width: 157px;
-  height: 126px;
-}
 
 .cardImageWrapper {
   display: flex;
+  height: 100%;
   justify-content: center;
   position: absolute;
   width: 100%;
@@ -40,6 +16,7 @@
 
 .cardWrapper {
   width: 244px;
+  height: 296px;
   position: relative;
   top: 0;
   cursor: pointer;
