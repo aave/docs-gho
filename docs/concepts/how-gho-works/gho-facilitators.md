@@ -15,7 +15,7 @@ It has been proposed to the Aave community that the Aave V3 Ethereum Pool and Fl
 
 The Aave V3 Ethereum Pool has been proposed to the Aave DAO to serve as one of the initial Facilitators on the Ethereum Mainnet due to the risk-reducing features of this version of the protocol, including [efficiency mode](https://docs.aave.com/developers/whats-new/efficiency-mode-emode) (“eMode”), [isolation mode](https://docs.aave.com/developers/whats-new/isolation-mode), [siloed borrowing](https://docs.aave.com/developers/whats-new/siloed-borrowing), and [caps](https://docs.aave.com/developers/whats-new/supply-borrow-caps). In addition, it will assist with bootstrapping the GHO supply in a decentralized and permissionless fashion.
 
-The [Aave Protocol](https://aave.com/) is a liquidity protocol available on Ethereum and various other L1 and L2 networks. Aave allows users to supply a range of assets and borrow against them while simultaneously earning yield, as well as participating in liquidations. The Aave Protocol operates on an overcollateralized model. Accordingly, GHO will be overcollateralized as well.
+The [Aave Protocol](https://aave.com/) is a liquidity protocol available on Ethereum and various other L1 and L2 networks. Aave allows users to supply a range of assets and borrow against them while simultaneously earning yield, as well as participating in liquidations. The Aave Protocol operates on an overcollateralized model. Accordingly, GHO is overcollateralized as well.
 
 ### FlashMinter
 
@@ -31,9 +31,9 @@ Frameworks on how to apply to become a Facilitator will be open to community dis
 
 ## Facilitator Strategies
 
-GHO will be minted through various strategies. Eventually, Facilitators will be able to apply different strategies to their generation of GHO. This will allow Aave Governance to manage its exposure to different strategies across the ecosystem, and some strategies may help GHO maintain its peg.
+GHO is minted through various strategies. Eventually, Facilitators will be able to apply different strategies to their generation of GHO. This will allow Aave Governance to manage its exposure to different strategies across the ecosystem, and some strategies may help GHO maintain its peg.
 
-As it will be up to Facilitators to decide their minting strategies, we expect to see exciting creativity in this area. For example, the Aave V3 Pool, one of the proposed initial Facilitators of GHO, operates on an overcollateralized model. As a result, GHO will be overcollateralized.
+As it will be up to Facilitators to decide their minting strategies, we expect to see exciting creativity in this area. For example, the Aave V3 Pool, one of the proposed initial Facilitators of GHO, operates on an overcollateralized model. As a result, GHO is overcollateralized.
 
 Aave Governance may attract varied Facilitators in different ways. If new and additional Facilitators are approved by Aave Governance, the possibilities are endless.
 

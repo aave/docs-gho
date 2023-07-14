@@ -36,13 +36,9 @@ The configuration of the discount rate is controlled by Aave Governance.
 
 ### For each stkAAVE there will be a discount on the borrowing rate for 100 GHO
 
-:::info
+For each stkAAVE, a user will receive a 30% discount on interest for 100 GHO, at an interest rate of 1.5%. If a user stakes 1 AAVE and borrows 100 GHO, they have borrowed the maximum amount of GHO available to them at a discount. Their interest rate is 30% of 1.5% → 1.06%. If a user instead borrows 200 GHO, 100 of that GHO will be at a 1.06% interest rate and 100 of the GHO will be at a 1.5% interest rate. Their effective interest rate will be 1.28%.
 
-The parameters provided below are examples only. The initial parameters for the interest rate and discount model are subject to community discussions and a voting.
-
-:::
-
-For each stkAAVE, a user can receive a 50% discount on interest for 100 GHO, at an interest rate of 3%. If a user stakes 1 AAVE and borrows 100 GHO, they have borrowed the maximum amount of GHO available to them at a discount. Their interest rate is 50% of 3% → 1.5%. If a user instead borrows 200 GHO, 100 of that GHO will be at a 1.5% interest rate and 100 of the GHO will be at a 3% interest rate. Their effective interest rate will be 2.25%.
+The community decision on the interest rate and discount rate can be found [here](https://snapshot.org/#/aave.eth/proposal/0xb413a17004875443fa3dcf90b07e249b5c4592a760b6daf7b06909131f9fc30c)
 
 :::caution
 
