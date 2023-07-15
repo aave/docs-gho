@@ -1,6 +1,6 @@
 # How GHO Works
 
-GHO is a flexible, decentralized multi-collateral stablecoin on the Ethereum Mainnet. It is available in the form of an ERC20 token that is designed to maintain a stable rate, pegged to the U.S. dollar, despite market volatility. GHO natively fits into the existing Aave Protocol as a new asset, meaning that interacting with the protocol to borrow GHO will be similar to interacting with other assets in the Aave Pool:
+GHO is a flexible, decentralized overcollateralized stablecoin on the Ethereum Mainnet. It is available in the form of an ERC20 token that is designed to maintain a stable rate, pegged to the U.S. dollar, despite market volatility. GHO natively fits into the existing Aave Protocol as a new asset, meaning that interacting with the protocol to borrow GHO is similar to interacting with other assets in the Aave Pool:
 
 ![GHO_Architecture Diagram](../../assets/GHO_Architecture_dark.png#gh-dark-mode-only)
 ![GHO_Architecture Diagram](../../assets/GHO_Architecture.png#gh-light-mode-only)

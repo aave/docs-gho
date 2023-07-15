@@ -2,7 +2,7 @@
 
 ## What is GHO?
 
-GHO is a decentralized multi-collateral stablecoin that is fully backed, transparent and native to the Aave Protocol.
+GHO is a decentralized overcollateralized stablecoin that is fully backed, transparent and native to the Aave Protocol.
 
 ## How is the value of GHO kept stable?
 

@@ -1,6 +1,6 @@
 # GHO Document Hub
 
-This repository contains all the documentation for GHO,a decentralized multi-collateral stablecoin that is fully backed, transparent and native to the Aave Protocol. The docs [website](docs.gho.xyz) has been built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This repository contains all the documentation for GHO,a decentralized overcollateralized stablecoin that is fully backed, transparent and native to the Aave Protocol. The docs [website](docs.gho.xyz) has been built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ## Documentation
 
