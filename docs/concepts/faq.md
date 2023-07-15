@@ -2,11 +2,11 @@
 
 ## What is GHO?
 
-GHO is a decentralized multi-collateral stablecoin that is fully backed, transparent and native to the Aave Protocol.
+GHO is a decentralized overcollateralized stablecoin that is fully backed, transparent and native to the Aave Protocol.
 
 ## How is the value of GHO kept stable?
 
-GHO will be kept stable through market efficiencies. It is envisioned that if GHO were to be valued > $1, the market would [arbitrage](../concepts/fundamental-concepts/arbitrage.md) the value back to $1 as it would be profitable to swap GHO for other stablecoins. If GHO were to be valued < $1, then it would be profitable to pay back debt, and will result in GHO total supply decreasing as debt is repaid will help the peg to be restored.
+GHO is kept stable through market efficiencies. It is envisioned that if GHO were to be valued > $1, the market would [arbitrage](../concepts/fundamental-concepts/arbitrage.md) the value back to $1 as it would be profitable to swap GHO for other stablecoins. If GHO were to be valued < $1, then it would be profitable to pay back debt, and will result in GHO total supply decreasing as debt is repaid will help the peg to be restored.
 
 ## How to mint GHO?
 
@@ -29,7 +29,7 @@ The video below shows how to borrow GHO using the Aave Protocol interface.
 
 ## How is GHO different from the other assets listed on the Aave markets?
 
-Unlike many stablecoins, the oracle price for GHO will be fixed. Decentralized stablecoins such as GHO are transparent and cannot be changed. Interest rates are defined by the Aave DAO and repaid interest is redirected to the DAO instead of the asset suppliers. Discounts are available to borrowers staking AAVE in the Safety Module.
+Unlike many stablecoins, the oracle price for GHO is fixed. Decentralized stablecoins such as GHO are transparent and cannot be changed. Interest rates are defined by the Aave DAO and repaid interest is redirected to the DAO instead of the asset suppliers. Discounts are available to borrowers staking AAVE in the Safety Module.
 
 ## Which assets can be used as collateral to borrow GHO?
 

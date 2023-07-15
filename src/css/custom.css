@@ -241,14 +241,16 @@ border: 1.5px solid  var(--gho-border) !important;
 }
 
 .ghost-container {
-  max-width: 298px;
-  max-height: 258px;
+  max-width: 398px;
+  max-height: 358px;
 }
 
 .ghost-image {
-  width: 344px;
-  height: 304px;
-  max-width: 344px;
+  margin-top: -25%;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -25%;
+
 }
 
 .builders-title {

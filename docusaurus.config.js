@@ -9,7 +9,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'GHO Document Hub',
-  tagline: 'GHO is a decentralized multi-collateral stablecoin that is fully backed, transparent and native to the Aave Protocol.',
+  tagline: 'GHO is the only decentralized, overcollateralized stablecoin native to the Aave Protocol',
   favicon: 'img/logo.svg',
 
   // Set the production url of your site here

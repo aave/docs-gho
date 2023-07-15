@@ -4,7 +4,7 @@ title: Developer Docs
 sidebar_position: 1
 ---
 
-import AaveGhostSrc from "@site/static/img/Aave_ghost.png";
+import AaveGhostSrc from "@site/static/img/tools.png";
 
 <div className="ghost-container">
   <img className="ghost-image" src={AaveGhostSrc} alt="aave ghost" />
