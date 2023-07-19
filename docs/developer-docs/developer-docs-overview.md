@@ -46,6 +46,9 @@ import AaveGhostSrc from "@site/static/img/tools.png";
   href="https://github.com/bgd-labs/aave-address-book"
   > Solidity and JavaScript Address Registry
   </a>
+- <a className="links-list" href="https://thegraph.com/hosted-service/subgraph/aave/gho-mainnet">
+  GHO Subgraph Ethereum Mainnet
+  </a>
 
 ## Learn GHO
 
@@ -470,14 +473,21 @@ A complete example of fetching and formatting data from these contracts can be f
 
 ### Historical Data
 
-Transactions of the GHO facilitator are queryable through events on the GHO contracts. In the future there will be indexed alternatives such as subgraphs, dashbaords, and tailored endpoints for GHO data, but for now this data is only through event queries. 
+Transactions of the GHO facilitator are queryable through events on the GHO contracts, and through other indexed data sources.
 
-Shown below are 2 methods for generalized event queries using RPCs and the Etherscan API which can be used with the GHO deployed contracts to index historical data for GHO integrations.
+Shown below are 3 methods for generalized event queries using subgraphs, RPCs, and the Etherscan API which can all be used with the GHO deployed contracts to index historical data for GHO integrations.
 
-Note: An archival node may be necessary for the rpcUrl to query historical events
+<details>
+<summary>Query Events Subgraph</summary>
+
+The <a href="https://thegraph.com/hosted-service/subgraph/aave/gho-mainnet">GHO Ethereum Mainnet Subgraph</a> is a GraphQL endpoint which indexes events and can be used to query data about GHO facilitators and interactions with Aave V3 Ethereum market. The full schema for GHO-related entities can be found <a href="https://github.com/aave/protocol-subgraphs/discussions/91">here</a>
+
+</details>
 
 <details>
 <summary>Query Events RPC</summary>
+
+Note: An archival node may be necessary for the rpcUrl to query historical events
 
 ```js
 const { providers, Contract, utils } = require("ethers");
