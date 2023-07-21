@@ -34,7 +34,7 @@ Despite demand, there is a lack of decentralized stablecoins in the current DeFi
 
 Decentralized stablecoins, like GHO, provide censorship resistance, and most importantly, transparency for users.
 
-GHO is decentralized and intentionally does not have one single concentrated point of control. GHO will be controlled by Aave Governance and the Aave Protocol’s community. With Aave Governance making all decisions relating to GHO, there is increased transparency with this asset in comparison to other stablecoins in the market. In addition, all [GHO code](https://github.com/aave/gho-core) is open source and has been [audited](../resources/resources.md#audit-round-1) extensively by security firms prior to launch. All protocol upgrades and updates to interest rates/risk parameters will be public and must be agreed upon in advance by Aave Governance prior to execution.
+GHO is decentralized and intentionally does not have one single concentrated point of control. GHO is controlled by Aave Governance and the Aave Protocol’s community. With Aave Governance making all decisions relating to GHO, there is increased transparency with this asset in comparison to other stablecoins in the market. In addition, all [GHO code](https://github.com/aave/gho-core) is open source and has been [audited](../resources/resources.md#audit-round-1) extensively by security firms prior to launch. All protocol upgrades and updates to interest rates/risk parameters will be public and must be agreed upon in advance by Aave Governance prior to execution.
 
 ### Interest and Discount Rate Model
 
@@ -44,7 +44,7 @@ Please see the [Interest and Discount Rate Models](./how-gho-works/interest-rate
 
 ### Multi-Collateral Positions
 
-Traditionally in the DeFi ecosystem, users mint decentralized stablecoins via single asset-backed vaults. GHO is multi-collateralized, which means that users can mint GHO based on their entire set of supplied collateral assets across the Aave Protocol. As a result, GHO will be backed by various types of assets.
+Traditionally in the DeFi ecosystem, users mint decentralized stablecoins via single asset-backed vaults. GHO is multi-collateralized, which means that users can mint GHO based on their entire set of supplied collateral assets across the Aave Protocol. As a result, GHO is backed by various types of assets.
 
 While there are key differences with respect to the implementation of GHO (please see the “[How GHO Works](./how-gho-works/how-gho-works.md)" page for a more detailed explanation), the process of interacting with the Aave Protocol and borrowing GHO is similar to that of other assets (i.e., a user will supply assets into the Aave Protocol and enable them to be used as collateral, and these assets can then be used to mint GHO, opening a multi-collateral backed borrowing position).
 
