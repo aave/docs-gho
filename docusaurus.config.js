@@ -120,7 +120,7 @@ const config = {
         },
           {to: 'https://docs.aave.com', label: 'Aave Docs', position: 'right', className: 'persistent'},
           {
-            href: 'https://gho.aave.com',
+            href: 'https://app.aave.com',
             label: 'App',
             position: 'right',
           },
@@ -134,7 +134,7 @@ const config = {
             items: [
               {
                 label: 'Developers Home',
-                to: '/developer-docs/overview',
+                to: '/developer-docs/overview',           
               },
               {
                 label: 'Bug Bounty',
@@ -160,6 +160,10 @@ const config = {
               {
                 label: 'Aave Utilities SDK',
                 href: 'https://github.com/aave/aave-utilities',
+              },
+               {
+                label: 'Brand Kit',
+                href: 'https://github.com/aave/gho-brand-assets',
               },
             ],
           },
