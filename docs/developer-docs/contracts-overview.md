@@ -9,28 +9,27 @@ title: GHO Contracts
 - [Goerli Deployment - GHO Community Testnet](#goerli-gho-deployment)
 - [Sepolia Deployment - GHO Community Testnet](#sepolia-gho-deployment)
 
-### Ethereum Mainnet Deployment  {#goerli-gho-deployment}
+### Ethereum Mainnet Deployment {#goerli-gho-deployment}
 
 Source code: <https://github.com/aave/gho-core/>
 
-| Name                         | Address                                                                                                     |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| GhoOracle                    | [0xD110cac5d8682A3b045D5524a9903E031d70FCCd](https://etherscan.io/address/0xD110cac5d8682A3b045D5524a9903E031d70FCCd) |
-| GhoATokenImpl                | [0x2f32A274e02FA356423CE5e97a8e3155c1Ac396b](https://etherscan.io/address/0x2f32A274e02FA356423CE5e97a8e3155c1Ac396b) |
-| GhoVariableDebtTokenImpl     | [0x3FEaB6F8510C73E05b8C0Fdf96Df012E3A144319](https://etherscan.io/address/0x3FEaB6F8510C73E05b8C0Fdf96Df012E3A144319) |
-| GhoStableDebtTokenImpl       | [0x05b435C741F5ab03C2E6735e23f1b7Fe01Cc6b22](https://etherscan.io/address/0x05b435C741F5ab03C2E6735e23f1b7Fe01Cc6b22) |
-| GhoInterestRateStrategy      | [0x16E77D8a7192b65fEd49B3374417885Ff4421A74](https://etherscan.io/address/0x16E77D8a7192b65fEd49B3374417885Ff4421A74) |
-| GhoDiscountRateStrategy      | [0x4C38Ec4D1D2068540DfC11DFa4de41F733DDF812](https://etherscan.io/address/0x4C38Ec4D1D2068540DfC11DFa4de41F733DDF812) |
-| GhoToken                     | [0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f](https://etherscan.io/address/0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f) |
-| GhoFlashMinter               | [0xb639D208Bcf0589D54FaC24E655C79EC529762B8](https://etherscan.io/address/0xb639D208Bcf0589D54FaC24E655C79EC529762B8) |
-| Payload                      | [0x16765d275c00Caa7Ec9a30D1629fD42121c3ae6B](https://etherscan.io/address/0x16765d275c00Caa7Ec9a30D1629fD42121c3ae6B) |
-| Create2Helper                | [0xeCEBeDBF26013Fb55A5b0a275191A90984E5Ae5e](https://etherscan.io/address/0xeCEBeDBF26013Fb55A5b0a275191A90984E5Ae5e) |
-| UiGhoDataProvider            | [0x379c1EDD1A41218bdbFf960a9d5AD2818Bf61aE8](https://etherscan.io/address/0x379c1EDD1A41218bdbFf960a9d5AD2818Bf61aE8) |
+| Name                     | Address                                                                                                               |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| GhoOracle                | [0xD110cac5d8682A3b045D5524a9903E031d70FCCd](https://etherscan.io/address/0xD110cac5d8682A3b045D5524a9903E031d70FCCd) |
+| GhoATokenImpl            | [0x2f32A274e02FA356423CE5e97a8e3155c1Ac396b](https://etherscan.io/address/0x2f32A274e02FA356423CE5e97a8e3155c1Ac396b) |
+| GhoVariableDebtTokenImpl | [0x3FEaB6F8510C73E05b8C0Fdf96Df012E3A144319](https://etherscan.io/address/0x3FEaB6F8510C73E05b8C0Fdf96Df012E3A144319) |
+| GhoStableDebtTokenImpl   | [0x05b435C741F5ab03C2E6735e23f1b7Fe01Cc6b22](https://etherscan.io/address/0x05b435C741F5ab03C2E6735e23f1b7Fe01Cc6b22) |
+| GhoInterestRateStrategy  | [0x16E77D8a7192b65fEd49B3374417885Ff4421A74](https://etherscan.io/address/0x16E77D8a7192b65fEd49B3374417885Ff4421A74) |
+| GhoDiscountRateStrategy  | [0x4C38Ec4D1D2068540DfC11DFa4de41F733DDF812](https://etherscan.io/address/0x4C38Ec4D1D2068540DfC11DFa4de41F733DDF812) |
+| GhoToken                 | [0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f](https://etherscan.io/address/0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f) |
+| GhoFlashMinter           | [0xb639D208Bcf0589D54FaC24E655C79EC529762B8](https://etherscan.io/address/0xb639D208Bcf0589D54FaC24E655C79EC529762B8) |
+| Payload                  | [0x16765d275c00Caa7Ec9a30D1629fD42121c3ae6B](https://etherscan.io/address/0x16765d275c00Caa7Ec9a30D1629fD42121c3ae6B) |
+| Create2Helper            | [0xeCEBeDBF26013Fb55A5b0a275191A90984E5Ae5e](https://etherscan.io/address/0xeCEBeDBF26013Fb55A5b0a275191A90984E5Ae5e) |
+| UiGhoDataProvider        | [0x379c1EDD1A41218bdbFf960a9d5AD2818Bf61aE8](https://etherscan.io/address/0x379c1EDD1A41218bdbFf960a9d5AD2818Bf61aE8) |
 
 :::info
-Aave Protocol deplyoded contract addresses: See [here](https://docs.aave.com/developers/deployed-contracts/v3-mainnet/ethereum-mainnet)
+Aave Protocol deployed contract addresses: See [here](https://docs.aave.com/developers/deployed-contracts/v3-mainnet/ethereum-mainnet)
 :::
-
 
 ### Goerli Deployment - GHO Community Testnet {#goerli-gho-deployment}
 
@@ -194,11 +193,11 @@ Version: https://github.com/aave/gho-core/pull/242/commits/c0999cb908d1037bb0515
 
 GHO Sepolia Market Reserves
 
-| Name                           | Address                                                                                                                            |
-| :------------------------------| :--------------------------------------------------------------------------------------------------------------------------------- |
-| AAVE-TestnetMintableERC20      | [0xf9aBBc6E64f3Cb3cb237EbcAB95A252365BBd0D0](https://sepolia.etherscan.io/address/0xf9aBBc6E64f3Cb3cb237EbcAB95A252365BBd0D0)      |
-| DAI-TestnetMintableERC20       | [0xe5118E47e061ab15Ca972D045b35193F673bcc36](https://sepolia.etherscan.io/address/0xe5118E47e061ab15Ca972D045b35193F673bcc36)      |
-| LINK-TestnetMintableERC20      | [0xe97aacf2F1248484003d3208CF4060ec262c6b03](https://sepolia.etherscan.io/address/0xe97aacf2F1248484003d3208CF4060ec262c6b03)      |
-| USDC-TestnetMintableERC20      | [0xEbCC972B6B3eB15C0592BE1871838963d0B94278](https://sepolia.etherscan.io/address/0xEbCC972B6B3eB15C0592BE1871838963d0B94278)      |
-| WETH-TestnetMintableERC20      | [0xA1A245cc76414DC143687D9c3DE1152396f352D6](https://sepolia.etherscan.io/address/0xA1A245cc76414DC143687D9c3DE1152396f352D6)      |
-| GhoToken                       | [0x5d00fab5f2F97C4D682C1053cDCAA59c2c37900D](https://sepolia.etherscan.io/address/0x5d00fab5f2F97C4D682C1053cDCAA59c2c37900D)      |
+| Name                      | Address                                                                                                                       |
+| :------------------------ | :---------------------------------------------------------------------------------------------------------------------------- |
+| AAVE-TestnetMintableERC20 | [0xf9aBBc6E64f3Cb3cb237EbcAB95A252365BBd0D0](https://sepolia.etherscan.io/address/0xf9aBBc6E64f3Cb3cb237EbcAB95A252365BBd0D0) |
+| DAI-TestnetMintableERC20  | [0xe5118E47e061ab15Ca972D045b35193F673bcc36](https://sepolia.etherscan.io/address/0xe5118E47e061ab15Ca972D045b35193F673bcc36) |
+| LINK-TestnetMintableERC20 | [0xe97aacf2F1248484003d3208CF4060ec262c6b03](https://sepolia.etherscan.io/address/0xe97aacf2F1248484003d3208CF4060ec262c6b03) |
+| USDC-TestnetMintableERC20 | [0xEbCC972B6B3eB15C0592BE1871838963d0B94278](https://sepolia.etherscan.io/address/0xEbCC972B6B3eB15C0592BE1871838963d0B94278) |
+| WETH-TestnetMintableERC20 | [0xA1A245cc76414DC143687D9c3DE1152396f352D6](https://sepolia.etherscan.io/address/0xA1A245cc76414DC143687D9c3DE1152396f352D6) |
+| GhoToken                  | [0x5d00fab5f2F97C4D682C1053cDCAA59c2c37900D](https://sepolia.etherscan.io/address/0x5d00fab5f2F97C4D682C1053cDCAA59c2c37900D) |
