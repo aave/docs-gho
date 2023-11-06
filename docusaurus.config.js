@@ -177,7 +177,7 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/aaveaave",
+                href: "https://twitter.com/aave",
               },
               {
                 label: "GitHub",
