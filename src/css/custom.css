@@ -181,7 +181,11 @@
     
   /* LINKS */
 
-  --ifm-link-color: #8C7CF1
+  --ifm-link-color: #8C7CF1;
+
+  .circle {
+    border-color: white;
+  }
       
 }
 
@@ -281,4 +285,23 @@ border: 1.5px solid  var(--gho-border) !important;
     justify-content: center;
     font-size: 18px;
   }
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+  color: black;
+  background-color: #c9b3f9;
+  text-align: center;
+  line-height: 100px;
+  margin: 10px;
+  display: inline-block;
+  cursor:pointer;
+}
+
+.link-plain, .link-plain:hover {
+  text-decoration: none;
+  color: white;
 }
