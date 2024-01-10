@@ -5,9 +5,10 @@ title: GHO Contracts
 
 ## Deployments
 
-- [Ethereum Mainnet Deployment](#ethereummainnet-gho-deployment)
-- [Goerli Deployment - GHO Community Testnet](#goerli-gho-deployment)
-- [Sepolia Deployment - GHO Community Testnet](#sepolia-gho-deployment)
+- [Ethereum Mainnet](#ethereummainnet-gho-deployment)
+- [Sepolia Testnet](#sepolia-deployment)
+- [Goerli Launch Testnet (deprecated)](#goerli-gho-deployment)
+- [Sepolia Launch Testnet (deprecated)](#sepolia-gho-deployment)
 
 ### Ethereum Mainnet Deployment {#goerli-gho-deployment}
 
@@ -31,7 +32,29 @@ Source code: <https://github.com/aave/gho-core/>
 Aave Protocol deployed contract addresses: See [here](https://docs.aave.com/developers/deployed-contracts/v3-mainnet/ethereum-mainnet)
 :::
 
-### Goerli Deployment - GHO Community Testnet {#goerli-gho-deployment}
+### Sepolia Testnet {#sepolia-deployment}
+
+The maintained testnet deployment for GHO is the same Sepolia V3 market as the core Aave Protocol. A full list of addresses can be found [here](https://github.com/bgd-labs/aave-address-book/blob/main/src/AaveV3Sepolia.sol). This market can be accessed through [gho.aave.com](https://gho.aave.com) or [app.aave.com](https://app.aave.com) UIs.
+
+| Contract                  | Address                                     |
+| ------------------------- | ------------------------------------------- |
+| GhoToken                  | 0xc4bF5CbDaBE595361438F8c6a187bDc330539c60  |
+| GhoATokenImpl             | 0xD4BDb51fB96996CA24a5C49E7b57f94a1850Fa30` |
+| GhoDiscountRateStrategy   | 0x19cdecE64EDE475ba0EB114ff4E319d64Ef8ECCf  |
+| GhoInterestRateStrategy   | 0x521247B4d0a51E71DE580dA2cBF99EB40a44b3Bf  |
+| GhoOracle                 | 0x00f7fecFAEbEd9499e1f3f9d04E755a21E5fc47C  |
+| GhoStableDebtTokenImpl    | 0x2aa7819F2e88aF4cfF8FD0869ABdB97E336101Ee  |
+| GhoVariableDebtTokenImpl  | 0xd4FEA5bD40cE7d0f7b269678541fF0a95FCb4b68  |
+| GhoFlashMinter            | 0xB5d0ef1548D9C70d3E7a96cA67A2d7EbC5b1173E  |
+| UiGhoDataProvider         | 0x69B9843A16a6E9933125EBD97659BA3CCbE2Ef8A  |
+| GhoSteward                | 0x4bF0c2c74717a4e538cfe25DD389C21A139E0096  |
+| StkAaveTokenV3Proxy       | 0x56033E114c61183590d39BA847400F02022Ebe47  |
+| StkAaveTokenV3Impl        | 0xf556C102F47d806E21E8E78438E58ac06A14A29E  |
+| GhoATokenProxy            | 0xd190eF37dB51Bb955A680fF1A85763CC72d083D4  |
+| GhoStableDebtTokenProxy   | 0xdCA691FB9609aB814E59c62d70783da1c056A9b6  |
+| GhoVariableDebtTokenProxy | 0x67ae46EF043F7A4508BD1d6B94DB6c33F0915844  |
+
+### Goerli Launch Testnet (deprecated) {#goerli-gho-deployment}
 
 Source code: https://github.com/aave/gho-core/pull/242/commits/c0999cb908d1037bb0515b88eb3cf15321cd3d60
 
@@ -130,7 +153,7 @@ Goerli GHO Market Reserves
 
 <br />
 
-### Sepolia Deployment - GHO Community Testnet {#sepolia-gho-deployment}
+### Sepolia Launch Testnet (deprecated) {#sepolia-gho-deployment}
 
 Version: https://github.com/aave/gho-core/pull/242/commits/c0999cb908d1037bb0515b88eb3cf15321cd3d60
 
