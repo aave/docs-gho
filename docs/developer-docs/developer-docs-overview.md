@@ -34,7 +34,7 @@ import AaveGhostSrc from "@site/static/img/tools.png";
   className="links-list"
   href="https://docs.aave.com/developers/deployed-contracts/deployed-contracts"
   > Deployed Aave Protocol Contracts
-  </a>
+  > </a>
 - <a className="links-list" href="https://github.com/aave/aave-v3-core">
     Aave V3 Contract Source Code
   </a>
@@ -45,7 +45,7 @@ import AaveGhostSrc from "@site/static/img/tools.png";
   className="links-list"
   href="https://github.com/bgd-labs/aave-address-book"
   > Solidity and JavaScript Address Registry
-  </a>
+  > </a>
 - <a className="links-list" href="https://thegraph.com/hosted-service/subgraph/aave/gho-mainnet">
   GHO Subgraph Ethereum Mainnet
   </a>
@@ -174,15 +174,15 @@ The [data](#data) section goes into detail about integrating the most common liv
 The [Aave Utilities Javascript SDK](https://github.com/aave/aave-utilities) is a utilty for fetching data and building transactions. Since GHO is under active development, it is not available in the main package versions. GHO versions are published from [this branch](https://github.com/aave/aave-utilities/pull/445) and the current version in use on the [GHO testnet app](https://gho.aave.com) are listed below:
 
 ```
-npm install @aave/math-utils@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.0
-npm install @aave/contract-helpers@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.0
+npm install @aave/math-utils@1.21.1
+npm install @aave/contract-helpers@1.21.1
 ```
 
-or 
+or
 
 ```
-yarn add @aave/math-utils@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.0
-yarn add @aave/contract-helpers@1.13.6-b2b7613127eb1278aa61a20d618e3b6d95782bb2.0
+yarn add @aave/math-utils@1.21.1
+yarn add @aave/contract-helpers@1.21.1
 ```
 
 ### borrow
@@ -193,11 +193,11 @@ GHO is minted through the `borrow` method of the Aave Pool facilitator which can
 <summary>Sample Code (JavaScript)</summary>
 
 ```js
-import { Pool, InterestRate } from '@aave/contract-helpers';
+import { Pool, InterestRate } from "@aave/contract-helpers";
 
 const pool = new Pool(provider, {
-  POOL: '0x3De59b6901e7Ad0A19621D49C5b52cC9a4977e52', // Goerli GHO market
-  WETH_GATEWAY: '0x9c402E3b0D123323F0FCed781b8184Ec7E02Dd31', // Goerli GHO market
+  POOL: "0x3De59b6901e7Ad0A19621D49C5b52cC9a4977e52", // Goerli GHO market
+  WETH_GATEWAY: "0x9c402E3b0D123323F0FCed781b8184Ec7E02Dd31", // Goerli GHO market
 });
 
 /*
@@ -210,20 +210,22 @@ const pool = new Pool(provider, {
 */
 const txs: EthereumTransactionTypeExtended[] = await pool.borrow({
   user,
-  reserve: '0xcbE9771eD31e761b744D3cB9eF78A1f32DD99211', // Goerli GHO market
+  reserve: "0xcbE9771eD31e761b744D3cB9eF78A1f32DD99211", // Goerli GHO market
   amount,
   interestRateMode,
-  debtTokenAddress: '0x80aa933EfF12213022Fd3d17c2c59C066cBb91c7', // Goerli GHO market
+  debtTokenAddress: "0x80aa933EfF12213022Fd3d17c2c59C066cBb91c7", // Goerli GHO market
   onBehalfOf,
   referralCode,
 });
 ```
+
 Submit transaction using [these instructions](https://github.com/aave/aave-utilities#submitting-transactions).
+
 </details>
 
 ### repay
 
-Repay also occurs seamlessly through the `repay` function of the Aave V3 Pool contract. Since repay transfers assets, the Pool must be approved as a spender of the tokens. There are two routes for approval: 
+Repay also occurs seamlessly through the `repay` function of the Aave V3 Pool contract. Since repay transfers assets, the Pool must be approved as a spender of the tokens. There are two routes for approval:
 
 - Approve via txn -> repay
 - Approve via signed message -> repayWithPermit
@@ -234,11 +236,11 @@ There are instructions for both routes below:
 <summary>Repay Sample Code (JavaScript)</summary>
 
 ```js
-import { Pool } from '@aave/contract-helpers';
+import { Pool } from "@aave/contract-helpers";
 
 const pool = new Pool(provider, {
-  POOL: '0x3De59b6901e7Ad0A19621D49C5b52cC9a4977e52', // Goerli GHO market
-  WETH_GATEWAY: '0x9c402E3b0D123323F0FCed781b8184Ec7E02Dd31', // Goerli GHO market
+  POOL: "0x3De59b6901e7Ad0A19621D49C5b52cC9a4977e52", // Goerli GHO market
+  WETH_GATEWAY: "0x9c402E3b0D123323F0FCed781b8184Ec7E02Dd31", // Goerli GHO market
 });
 
 /*
@@ -250,13 +252,15 @@ const pool = new Pool(provider, {
 */
 const txs: EthereumTransactionTypeExtended[] = await pool.repay({
   user,
-  reserve: '0xcbE9771eD31e761b744D3cB9eF78A1f32DD99211', // Goerli GHO market
+  reserve: "0xcbE9771eD31e761b744D3cB9eF78A1f32DD99211", // Goerli GHO market
   amount,
   interestRateMode,
   onBehalfOf,
 });
 ```
+
 Will return an array with repay transaction and optionally an approval transaction. Submit transaction(s) using [these instructions](https://github.com/aave/aave-utilities#submitting-transactions).
+
 </details>
 
 <details>
@@ -282,9 +286,9 @@ const approvalMsg = await pool.signERC20Approval({
 // User signs with wallet method such as ethers signTypedDataV4 and passed as signature variable in next call
 
 /*
-- @param `user` The ethereum address that will make the deposit 
-- @param `reserve` The ethereum address of the reserve 
-- @param `amount` The amount to be deposited 
+- @param `user` The ethereum address that will make the deposit
+- @param `reserve` The ethereum address of the reserve
+- @param `amount` The amount to be deposited
 - @param `interestRateMode` // Whether stable (InterestRate.Stable) or variable (InterestRate.Variable) debt will be repaid
 - @param @optional `onBehalfOf` The ethereum address for which user is depositing. It will default to the user address
 */
@@ -297,13 +301,14 @@ const txs: EthereumTransactionTypeExtended[] = await pool.repayWithPermit({
   signature,
 });
 ```
+
 Will return an array with repay transaction and optionally an approval transaction. Submit transaction(s) using [these instructions](https://github.com/aave/aave-utilities#submitting-transactions).
 
 </details>
 
 ### flashmint
 
-Coming soon to GHO SDK. In the meantime, can be accessed by following the [contracts documentation](./flashmint-facilitator/GhoFlashMinter.md). 
+Coming soon to GHO SDK. In the meantime, can be accessed by following the [contracts documentation](./flashmint-facilitator/GhoFlashMinter.md).
 
 ### Interface Live Data
 
@@ -313,20 +318,20 @@ There are several view contracts used to provide a summarized data source for ma
 <summary>Sample Code (JavaScript)</summary>
 
 ```js
-import { ethers } from 'ethers';
-import { dayjs } from 'dayjs';
+import { ethers } from "ethers";
+import { dayjs } from "dayjs";
 import {
   UiPoolDataProvider,
   UiIncentiveDataProvider,
   ChainId,
   GhoService,
-} from '@aave/contract-helpers';
+} from "@aave/contract-helpers";
 import {
   formatGhoReserveData,
   formatGhoUserData,
   formatReservesAndIncentives,
   formatUserSummaryAndIncentives,
-} from '@aave/math-utils';
+} from "@aave/math-utils";
 
 // ES5 Alternative imports
 //  const {
@@ -345,64 +350,63 @@ import {
 
 // Sample RPC address for querying ETH goerli
 const provider = new ethers.providers.JsonRpcProvider(
-  'https://eth-goerli.public.blastapi.io',
+  "https://eth-goerli.public.blastapi.io"
 );
 
 // User address to fetch data for, insert address here
-const currentAccount = '0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c';
+const currentAccount = "0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c";
 
 // View contract used to fetch all reserves data (including market base currency data), and user reserves
 // Using Aave V3 Eth goerli address for demo
 const poolDataProviderContract = new UiPoolDataProvider({
-  uiPoolDataProviderAddress: '0x3De59b6901e7Ad0A19621D49C5b52cC9a4977e52', // Goerli GHO Market
+  uiPoolDataProviderAddress: "0x3De59b6901e7Ad0A19621D49C5b52cC9a4977e52", // Goerli GHO Market
   provider,
   chainId: ChainId.goerli,
 });
-const currentTimestamp = dayjs().unix()
+const currentTimestamp = dayjs().unix();
 
 // View contract used to fetch all reserve incentives (APRs), and user incentives
 // Using Aave V3 Eth goerli address for demo
 const incentiveDataProviderContract = new UiIncentiveDataProvider({
-  uiIncentiveDataProviderAddress:
-    '0xF67B25977cEFf3563BF7F24A531D6CEAe6870a9d', // Goerli GHO Market
+  uiIncentiveDataProviderAddress: "0xF67B25977cEFf3563BF7F24A531D6CEAe6870a9d", // Goerli GHO Market
   provider,
   chainId: ChainId.goerli,
 });
 
 const ghoService = new GhoService({
-    provider,
-    uiGhoDataProviderAddress: '0xE914D574975a1Cd273388035Db4413dda788c0E5', // Goerli GHO Market
+  provider,
+  uiGhoDataProviderAddress: "0xE914D574975a1Cd273388035Db4413dda788c0E5", // Goerli GHO Market
 });
 
 async function fetchContractData() {
   // Object containing array of pool reserves and market base currency data
   // { reservesArray, baseCurrencyData }
   const reserves = await poolDataProviderContract.getReservesHumanized({
-    lendingPoolAddressProvider: '0x4dd5ab8Fb385F2e12aDe435ba7AFA812F1d364D0', // Goerli GHO Market
+    lendingPoolAddressProvider: "0x4dd5ab8Fb385F2e12aDe435ba7AFA812F1d364D0", // Goerli GHO Market
   });
 
   // Object containing array or users aave positions and active eMode category
   // { userReserves, userEmodeCategoryId }
   const userReserves = await poolDataProviderContract.getUserReservesHumanized({
-    lendingPoolAddressProvider: '0x4dd5ab8Fb385F2e12aDe435ba7AFA812F1d364D0', // Goerli GHO Market
+    lendingPoolAddressProvider: "0x4dd5ab8Fb385F2e12aDe435ba7AFA812F1d364D0", // Goerli GHO Market
     user: currentAccount,
   });
 
   // Array of incentive tokens with price feed and emission APR
   const reserveIncentives =
     await incentiveDataProviderContract.getReservesIncentivesDataHumanized({
-      lendingPoolAddressProvider: '0x4dd5ab8Fb385F2e12aDe435ba7AFA812F1d364D0', // Goerli GHO Market
+      lendingPoolAddressProvider: "0x4dd5ab8Fb385F2e12aDe435ba7AFA812F1d364D0", // Goerli GHO Market
     });
 
   // Dictionary of claimable user incentives
   const userIncentives =
     await incentiveDataProviderContract.getUserReservesIncentivesDataHumanized({
-      lendingPoolAddressProvider: '0x4dd5ab8Fb385F2e12aDe435ba7AFA812F1d364D0', // Goerli GHO Market
+      lendingPoolAddressProvider: "0x4dd5ab8Fb385F2e12aDe435ba7AFA812F1d364D0", // Goerli GHO Market
       user: currentAccount,
     });
 
-   const ghoReserveData = await ghoService.getGhoReserveData();
-   const ghoUserData = await ghoService.getGhoUserData(currentAccount);
+  const ghoReserveData = await ghoService.getGhoReserveData();
+  const ghoUserData = await ghoService.getGhoUserData(currentAccount);
 
   const formattedGhoReserveData = formatGhoReserveData({
     ghoReserveData,
@@ -416,15 +420,19 @@ async function fetchContractData() {
   const formattedPoolReserves = formatReservesAndIncentives({
     reserves: reserves.reservesData,
     currentTimestamp,
-    marketReferenceCurrencyDecimals: reserves.baseCurrencyData.marketReferenceCurrencyDecimals,
-    marketReferencePriceInUsd: reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd,
+    marketReferenceCurrencyDecimals:
+      reserves.baseCurrencyData.marketReferenceCurrencyDecimals,
+    marketReferencePriceInUsd:
+      reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd,
     reserveIncentives: reserveIncentives,
-  })
+  });
 
   const userSummary = formatUserSummaryAndIncentives({
     currentTimestamp,
-    marketReferencePriceInUsd: reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd,
-    marketReferenceCurrencyDecimals: reserves.baseCurrencyData.marketReferenceCurrencyDecimals,
+    marketReferencePriceInUsd:
+      reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd,
+    marketReferenceCurrencyDecimals:
+      reserves.baseCurrencyData.marketReferenceCurrencyDecimals,
     userReserves: userReserves.userReserves,
     formattedReserves: formattedPoolReserves,
     userEmodeCategoryId: userReserves.userEmodeCategoryId,
@@ -432,14 +440,17 @@ async function fetchContractData() {
     userIncentives: userIncentives,
   });
 
-let formattedUserSummary = userSummary;
+  let formattedUserSummary = userSummary;
   // Factor discounted GHO interest into cumulative user fields
   if (formattedGhoUserData.userDiscountedGhoInterest > 0) {
     const userSummaryWithDiscount = formatUserSummaryWithDiscount({
       userGhoDiscountedInterest: formattedGhoUserData.userDiscountedGhoInterest,
       user,
       marketReferenceCurrencyPriceUSD: Number(
-        formatUnits(reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd, USD_DECIMALS)
+        formatUnits(
+          reserves.baseCurrencyData.marketReferenceCurrencyPriceInUsd,
+          USD_DECIMALS
+        )
       ),
     });
     formattedUserSummary = {
@@ -448,11 +459,17 @@ let formattedUserSummary = userSummary;
     };
   }
 
-   console.log({ formattedGhoReserveData, formattedGhoUserData, formattedPoolReserves, formattedUserSummary });
+  console.log({
+    formattedGhoReserveData,
+    formattedGhoUserData,
+    formattedPoolReserves,
+    formattedUserSummary,
+  });
 }
 
 fetchContractData();
 ```
+
 </details>
 
 <br />
@@ -517,6 +534,7 @@ async function fetchEvents() {
 }
 fetchEvents();
 ```
+
 </details>
 
 <details>
@@ -577,4 +595,5 @@ async function fetchEvents() {
 }
 fetchEvents();
 ```
+
 </details>

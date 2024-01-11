@@ -6,70 +6,57 @@ import ghostImgSrc from "@site/static/img/ghost.png";
 import bubbleImgSrc from "@site/static/img/question_bubble.png";
 import toolsImgSrc from "@site/static/img/tools.png";
 
-const featureList = [
+const hackathonDashboardList = [
   {
-    title: "DEVELOPERS",
+    title: "PAYMENTS",
     imageSrc: toolsImgSrc,
-    link: "/developer-docs/overview",
+    link: "/developer-docs/payments/",
     imageWrapperStyle: styles.toolsImgWrapper,
-    description: <>Build with GHO</>,
+    description: <>Payments</>,
   },
   {
-    title: "WHAT IS GHO?",
-    link: "/concepts/overview",
+    title: "VAULTS",
+    link: "/developer-docs/vaults/",
     imageSrc: ghostImgSrc,
     imageWrapperStyle: styles.ghostImgWrapper,
-    description: <>Learn the basics</>,
+    description: <>Vaults</>,
   },
   {
-    title: "FAQ",
-    link: "/concepts/faq",
+    title: "FACILITATORS",
+    link: "/developer-docs/facilitators/",
     imageSrc: bubbleImgSrc,
     imageWrapperStyle: styles.bubbleImgWrapper,
-    description: <>Get answers</>,
+    description: <>Facilitators</>,
+  },
+  {
+    title: "TESTING GUIDE",
+    imageSrc: toolsImgSrc,
+    link: "/developer-docs/testing-guide/",
+    imageWrapperStyle: styles.toolsImgWrapper,
+    description: <>Testing Guide</>,
   },
 ];
 
-function Feature({
-  imageSrc,
-  title,
-  description,
-  imageWrapperStyle,
-  link,
-  navigate,
-}) {
+function Feature({ title, link, navigate }) {
   return (
     <div
       className={clsx("card", styles.cardWrapper)}
       onClick={() => navigate.push(link)}
     >
-      <div className="card__header">
+      <div className={clsx(styles.cardBase)}>
         <span className={clsx("badge", styles.cardBadge)}>{title}</span>
-      </div>
-      <div className={clsx(imageWrapperStyle, styles.cardImageWrapper)}>
-        <img src={imageSrc} />
-      </div>
-      <div className={clsx("card__footer", styles.cardFooter)}>
-        <p>{description}</p>
       </div>
     </div>
   );
 }
 
-export default function HomepageFeatures() {
+export default function HackathonFeatures() {
   const navigate = useHistory();
   return (
     <section className={styles.features}>
       <div className="container">
-        <div
-          className={clsx("card", styles.cardWrapper, styles.announcement)}
-          onClick={() => navigate.push("/developer-docs/lfgho-dashboard")}
-        >
-          LFGHO Hackathon Dashboard
-        </div>
-
         <div className={clsx("row", styles.featuresContainer)}>
-          {featureList.map((props) => (
+          {hackathonDashboardList.map((props) => (
             <Feature key={props.title} {...props} navigate={navigate} />
           ))}
         </div>
