@@ -18,9 +18,9 @@ This is not required for GHO.
 
 ### GHO
 
-If a user supplies USDC and would like to borrow GHO, there is no requirement for a user to have supplied GHO. Instead, the Aave Protocol calls the GHO contract mints GHO on demand. When repaying GHO debt, GHO is burned via smart contracts when the amount repaid exceeds the interest to pay, rather than going back to the suppliers.
+If a user supplies USDC and would like to borrow GHO, there is no requirement for a user to have supplied GHO. Instead, the Aave Protocol calls the GHO contract and mints GHO on demand. When repaying GHO debt, GHO is burned via smart contracts when the amount repaid exceeds the interest to pay, rather than going back to the suppliers.
 
-This provides more flexibility than regular assets in the pool as GHO is minted on demand, the user does not have to rely on assets being supplied.
+This provides more flexibility than regular assets in the pool. As GHO is minted on demand, the user does not have to rely on assets being supplied.
 
 Facilitators will have the ability to mint GHO. Please see the [Facilitators](gho-facilitators.md) page to read about the role that Facilitators play for GHO.
 

@@ -16,9 +16,9 @@ The exposure and risk of a flash crash exist in all markets; however, the Aave P
 
 ## Smart Contract Risk
 
-GHO has been developed with security as a top priority. GHO has been reviewed as thoroughly as possible before being activated by Aave Governance. There is an active [bug bounty](https://github.com/aave/gho-bug-bounty) where any security vulnerabilities can be reported and awarded the bounty if the criteria is met.
+GHO has been developed with security as a top priority. GHO has been reviewed as thoroughly as possible before being activated by Aave Governance. There is an active [bug bounty](https://github.com/aave/gho-bug-bounty) where any security vulnerabilities can be reported and awarded the bounty if the criteria are met.
 
-The system has been designed to be safe and secure and to meet the highest security standards. The GHO smart contracts have been developed following responsible development practices, which includes both internal and external code reviews and formal verification from [auditors](../../resources/resources.md#audit-round-1) and community contributors.
+The system has been designed to be safe and secure and to meet the highest security standards. The GHO smart contracts have been developed following responsible development practices, which include both internal and external code reviews and formal verification from [auditors](../../resources/resources.md#audit-round-1) and community contributors.
 
 Smart contract risk can never be eliminated completely; however, through conservative development processes, it can be reduced.
 
