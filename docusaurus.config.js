@@ -53,7 +53,20 @@ const config = {
       }),
     ],
   ],
-  plugins: [require.resolve("docusaurus-plugin-image-zoom")],
+  plugins: [
+    require.resolve("docusaurus-plugin-image-zoom"),
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          {
+            to: "/developer-docs/payments",
+            from: "/developer-docs/transferring-gho",
+          },
+        ],
+      },
+    ],
+  ],
   stylesheets: [
     {
       href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
