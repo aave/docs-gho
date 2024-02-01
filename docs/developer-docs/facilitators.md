@@ -30,3 +30,5 @@ The generic nature of the GHO facilitator model creates a large design space for
 - [Aave Protocol Facilitator](https://github.com/aave/gho-core/blob/51be44756a1013eaead43f25142a6ab723646ec3/src/contracts/facilitators/aave/tokens/GhoAToken.sol#L4)
 - [GHO Facilitator Governance Framework](https://snapshot.org/#/aave.eth/proposal/0x49486dc5964267bf67f034bb6146cd93ffe6c9e3a85c7368334b48b8e5057776)
 - [Aave Address Book - solidity & npm registry](https://github.com/bgd-labs/aave-address-book/)
+
+[{"inputs":[{"internalType":"contract IPoolAddressesProvider","name":"provider","type":"address"},{"inputs":[{"internalType":"address","name":"asset","type":"address"}],"name":"getAssetPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]

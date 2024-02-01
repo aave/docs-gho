@@ -61,13 +61,6 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div
-          className={clsx("card", styles.cardWrapper, styles.announcement)}
-          onClick={() => navigate.push("/developer-docs/lfgho-dashboard")}
-        >
-          LFGHO Hackathon Dashboard
-        </div>
-
         <div className={clsx("row", styles.featuresContainer)}>
           {featureList.map((props) => (
             <Feature key={props.title} {...props} navigate={navigate} />

@@ -139,9 +139,9 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "LFGHO Hackathon",
+      label: "Hackathon Resources",
       items: [
-        "developer-docs/lfgho-dashboard",
+        "developer-docs/hackathon-dashboard",
         "developer-docs/payments",
         "developer-docs/vaults",
         "developer-docs/facilitators",
