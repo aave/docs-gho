@@ -10,32 +10,31 @@ title: GHO Contracts
 - [Goerli Launch Testnet (deprecated)](#goerli-gho-deployment)
 - [Sepolia Launch Testnet (deprecated)](#sepolia-gho-deployment)
 
+:::info
+Integrate contract addresses in solidity or npm package with the [Aave Address Book](https://github.com/bgd-labs/aave-address-book)
+:::
+
 ### Ethereum Mainnet Deployment {#ethereummainnet-gho-deployment}
 
 Source code: <https://github.com/aave/gho-core/>
 
-| Name                      | Address                                                                                                               |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GhoOracle                 | [0xD110cac5d8682A3b045D5524a9903E031d70FCCd](https://etherscan.io/address/0xD110cac5d8682A3b045D5524a9903E031d70FCCd) |
-| GhoATokenImpl             | [0x2f32A274e02FA356423CE5e97a8e3155c1Ac396b](https://etherscan.io/address/0x2f32A274e02FA356423CE5e97a8e3155c1Ac396b) |
-| GhoVariableDebtTokenImpl  | [0x3FEaB6F8510C73E05b8C0Fdf96Df012E3A144319](https://etherscan.io/address/0x3FEaB6F8510C73E05b8C0Fdf96Df012E3A144319) |
-| GhoStableDebtTokenImpl    | [0x05b435C741F5ab03C2E6735e23f1b7Fe01Cc6b22](https://etherscan.io/address/0x05b435C741F5ab03C2E6735e23f1b7Fe01Cc6b22) |
-| GhoInterestRateStrategy   | [0x16E77D8a7192b65fEd49B3374417885Ff4421A74](https://etherscan.io/address/0x16E77D8a7192b65fEd49B3374417885Ff4421A74) |
-| GhoDiscountRateStrategy   | [0x4C38Ec4D1D2068540DfC11DFa4de41F733DDF812](https://etherscan.io/address/0x4C38Ec4D1D2068540DfC11DFa4de41F733DDF812) |
-| GhoToken                  | [0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f](https://etherscan.io/address/0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f) |
-| GhoFlashMinter            | [0xb639D208Bcf0589D54FaC24E655C79EC529762B8](https://etherscan.io/address/0xb639D208Bcf0589D54FaC24E655C79EC529762B8) |
-| Payload                   | [0x16765d275c00Caa7Ec9a30D1629fD42121c3ae6B](https://etherscan.io/address/0x16765d275c00Caa7Ec9a30D1629fD42121c3ae6B) |
-| Create2Helper             | [0xeCEBeDBF26013Fb55A5b0a275191A90984E5Ae5e](https://etherscan.io/address/0xeCEBeDBF26013Fb55A5b0a275191A90984E5Ae5e) |
-| UiGhoDataProvider         | [0x379c1EDD1A41218bdbFf960a9d5AD2818Bf61aE8](https://etherscan.io/address/0x379c1EDD1A41218bdbFf960a9d5AD2818Bf61aE8) |
-| GSMRegistry               | [0x167527DB01325408696326e3580cd8e55D99Dc1A](https://etherscan.io/address/0x167527DB01325408696326e3580cd8e55D99Dc1A) |
-| GSMFixedFeeStrategy       | [0xD4478A76aCeA81D3768A0ACB6e38f25eEB6Eb1B5](https://etherscan.io/address/0xD4478A76aCeA81D3768A0ACB6e38f25eEB6Eb1B5) |
-| GSMUSDCProxy              | [0x0d8eFfC11dF3F229AA1EA0509BC9DFa632A13578](https://etherscan.io/address/0x0d8eFfC11dF3F229AA1EA0509BC9DFa632A13578) |
-| GSMUSDTProxy              | [0x686F8D21520f4ecEc7ba577be08354F4d1EB8262](https://etherscan.io/address/0x686F8D21520f4ecEc7ba577be08354F4d1EB8262) |
-| GSMUSDCFixedPriceStrategy | [0x430BEdcA5DfA6f94d1205Cb33AB4f008D0d9942a](https://etherscan.io/address/0x430BEdcA5DfA6f94d1205Cb33AB4f008D0d9942a) |
-| GSMUSDTFixedPriceStrategy | [0x4c707764cbFB4FFa078e169e6b8A6AdbE7526a2c](https://etherscan.io/address/0x4c707764cbFB4FFa078e169e6b8A6AdbE7526a2c) |
+| Name                    | Address                                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| GhoToken                | [0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f](https://etherscan.io/address/0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f) |
+| GHOAToken (facilitator) | [0x00907f9921424583e7ffBfEdf84F92B7B2Be4977](https://etherscan.io/address/0x00907f9921424583e7ffBfEdf84F92B7B2Be4977) |
+| GHOVariableDebtToken    | [0x786dBff3f1292ae8F92ea68Cf93c30b34B1ed04B](https://etherscan.io/address/0x786dBff3f1292ae8F92ea68Cf93c30b34B1ed04B) |
+| GhoOracle               | [0xD110cac5d8682A3b045D5524a9903E031d70FCCd](https://etherscan.io/address/0xD110cac5d8682A3b045D5524a9903E031d70FCCd) |
+| GhoInterestRateStrategy | [0x16E77D8a7192b65fEd49B3374417885Ff4421A74](https://etherscan.io/address/0x16E77D8a7192b65fEd49B3374417885Ff4421A74) |
+| GhoDiscountRateStrategy | [0x4C38Ec4D1D2068540DfC11DFa4de41F733DDF812](https://etherscan.io/address/0x4C38Ec4D1D2068540DfC11DFa4de41F733DDF812) |
+| GhoFlashMinter          | [0xb639D208Bcf0589D54FaC24E655C79EC529762B8](https://etherscan.io/address/0xb639D208Bcf0589D54FaC24E655C79EC529762B8) |
+| UiGhoDataProvider       | [0x379c1EDD1A41218bdbFf960a9d5AD2818Bf61aE8](https://etherscan.io/address/0x379c1EDD1A41218bdbFf960a9d5AD2818Bf61aE8) |
 
 :::info
-Aave Protocol deployed contract addresses: See [here](https://docs.aave.com/developers/deployed-contracts/v3-mainnet/ethereum-mainnet)
+Aave Protocol market deployed contract addresses: See [here](https://docs.aave.com/developers/deployed-contracts/v3-mainnet/ethereum-mainnet)
+:::
+
+:::info
+GHO Stability Module deployed contract addresses: See [here](./gho-stability-module)
 :::
 
 ### Sepolia Testnet {#sepolia-deployment}

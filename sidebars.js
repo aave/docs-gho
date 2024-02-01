@@ -106,6 +106,11 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "GHO Stability Module",
+      items: ["developer-docs/gho-stability-module"],
+    },
+    {
+      type: "category",
       label: "Misc",
       items: [
         "developer-docs/misc/GhoSteward",
