@@ -19,7 +19,7 @@ A Peg Stability Module (PSM) is a contract that enables the conversion of two to
 
 ## Architecture
 
-Terminology: "exgonous" is used througout this guide to refer to the non-GHO token in a module instance
+Terminology: "exogenous" is used throughout this guide to refer to the non-GHO token in a module instance
 
 ### GsmRegistry
 
@@ -29,7 +29,7 @@ The `GsmRegistry` is a contract that stores a list of all Gsm instances.
 
 Each token pairing in the stability module has a `Gsm` or `Gsm4626` contract instance that acts as the GHO facilitator and entry-point for buy and sell functionality.
 
-The `Gsm4626` contract is a special instance of the `Gsm` that supports ERC-4626 tokenized vault shares as the exogonous token.
+The `Gsm4626` contract is a special instance of the `Gsm` that supports ERC-4626 tokenized vault shares as the exogenous token.
 
 The parameters and periphery contracts that dictate module operations are detailed below:
 
@@ -46,7 +46,7 @@ Each `Gsm` instance has a `FeeStrategy` contract that determines a percentage fe
 
 ### Exposure Cap
 
-The exposure cap is a DAO controlled parameter that determines the maximum amount of exogonous tokens the stability module can hold.
+The exposure cap is a DAO controlled parameter that determines the maximum amount of exogenous tokens the stability module can hold.
 
 ### Price Bounds and Swap Freezes
 
@@ -56,4 +56,4 @@ Price Bounds and Swap Freezes are enabled by the `OracleSwapFreezer`. This contr
 
 ### Last Resort Liquidations
 
-In case of a rapid increase in risk in an exogenous token, the GSM features Last Resort Liquidations to liquidate the exogenous token. This contract role allows in the worst-case scenarios for the DAO to pause GSM functionality and liquidate the underyling balance of exegonous tokens.
+In case of a rapid increase in risk in an exogenous token, the GSM features Last Resort Liquidations to liquidate the exogenous token. This contract role allows in the worst-case scenarios for the DAO to pause GSM functionality and liquidate the underlying balance of exegonous tokens.
