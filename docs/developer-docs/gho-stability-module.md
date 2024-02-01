@@ -17,8 +17,6 @@ A Peg Stability Module (PSM) is a contract that enables the conversion of two to
 | GsmUSDCOracleSwapFreezer  | [0xef6beCa8D9543eC007bceA835aF768B58F730C1f](https://etherscan.io/address/0xef6beCa8D9543eC007bceA835aF768B58F730C1f) |
 | GsmUSDTOracleSwapFreezer  | [0x71381e6718b37C12155CB961Ca3D374A8BfFa0e5](https://etherscan.io/address/0x71381e6718b37C12155CB961Ca3D374A8BfFa0e5) |
 
-0xef6beCa8D9543eC007bceA835aF768B58F730C1f
-
 ## Architecture
 
 Terminology: "exgonous" is used througout this guide to refer to the non-GHO token in a module instance
