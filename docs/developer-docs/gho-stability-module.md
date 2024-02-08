@@ -2,7 +2,11 @@
 
 ## Overview
 
-A Peg Stability Module (PSM) is a contract that enables the conversion of two tokens at a predetermined ratio. This mechanism has proven effective for numerous stablecoin projects in preserving the stability of exchange rates. Using this model as inspiration, the GHO Stability Module (GSM) for GHO leverages the benefits of existing models whilst innovating upon them in several ways to help further maintain GHO’s peg.
+A Peg Stability Module (PSM) is a contract that enables the conversion of two tokens at a predetermined ratio. The GHO Stability Module (GSM) leverages the benefits of existing PSM models whilst innovating upon them in several ways to help further maintain GHO’s peg. The GSM is designed to facilitate conversions between GHO and governance-approved tokens, underpinned by a suite of features designed for flexible operations and risk management.
+
+Key components include [Price Strategies](#price-strategy), [Fee Strategies](#fee-strategy), support for ERC-4626 tokenized vault positions, oracle-based [Price Bounds](#price-bounds-and-swap-freezes), [Exposure Caps](#exposure-cap), and [Last Resort Liquidations](#last-resort-liquidations).
+
+This multifaceted approach underscores the GSM's role not just as a technical solution but as a strategic asset for peg maintenance and risk mitigation.
 
 ## Deployed Contracts
 
@@ -23,7 +27,7 @@ Terminology: "exogenous" is used throughout this guide to refer to the non-GHO t
 
 ### GsmRegistry
 
-The `GsmRegistry` is a contract that stores a list of all Gsm instances.
+The `GsmRegistry` is a smart contract that stores a list of all Gsm instances. This contract is owned by the Aave Governance Short Executor.
 
 ### Gsm
 
@@ -35,10 +39,7 @@ The parameters and periphery contracts that dictate module operations are detail
 
 ### Price Strategy
 
-The GSM introduces the concept of Price Strategies that provide the ability to adjust the pricing ratio between GHO and the exogenous token, based on different strategies. The `PriceStrategy` oversee the calculation of the price ratio for a module instance, and:
-
-- Can be fixed.
-- Can be dynamic, based on price oracles and markets, linear curves, stableswap curves, etc.
+The GSM introduces a flexible Price Strategy framework, enabling the module to adapt its pricing mechanism based on market conditions or strategic objectives. This system supports both fixed and dynamic pricing strategies, allowing for adjustments in response to real-time market data or predetermined conditions. The initial implementation focuses on a fixed 1:1 pricing strategy for simplicity and stability, with provisions for future adaptation to dynamic strategies as dictated by DAO governance.
 
 ### Fee Strategy
 
