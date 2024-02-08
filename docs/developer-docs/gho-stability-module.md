@@ -4,7 +4,7 @@
 
 A Peg Stability Module (PSM) is a contract that enables the conversion of two tokens at a predetermined ratio. The GHO Stability Module (GSM) leverages the benefits of existing PSM models while innovating upon them in several ways to help further maintain GHO’s peg. The GSM is designed to facilitate conversions between GHO and governance-approved tokens, underpinned by a suite of features designed for flexible operations and risk management.
 
-Key components include [Price Strategies](#price-strategy), [Fee Strategies](#fee-strategy), support for ERC-4626 tokenized vault positions, oracle-based [Price Bounds](#price-bounds-and-swap-freezes), [Exposure Caps](#exposure-cap), and [Last Resort Liquidations](#last-resort-liquidations).
+Key components include [Price Strategies](#price-strategy), [Fee Strategies](#fee-strategy), support for ERC-4626 tokenized vault positions, freezes based on oracle [Price Bounds](#conversion-freezes-and-oracle-price-bounds), [Exposure Caps](#exposure-cap), and [Last Resort Liquidations](#last-resort-liquidations).
 
 This multifaceted approach underscores the GSM's role not just as a technical solution but as a strategic asset for peg maintenance and risk mitigation.
 
@@ -49,11 +49,11 @@ Each `Gsm` instance has a `FeeStrategy` contract that determines a percentage fe
 
 The exposure cap is a DAO controlled parameter that determines the maximum amount of exogenous tokens the stability module can hold.
 
-### Price Bounds and Swap Freezes
+### Conversion Freezes and Oracle Price Bounds
 
-In case the price of the exogenous token deviates from the 1:1 ratio, trading can be stopped using Price Bounds and Swap Freezes.
+In case the price of the exogenous token deviates from a determined ratio, the freeze role can be utilized by the Aave DAO or assigned to an entity (autonomous agents or contracts) to respond and halt conversions.
 
-Price Bounds and Swap Freezes are enabled by the `OracleSwapFreezer`. This contract has a function that utilizes an oracle to factor the price of the exogenous token, and if it is outside of a parameterized bound, react accordingly to freeze conversions.
+An implementation of the freeze role is the `OracleSwapFreezer` contract. This contract utilizes Chainlink oracles and price bounds determined by Aave Governence to freeze/unfreeze based on oracle conditions.
 
 ### Last Resort Liquidations
 
