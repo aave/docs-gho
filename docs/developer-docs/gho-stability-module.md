@@ -2,7 +2,7 @@
 
 ## Overview
 
-A Peg Stability Module (PSM) is a contract that enables the conversion of two tokens at a predetermined ratio. The GHO Stability Module (GSM) leverages the benefits of existing PSM models whilst innovating upon them in several ways to help further maintain GHO’s peg. The GSM is designed to facilitate conversions between GHO and governance-approved tokens, underpinned by a suite of features designed for flexible operations and risk management.
+A Peg Stability Module (PSM) is a contract that enables the conversion of two tokens at a predetermined ratio. The GHO Stability Module (GSM) leverages the benefits of existing PSM models while innovating upon them in several ways to help further maintain GHO’s peg. The GSM is designed to facilitate conversions between GHO and governance-approved tokens, underpinned by a suite of features designed for flexible operations and risk management.
 
 Key components include [Price Strategies](#price-strategy), [Fee Strategies](#fee-strategy), support for ERC-4626 tokenized vault positions, oracle-based [Price Bounds](#price-bounds-and-swap-freezes), [Exposure Caps](#exposure-cap), and [Last Resort Liquidations](#last-resort-liquidations).
 
@@ -57,4 +57,4 @@ Price Bounds and Swap Freezes are enabled by the `OracleSwapFreezer`. This contr
 
 ### Last Resort Liquidations
 
-In case of a rapid increase in risk in an exogenous token, the GSM features Last Resort Liquidations to liquidate the exogenous token. This contract role allows in the worst-case scenarios for the DAO to pause GSM functionality and liquidate the underlying balance of exegonous tokens.
+In case of a rapid increase in risk in an exogenous token, the GSM features Last Resort Liquidations to liquidate the exogenous token. This contract role allows in the worst-case scenarios for the DAO to pause GSM functionality and liquidate the underlying balance of exogenous tokens.
