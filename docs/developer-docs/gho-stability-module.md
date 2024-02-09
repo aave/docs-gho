@@ -12,28 +12,28 @@ This multifaceted approach underscores the GSM's role not just as a technical so
 
 | Name                      | Address                                                                                                               |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GsmRegistry               | [0x167527DB01325408696326e3580cd8e55D99Dc1A](https://etherscan.io/address/0x167527DB01325408696326e3580cd8e55D99Dc1A) |
-| GsmFixedFeeStrategy       | [0xD4478A76aCeA81D3768A0ACB6e38f25eEB6Eb1B5](https://etherscan.io/address/0xD4478A76aCeA81D3768A0ACB6e38f25eEB6Eb1B5) |
-| GsmUSDC                   | [0x0d8eFfC11dF3F229AA1EA0509BC9DFa632A13578](https://etherscan.io/address/0x0d8eFfC11dF3F229AA1EA0509BC9DFa632A13578) |
-| GsmUSDT                   | [0x686F8D21520f4ecEc7ba577be08354F4d1EB8262](https://etherscan.io/address/0x686F8D21520f4ecEc7ba577be08354F4d1EB8262) |
-| GsmUSDCFixedPriceStrategy | [0x430BEdcA5DfA6f94d1205Cb33AB4f008D0d9942a](https://etherscan.io/address/0x430BEdcA5DfA6f94d1205Cb33AB4f008D0d9942a) |
-| GsmUSDTFixedPriceStrategy | [0x4c707764cbFB4FFa078e169e6b8A6AdbE7526a2c](https://etherscan.io/address/0x4c707764cbFB4FFa078e169e6b8A6AdbE7526a2c) |
-| GsmUSDCOracleSwapFreezer  | [0xef6beCa8D9543eC007bceA835aF768B58F730C1f](https://etherscan.io/address/0xef6beCa8D9543eC007bceA835aF768B58F730C1f) |
-| GsmUSDTOracleSwapFreezer  | [0x71381e6718b37C12155CB961Ca3D374A8BfFa0e5](https://etherscan.io/address/0x71381e6718b37C12155CB961Ca3D374A8BfFa0e5) |
+| GSMRegistry               | [0x167527DB01325408696326e3580cd8e55D99Dc1A](https://etherscan.io/address/0x167527DB01325408696326e3580cd8e55D99Dc1A) |
+| GSMFixedFeeStrategy       | [0xD4478A76aCeA81D3768A0ACB6e38f25eEB6Eb1B5](https://etherscan.io/address/0xD4478A76aCeA81D3768A0ACB6e38f25eEB6Eb1B5) |
+| GSMUSDC                   | [0x0d8eFfC11dF3F229AA1EA0509BC9DFa632A13578](https://etherscan.io/address/0x0d8eFfC11dF3F229AA1EA0509BC9DFa632A13578) |
+| GSMUSDT                   | [0x686F8D21520f4ecEc7ba577be08354F4d1EB8262](https://etherscan.io/address/0x686F8D21520f4ecEc7ba577be08354F4d1EB8262) |
+| GSMUSDCFixedPriceStrategy | [0x430BEdcA5DfA6f94d1205Cb33AB4f008D0d9942a](https://etherscan.io/address/0x430BEdcA5DfA6f94d1205Cb33AB4f008D0d9942a) |
+| GSMUSDTFixedPriceStrategy | [0x4c707764cbFB4FFa078e169e6b8A6AdbE7526a2c](https://etherscan.io/address/0x4c707764cbFB4FFa078e169e6b8A6AdbE7526a2c) |
+| GSMUSDCOracleSwapFreezer  | [0xef6beCa8D9543eC007bceA835aF768B58F730C1f](https://etherscan.io/address/0xef6beCa8D9543eC007bceA835aF768B58F730C1f) |
+| GSMUSDTOracleSwapFreezer  | [0x71381e6718b37C12155CB961Ca3D374A8BfFa0e5](https://etherscan.io/address/0x71381e6718b37C12155CB961Ca3D374A8BfFa0e5) |
 
 ## Architecture
 
 Terminology: "exogenous" is used throughout this guide to refer to the non-GHO token in a module instance
 
-### GsmRegistry
+### GSMRegistry
 
-The `GsmRegistry` is a smart contract that stores a list of all Gsm instances. This contract is owned by the Aave Governance Short Executor.
+The `GSMRegistry` is a smart contract that stores a list of all GSM instances. This contract is owned by the Aave Governance Short Executor.
 
-### Gsm
+### GSM
 
-Each token pairing in the stability module has a `Gsm` or `Gsm4626` contract instance that acts as the GHO facilitator and entry-point for buy and sell functionality.
+Each token pairing in the stability module has a `GSM` or `GSM4626` contract instance that acts as the GHO facilitator and entry-point for buy and sell functionality.
 
-The `Gsm4626` contract is a special instance of the `Gsm` that supports ERC-4626 tokenized vault shares as the exogenous token.
+The `GSM4626` contract is a special instance of the `GSM` that supports ERC-4626 tokenized vault shares as the exogenous token.
 
 The parameters and periphery contracts that dictate module operations are detailed below:
 
@@ -43,11 +43,11 @@ The GSM introduces a flexible Price Strategy framework, enabling the module to a
 
 ### Fee Strategy
 
-Each `Gsm` instance has a `FeeStrategy` contract that determines a percentage fee for buy and sell conversions that is allocated to the Aave DAO treasury.
+Each `GSM` instance has a `FeeStrategy` contract that determines a percentage fee for buy and sell conversions that is allocated to the Aave DAO treasury.
 
 ### Exposure Cap
 
-The exposure cap is a DAO controlled parameter that determines the maximum amount of exogenous tokens the stability module can hold.
+The exposure cap is a parameter determined by Aave DAO Governance that sets the maximum amount of an exogenous token the stability module can hold.
 
 ### Conversion Freezes and Oracle Price Bounds
 
