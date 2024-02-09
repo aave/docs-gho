@@ -1,12 +1,12 @@
 ---
-id: lfgho-dashboard
-title: LFGHO Hackathon Dashboard
+id: hackathon-dashboard
+title: Hackathon Dashboard
 ---
 
 import AaveGhostSrc from "@site/static/img/tools.png";
 import HackathonFeatures from '@site/src/components/HackathonFeatures';
 
-# LFGHO Hackathon Dashboard
+# Hackathon Dashboard
 
 <div>
     <HackathonFeatures/>
