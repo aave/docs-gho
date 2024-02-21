@@ -61,7 +61,7 @@ import AaveGhostSrc from "@site/static/img/tools.png";
 
 GHO is an ERC20 token minted from contracts designated as [Facilitators](../concepts/how-gho-works/gho-facilitators.md). It has been proposed to the Aave community that the [Aave V3 Ethereum Pool](../concepts/how-gho-works/gho-facilitators.md#aave-v3-ethereum-pool) and [FlashMinter](../concepts/how-gho-works/gho-facilitators.md#flashminter) Facilitator will be the first Facilitators of GHO.
 
-The Aave Pool facilitator will facilitate the minting and burning of GHO through the standard `borrow` and `repay` function which are utilizaed by all other Aave reserves. The flashminter facilitator will provide flashloan functionality to GHO which is not available by default.
+The Aave Pool facilitator will facilitate the minting and burning of GHO through the standard `borrow` and `repay` function which are utilized by all other Aave reserves. The flashminter facilitator will provide flashloan functionality to GHO which is not available by default.
 
 ![GHO_Architecture Diagram](../assets/GHO_Architecture_dark.png#gh-dark-mode-only)
 ![GHO_Architecture Diagram](../assets/GHO_Architecture.png#gh-light-mode-only)
@@ -86,7 +86,7 @@ GHO can be added to an eMode category, which modifies the collateral factor and 
 
 Since GHO is created and not borrowed from suppliers, GHO is not subject to restrictions on available liquidity, and instead, the Facilitator cap and collateralization requirements define the limits to which GHO can be minted as calculated below.
 
-`availableFacilitatorCap = ghoReserveData.aaveFacilitatorButcketMaxCapacity - ghoReserveData.aaveFacilitatorBucketLevel`
+`availableFacilitatorCap = ghoReserveData.aaveFacilitatorBucketMaxCapacity - ghoReserveData.aaveFacilitatorBucketLevel`
 
 See [core functions](#core-functions) for GHO borrowing integrations.
 
@@ -159,7 +159,7 @@ Check out the [deployed GHO contracts](./contracts-overview.md) to get started w
 
 [Aave Utilities](https://github.com/aave/aave-utilities) is a JavaScript SDK that can be used to greatly simplify the process of integrating GHO data and functionality.
 
-It provides imports for fetching data, formatting data, and building transactions. Tutorials with sample code for utilizaing this SDK can be found [here](#gho-sdk)
+It provides imports for fetching data, formatting data, and building transactions. Tutorials with sample code for utilizing this SDK can be found [here](#gho-sdk)
 
 ### Data Analytics
 
@@ -171,7 +171,7 @@ The [data](#data) section goes into detail about integrating the most common liv
 
 ### setup
 
-The [Aave Utilities Javascript SDK](https://github.com/aave/aave-utilities) is a utilty for fetching data and building transactions. Since GHO is under active development, it is not available in the main package versions. GHO versions are published from [this branch](https://github.com/aave/aave-utilities/pull/445) and the current version in use on the [GHO testnet app](https://gho.aave.com) are listed below:
+The [Aave Utilities Javascript SDK](https://github.com/aave/aave-utilities) is a utility for fetching data and building transactions. Since GHO is under active development, it is not available in the main package versions. GHO versions are published from [this branch](https://github.com/aave/aave-utilities/pull/445) and the current version in use on the [GHO testnet app](https://gho.aave.com) are listed below:
 
 ```
 npm install @aave/math-utils@1.21.1

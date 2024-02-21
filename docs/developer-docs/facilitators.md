@@ -11,16 +11,16 @@ The GHO token has a simple yet flexible design. See for yourself by viewing the 
 
 The core mechanism of the GHO contract is _facilitators_. A facilitator is an address with the ability to mint GHO up to a specified threshold. Facilitators can only be approved by Aave Governance through on-chain proposal voting.
 
-The initial proposal for GHO launched two faciltiators: Aave Protocol and Flashmint. The Aave Protocol facilitator operates similarly to borrowing a standard Aave reserve token: the `borrow` function is called but in the case of GHO, liquidity is minted instead of being allocated from token suppliers.
+The initial proposal for GHO launched two facilitators: Aave Protocol and Flashmint. The Aave Protocol facilitator operates similarly to borrowing a standard Aave reserve token: the `borrow` function is called but in the case of GHO, liquidity is minted instead of being allocated from token suppliers.
 
-The flashmint facilitator operates simiarly to the `flashloan` functionality of the Aave Protocol, enabling GHO to be minted and burned within a single transaction.
+The flashmint facilitator operates similarly to the `flashloan` functionality of the Aave Protocol, enabling GHO to be minted and burned within a single transaction.
 
 The generic nature of the GHO facilitator model creates a large design space for potential facilitators, some ideas are listed below.
 
 ## Ideas
 
 - Existing DeFi protocols as potential facilitator
-- New facilitator protocol to acheive strategic goal for Aave DAO: peg stability, treasury management, etc.
+- New facilitator protocol to achieve strategic goal for Aave DAO: peg stability, treasury management, etc.
 - Interest rate or bonding curve mechanisms (potential upgrade to Aave Protocol facilitator or entirely new facilitator)
 - Systems for verifying off-chain collateral
 
